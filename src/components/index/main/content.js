@@ -1,6 +1,5 @@
-import React, {useEffect, useState} from 'react'
+import React from 'react'
 import {Grid, Paper, Typography, Button, Link} from "@material-ui/core";
-import Countdown from './countdown';
 import {makeStyles} from "@material-ui/styles";
 
 const useStyles = makeStyles(theme => ({
@@ -9,7 +8,8 @@ const useStyles = makeStyles(theme => ({
         padding: '30px 0px',
         justifyContent: 'center',
         backgroundColor: 'rgba(255, 255, 255, 0.8)',
-        textAlign: 'center'
+        textAlign: 'center',
+        zIndex: '1'
     },
     description: {
         padding: '0px 30px 20px 30px',
