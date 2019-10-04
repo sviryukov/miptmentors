@@ -8,7 +8,7 @@ const useStyles = makeStyles({
         marginBottom: "80px",
         paddingTop: "40px",
         paddingBottom: "40px",
-        backgroundImage: 'url(/img/net-bg.svg)',
+        backgroundImage: 'url(/img/header-net-bg.svg)',
         backgroundPosition: 'center'
     },
     header: {
