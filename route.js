@@ -40,7 +40,7 @@ export default (passport, client) => {
 		response.send(template('Новости проекта | Клуб Менторов Физтех-Союза', html, "news", css));
 	});
 	router.get("/news_data", (request, response) => {
-		client.db('miptmentors').collection("news").find({"publicated": "true"}).toArray((err, news) => {
+		client.db('miptmentors').collection("news").find({"publicated": true}).toArray((err, news) => {
 			news.sort(function(a, b){
 				return b.date - a.date;
 			});
