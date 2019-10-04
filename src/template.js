@@ -9,6 +9,11 @@ export default (title, body, script, css) => {
 				`<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons"/>` +
                 `<link rel="shortcut icon" href="/img/favicon.ico" type="image/x-icon">` +
 				`<style id="jss-server-side">${css}</style>` +
+				`<style>` +
+					`html, body, #root {` +
+						`height: 100%` +
+					`}` +
+				`</style>` +
             `</head>` +
             `<body>` +
                 `<div id="root">${body}</div>` +
