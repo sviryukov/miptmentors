@@ -4,10 +4,20 @@ import Vanta from './vanta.net';
 import Navbar from "../../common/navbar";
 import Content from './content';
 import theme from '../../../theme'
+import {makeStyles} from "@material-ui/styles";
+
+const useStyles = makeStyles({
+    animationContainer: {
+        minHeight: '100%',
+        padding: '0px',
+        backgroundImage: 'url(/img/net-bg.png)',
+        backgroundPositionX: 'center'
+    }
+});
 
 export default props => {
+    const classes = useStyles();
     const netAnimation = useRef();
-    const [height, setHeight] = useState(0);
     if(props.client) {
         useLayoutEffect(() => {
             Vanta({
@@ -20,16 +30,10 @@ export default props => {
             })
         });
     }
-    const handleResize = () => {
-        setHeight(window.innerHeight);
-    };
-    useEffect(() => {
-        handleResize();
-    }, []);
     return (
         <React.Fragment>
             <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/109/three.min.js"/>
-            <Container maxWidth={false} ref={netAnimation} style={{ minHeight: height, padding: '0px' }}>
+            <Container maxWidth={false} ref={netAnimation} className={classes.animationContainer}>
                 <Navbar/>
                 <Content/>
             </Container>
