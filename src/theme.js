@@ -13,6 +13,9 @@ let theme = createMuiTheme({
         background: {
             default: '#fff',
             dark: '#1d2c38'
+        },
+        text: {
+            link: '#1976d2'
         }
     }
 });
