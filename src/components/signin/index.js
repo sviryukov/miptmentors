@@ -3,13 +3,13 @@ import {Avatar, Grid, CssBaseline, Typography, TextField, Button} from '@materia
 import {makeStyles} from '@material-ui/styles';
 import {Lock} from '@material-ui/icons';
 import Navbar from '../common/navbar';
+import Header from '../common/header';
 
 let useStyles = makeStyles(theme =>({
     grid: {
         textAlign: "center"
     },
     header: {
-        marginTop: '160px',
         marginBottom: '20px',
         textAlign: 'center'
     },
@@ -35,6 +35,7 @@ export default () => {
             <CssBaseline/>
             <Navbar/>
             <Grid container justify='center'>
+                <Header text=''/>
                 <Grid item xl={2} lg={3} md={4} sm={6} xs={8} className={classes.grid}>
                     <Typography variant='h4' className={classes.header}>
                         <Avatar className={classes.icon}>
