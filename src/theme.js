@@ -21,10 +21,12 @@ let theme = createMuiTheme({
 });
 
 theme.typography.h2 = {
-    fontSize: '23px',
+    fontSize: '22px',
+    padding: '0px 20px',
     fontWeight: 'normal',
     [theme.breakpoints.up('sm')]: {
-        fontSize: '33px'
+        fontSize: '33px',
+        padding: '0px'
     },
     [theme.breakpoints.up('xl')]: {
         fontSize: '40px'
@@ -32,8 +34,11 @@ theme.typography.h2 = {
 };
 
 theme.typography.h1 = {
-    fontSize: '28px',
+    fontSize: '24px',
     fontWeight: 'normal',
+    [theme.breakpoints.up('sm')]: {
+        fontSize: '30px'
+    },
     [theme.breakpoints.up('xl')]: {
         fontSize: '30px'
     }
