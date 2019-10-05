@@ -18,11 +18,14 @@ let useStyles = makeStyles(theme =>({
     img: {
         width: '100%'
     },
+    link: {
+        color: theme.palette.text.link
+    },
     icon: {
         color: theme.palette.text.secondary,
         fontSize: '30px',
         '&:hover': {
-            color: theme.palette.secondary.main
+            color: theme.palette.text.link
         }
     }
 }));
@@ -37,9 +40,9 @@ export default (props) => {
             <p><b>{props.name}</b></p>
             <p>{props.role}</p>
             <p>
-                <Link href={'mailto:' + props.email} target='_blanc'>{props.email}</Link>
+                <Link href={'mailto:' + props.email} target='_blanc' className={classes.link}>{props.email}</Link>
                 <br/>
-                <Link href={'tel:' + props.phone} target='_blanc'>{props.phone}</Link>
+                <Link href={'tel:' + props.phone} target='_blanc' className={classes.link}>{props.phone}</Link>
             </p>
             <p>
                 {props.vk &&
