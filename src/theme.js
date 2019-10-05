@@ -27,4 +27,12 @@ theme.typography.h2 = {
     }
 };
 
+theme.typography.h1 = {
+    fontSize: '28px',
+    fontWeight: 'normal',
+    [theme.breakpoints.up('xl')]: {
+        fontSize: '30px'
+    }
+};
+
 export default theme;

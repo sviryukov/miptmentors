@@ -11,7 +11,10 @@ const useStyles = makeStyles(theme => ({
         color: theme.palette.primary.contrastText
     },
     logo: {
-        fontSize: '24px'
+        fontSize: '24px',
+        lineHeight: '1',
+        fontWeight: '100',
+        letterSpacing: '-0.01562em'
     }
 }));
 

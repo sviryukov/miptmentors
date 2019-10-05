@@ -2,21 +2,21 @@ import React from 'react';
 import {Grid, Typography} from "@material-ui/core";
 import {makeStyles} from "@material-ui/styles";
 
-const useStyles = makeStyles({
+const useStyles = makeStyles(theme => ({
     container: {
-        marginTop: "20px",
-        marginBottom: "80px",
-        paddingTop: "40px",
-        paddingBottom: "40px",
-        backgroundImage: 'url(/img/header-net-bg.svg)',
-        backgroundPosition: 'center'
+        marginBottom: "40px",
+        paddingTop: "60px",
+        paddingBottom: "120px",
+        backgroundImage: 'url(/img/header-bg.svg)',
+        backgroundPositionX: 'center'
     },
     header: {
+        height: '35px',
         textAlign: 'center',
-        fontSize: '28px',
-        textTransform: 'uppercase'
+        textTransform: 'uppercase',
+        color: theme.palette.primary.main
     }
-});
+}));
 
 export default props => {
     const classes = useStyles();
