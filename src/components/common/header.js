@@ -5,10 +5,13 @@ import {makeStyles} from "@material-ui/styles";
 const useStyles = makeStyles(theme => ({
     container: {
         marginBottom: "40px",
-        paddingTop: "60px",
+        paddingTop: "40px",
         paddingBottom: "120px",
         backgroundImage: 'url(/img/header-bg.svg)',
-        backgroundPositionX: 'center'
+        backgroundPositionX: 'center',
+        [theme.breakpoints.up('sm')]: {
+            paddingTop: "30px"
+        }
     },
     header: {
         height: '35px',
