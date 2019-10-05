@@ -6,7 +6,12 @@ const useStyles = makeStyles(theme => ({
     content: {
         fontSize: '20px'
     },
+    title: {
+        height: '92px',
+        margin: '0px'
+    },
     date: {
+        marginBottom: '0px',
         fontSize: '16px',
         color: theme.palette.text.secondary
     }
@@ -25,11 +30,11 @@ export default (props) => {
         <Grid item lg={4} md={6} xs={12}>
             <Card>
                 <CardActionArea>
+                    <CardMedia image={'/img/' + props.img} className={classes.media} component="img"/>
                     <CardContent className={classes.content}>
-                        {props.title}
+                        <p className={classes.title}>{props.title}</p>
                         <p className={classes.date}>{date}</p>
                     </CardContent>
-                    <CardMedia image={'/img/' + props.img} className={classes.media} component="img"/>
                 </CardActionArea>
             </Card>
         </Grid>
