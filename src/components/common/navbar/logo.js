@@ -1,6 +1,5 @@
 import React from 'react';
-import {Grid, ListItem, Typography} from '@material-ui/core';
-import Link from '@material-ui/core/Link';
+import {Grid, ListItem, Link, Typography} from '@material-ui/core';
 import {makeStyles} from '@material-ui/styles';
 
 const useStyles = makeStyles(theme => ({
