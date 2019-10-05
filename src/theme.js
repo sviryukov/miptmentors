@@ -16,10 +16,10 @@ let theme = createMuiTheme({
 });
 
 theme.typography.h2 = {
-    fontSize: '27px',
+    fontSize: '23px',
     fontWeight: 'normal',
     [theme.breakpoints.up('sm')]: {
-        fontSize: '35px'
+        fontSize: '33px'
     },
     [theme.breakpoints.up('xl')]: {
         fontSize: '40px'
