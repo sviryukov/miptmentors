@@ -8,7 +8,7 @@ const useStyles = makeStyles(theme => ({
         width: '225px',
         padding: '15px 24px',
         backgroundColor: theme.palette.primary.main,
-        color: 'white'
+        color: theme.palette.primary.contrastText
     },
     logo: {
         fontSize: '24px'

@@ -4,49 +4,42 @@ import {makeStyles} from "@material-ui/styles";
 
 const useStyles = makeStyles(theme => ({
     container: {
-        margin: '7% 0px',
-        padding: '30px 0px',
-        justifyContent: 'center',
-        backgroundColor: 'rgba(255, 255, 255, 0.8)',
-        textAlign: 'center',
-        zIndex: '1'
+        margin: '130px 0px'
     },
     description: {
-        padding: '0px 30px 20px 30px',
-        fontSize: '25px',
+        marginBottom: '40px',
         lineHeight: '1.4'
     },
     button: {
-        margin: '10px',
+        margin: '0px 10px 10px 0px',
         fontSize: '20px'
     },
     learnMore: {
         width: '100%',
         marginTop: '20px',
+        marginBottom: '20px',
         fontSize: '25px'
     }
 }));
 
-export default props => {
+export default () => {
     const classes = useStyles();
     return (
         <Grid container justify='center'>
-            <Grid item container xs={11} md={8} lg={6} className={classes.container} component={Paper}>
-                <Grid item xs={12}>
-                    <Typography variant='h1' className={classes.description}>
-                        <b>Клуб Менторов Физтех-Союза</b> - проект, в рамках которого опытные специалисты и предприниматели становятся наставниками студентов и молодых выпускников МФТИ. В проекте реализуются программы наставничества по трем направлениям: бизнес, карьерное и научное.
+            <Grid item container xs={10} md={10} lg={9} className={classes.container}>
+                <Grid item xs={12} md={10} lg={7}>
+                    <Typography variant='h2' className={classes.description} color='primary'>
+                        <b>Клуб Менторов Физтех&#8209;Союза</b>
+                        <br/>Мы развиваем программы наставничества в МФТИ и помогаем студентам и молодым выпускникам найти менторов для карьерного и профессионального роста
                     </Typography>
                     <Button color='primary'
-                            variant='contained'
+                            variant='outlined'
                             size='large'
                             className={classes.button}>Найти ментора</Button>
                     <Button color='primary'
-                            variant='contained'
+                            variant='outlined'
                             size='large'
                             className={classes.button}>Стать ментором</Button>
-                    <div className={classes.learnMore}>
-                        <Link>Узнать больше</Link>
-                    </div>
                 </Grid>
             </Grid>
         </Grid>

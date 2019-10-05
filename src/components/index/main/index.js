@@ -7,9 +7,7 @@ import {makeStyles} from "@material-ui/styles";
 const useStyles = makeStyles({
     container: {
         minHeight: '100%',
-        padding: '0px',
-        backgroundImage: 'url(/img/net-bg.png)',
-        backgroundPositionX: 'center'
+        padding: '0px'
     }
 });
 

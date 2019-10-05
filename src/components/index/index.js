@@ -8,9 +8,6 @@ export default props => {
         <React.Fragment>
             <CssBaseline/>
             <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/109/three.min.js"/>
-            <Hidden xsDown>
-                <Animation client={props.client}/>
-            </Hidden>
             <Main/>
         </React.Fragment>
     )

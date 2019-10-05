@@ -1,7 +1,7 @@
 import React from 'react';
-import {ListItem, Fab} from '@material-ui/core';
+import {ListItem, IconButton} from '@material-ui/core';
 import {makeStyles} from '@material-ui/styles';
-import {Person} from "@material-ui/icons";
+import {PersonOutlineOutlined} from "@material-ui/icons";
 
 const useStyles = makeStyles(theme => ({
     listItem: {
@@ -9,16 +9,17 @@ const useStyles = makeStyles(theme => ({
         height: '102px'
     },
     icon: {
-        boxShadow: 'none'}
+        boxShadow: 'none'
+    }
 }));
 
 export default () => {
     const classes = useStyles();
     return (
         <ListItem className={classes.listItem}>
-            <Fab href='/signin' color='secondary' size='medium' className={classes.icon}>
-                <Person/>
-            </Fab>
+            <IconButton href='/signin' className={classes.icon}>
+                <PersonOutlineOutlined color='secondary' size="medium" />
+            </IconButton>
         </ListItem>
     );
 };
