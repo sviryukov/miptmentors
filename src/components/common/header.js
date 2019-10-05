@@ -17,7 +17,7 @@ const useStyles = makeStyles(theme => ({
         height: '35px',
         textAlign: 'center',
         textTransform: 'uppercase',
-        color: theme.palette.primary.main
+        color: theme.palette.secondary.main
     }
 }));
 

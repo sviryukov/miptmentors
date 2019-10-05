@@ -7,6 +7,9 @@ const useStyles = makeStyles( theme => ({
     listItem: {
         width: '80px',
         height: '102px'
+    },
+    icon: {
+        color: theme.palette.text.light
     }
 }));
 
@@ -15,7 +18,7 @@ export default props => {
     return (
         <ListItem className={classes.listItem}>
             <IconButton onClick={props.handleClick}>
-                <MenuOutlined color='secondary' size="medium" />
+                <MenuOutlined size="medium" className={classes.icon}/>
             </IconButton>
         </ListItem>
     );

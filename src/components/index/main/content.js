@@ -31,15 +31,15 @@ export default () => {
         <Grid container justify='center'>
             <Grid item container xs={10} md={10} lg={9} className={classes.container}>
                 <Grid item xs={12} md={10} lg={7}>
-                    <Typography variant='h2' className={classes.description} color='primary'>
+                    <Typography variant='h2' className={classes.description} color='secondary'>
                         <b>Клуб Менторов Физтех&#8209;Союза</b>
                         <br/>Мы развиваем программы наставничества в МФТИ и помогаем студентам и молодым выпускникам найти менторов для карьерного и профессионального роста
                     </Typography>
-                    <Button color='primary'
+                    <Button color='secondary'
                             variant='outlined'
                             size='large'
                             className={classes.button}>Найти ментора</Button>
-                    <Button color='primary'
+                    <Button color='secondary'
                             variant='outlined'
                             size='large'
                             className={classes.button}>Стать ментором</Button>

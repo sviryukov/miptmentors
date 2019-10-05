@@ -7,6 +7,9 @@ const useStyles = makeStyles(theme => ({
     listItem: {
         width: '80px',
         height: '102px'
+    },
+    icon: {
+        color: theme.palette.text.light
     }
 }));
 
@@ -15,7 +18,7 @@ export default () => {
     return (
         <ListItem className={classes.listItem}>
             <IconButton href='/signin'>
-                <PersonOutlineOutlined color='secondary' size="medium" />
+                <PersonOutlineOutlined size="medium" className={classes.icon}/>
             </IconButton>
         </ListItem>
     );
