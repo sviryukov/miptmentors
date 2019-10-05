@@ -3,11 +3,16 @@ import {Card, CardActionArea, CardMedia, Grid, CardContent} from "@material-ui/c
 import {makeStyles} from "@material-ui/styles";
 
 const useStyles = makeStyles(theme => ({
+    grid: {
+        marginBottom: '0px',
+        [theme.breakpoints.up('md')]: {
+            marginBottom: '30px'
+        }
+    },
     content: {
         fontSize: '20px'
     },
     title: {
-        height: '92px',
         margin: '0px'
     },
     date: {
@@ -27,7 +32,7 @@ export default (props) => {
     date += dateObj.getMonth() + ".";
     date += dateObj.getFullYear();
     return (
-        <Grid item lg={4} md={6} xs={12}>
+        <Grid item lg={4} md={6} xs={12} className={classes.grid}>
             <Card>
                 <CardActionArea>
                     <CardMedia image={'/img/' + props.img} className={classes.media} component="img"/>

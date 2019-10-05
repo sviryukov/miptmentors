@@ -29,9 +29,9 @@ export default () => {
             <Navbar/>
             <Grid container justify='center'>
                 <Header text='Новости проекта'/>
-                <Grid item md={8} sm={6} xs={10}>
+                <Grid item xs={10} sm={6} md={8} lg={9}>
                     <Fade in={newsVisible}>
-                        <Grid container spacing={4} className={classes.mentorsContainer}>
+                        <Grid container spacing={4} className={classes.newsContainer}>
                             {news.map(newsItem => (
                                 <Card key={newsItem._id}
                                       title={newsItem.title}
