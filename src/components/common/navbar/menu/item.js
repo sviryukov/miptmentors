@@ -8,7 +8,7 @@ const useStyles = makeStyles(theme => ({
         width: 'auto',
         height: '102px',
         fontSize: '18px',
-        color: theme.palette.secondary.main,
+        color: theme.palette.text.light,
         textAlign: 'center'
     }
 }));
