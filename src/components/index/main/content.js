@@ -1,5 +1,5 @@
 import React from 'react'
-import {Grid, Paper, Typography, Button, Link} from "@material-ui/core";
+import {Grid, Typography, Button} from "@material-ui/core";
 import {makeStyles} from "@material-ui/styles";
 
 const useStyles = makeStyles(theme => ({
@@ -7,6 +7,9 @@ const useStyles = makeStyles(theme => ({
         margin: '40px 0px',
         [theme.breakpoints.up('sm')]: {
             margin: '130px 0px'
+        },
+        [theme.breakpoints.up('xl')]: {
+            margin: '200px 0px'
         }
     },
     description: {
