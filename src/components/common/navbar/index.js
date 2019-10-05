@@ -1,16 +1,14 @@
 import React, {useState} from 'react';
-import {AppBar, Grid, Toolbar, Hidden} from '@material-ui/core';
+import {Grid, Hidden} from '@material-ui/core';
 import {makeStyles} from '@material-ui/styles';
 import Logo from './logo';
 import Menu from './menu';
 import Drawer from './drawer';
 
 const useStyles = makeStyles(theme => ({
-    appBar: {
-        backgroundColor: 'white'
-    },
     container: {
-        padding: '0px'
+        padding: '0px',
+        backgroundColor: theme.palette.background.dark
     }
 }));
 
