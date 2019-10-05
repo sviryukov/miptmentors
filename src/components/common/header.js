@@ -6,11 +6,11 @@ const useStyles = makeStyles(theme => ({
     container: {
         marginBottom: "40px",
         paddingTop: "40px",
-        paddingBottom: "120px",
+        paddingBottom: "80px",
         backgroundImage: 'url(/img/header-bg.svg)',
         backgroundPositionX: 'center',
         [theme.breakpoints.up('sm')]: {
-            paddingTop: "30px"
+            paddingTop: "20px"
         }
     },
     header: {
