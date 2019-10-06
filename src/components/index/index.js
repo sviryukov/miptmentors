@@ -3,7 +3,7 @@ import {CssBaseline, Hidden} from "@material-ui/core";
 import Animation from './animation';
 import Main from './main';
 
-export default props => {
+export default () => {
     return (
         <React.Fragment>
             <CssBaseline/>
