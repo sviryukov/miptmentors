@@ -9,12 +9,8 @@ let theme = createMuiTheme({
             main: '#f2d357',
             contrastText: '#1d2c38'
         },
-        background: {
-            default: '#fff',
-            dark: '#1d2c38'
-        },
         text: {
-            light: '#d2faf7',
+            light: '#fff',
             link: '#1976d2'
         }
     }
@@ -22,11 +18,9 @@ let theme = createMuiTheme({
 
 theme.typography.h2 = {
     fontSize: '22px',
-    padding: '0px 20px',
     fontWeight: 'normal',
     [theme.breakpoints.up('sm')]: {
-        fontSize: '33px',
-        padding: '0px'
+        fontSize: '33px'
     },
     [theme.breakpoints.up('xl')]: {
         fontSize: '40px'

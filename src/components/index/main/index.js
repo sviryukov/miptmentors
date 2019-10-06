@@ -8,7 +8,7 @@ const useStyles = makeStyles(theme => ({
     container: {
         minHeight: '100%',
         padding: '0px',
-        backgroundColor: theme.palette.background.dark
+        backgroundColor: theme.palette.primary.main
     }
 }));
 
