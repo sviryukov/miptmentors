@@ -9,6 +9,7 @@ const useStyles = makeStyles(theme => ({
         backgroundColor: theme.palette.secondary.main
     },
     logo: {
+        color: theme.palette.primary.main,
         fontSize: '24px',
         lineHeight: '1',
         fontWeight: '100',

@@ -8,7 +8,7 @@ import Drawer from './drawer';
 const useStyles = makeStyles(theme => ({
     container: {
         padding: '0px',
-        backgroundColor: theme.palette.background.dark
+        backgroundColor: theme.palette.primary.main
     }
 }));
 
