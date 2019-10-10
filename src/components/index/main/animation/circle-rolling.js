@@ -3,7 +3,7 @@ import mojs from '@mojs/core';
 const build = () => new mojs.Shape({
     parent: document.getElementById('container'),
     fill: 'none',
-    radius: 190,
+    radius: 181,
     stroke: 'cyan',
     strokeWidth: 6,
     strokeDasharray: '100%',
