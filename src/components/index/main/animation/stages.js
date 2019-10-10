@@ -1,0 +1,29 @@
+export default [{
+    parent: document.getElementById('container'),
+    duration: 4000,
+    easing: 'expo.inout'
+}, {
+    duration: 4000,
+    easing: 'expo.inout'
+}, {
+    duration: 4000,
+    easing: 'expo.inout'
+}, {
+    duration: 1000,
+    easing: 'cubic.inout'
+}, {
+    duration: 4000,
+    easing: 'expo.inout'
+}, {
+    duration: 4000,
+    easing: 'expo.inout'
+}, {
+    duration: 1000,
+    easing: 'cubic.inout'
+}, {
+    duration: 4000,
+    easing: 'expo.inout'
+}, {
+    duration: 1000,
+    easing: 'cubic.inout'
+}]
