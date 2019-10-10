@@ -22,9 +22,9 @@ export default props => {
     return (
         <Grid item className={classes.container}>
             <Box component={List} className={classes.list} display={{ xs: 'none', md: 'flex'}}>
-                <MenuItem text='Новости проекта' href='/news'/>
-                <MenuItem text='Менторы проекта' href='/mentors'/>
-                <MenuItem text='Контакты' href='/contacts'/>
+                <MenuItem text='Новости проекта' href='/news' id='news'/>
+                <MenuItem text='Менторы проекта' href='/mentors' id='mentors'/>
+                <MenuItem text='Контакты' href='/contacts' id='contacts'/>
                 <MenuSignIn/>
             </Box>
             <Box component={List} className={classes.list} display={{ xs: 'flex', md: 'none'}}>
