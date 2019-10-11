@@ -35,7 +35,7 @@ export default (props) => {
         <Grid item lg={4} md={6} xs={12} className={classes.grid}>
             <Card>
                 <CardActionArea>
-                    <CardMedia image={'/img/' + props.img} className={classes.media} component="img"/>
+                    <CardMedia image={'/img/' + props.img.replace('.', 'min.')} className={classes.media} component="img"/>
                     <CardContent className={classes.content}>
                         <p className={classes.title}>{props.title}</p>
                         <p className={classes.date}>{date}</p>

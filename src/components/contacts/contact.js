@@ -33,7 +33,7 @@ let useStyles = makeStyles(theme =>({
 export default (props) => {
     const classes = useStyles();
     return (
-        <Grid item lg={3} md={4} sm={7} xs={9} className={classes.container}>
+        <Grid item xs={9} sm={7} md={4} lg={3} className={classes.container}>
             <Box boxShadow={3} className={classes.imgBox}>
                 <img className={classes.img} src={'/img/' + props.img}/>
             </Box>

@@ -11,7 +11,7 @@ export default () => {
             <Navbar/>
             <Grid container justify='center'>
                 <Header text='Контакты'/>
-                <Grid item xl={8} lg={10} md={11} sm={8} xs={11}>
+                <Grid item xs={11} sm={8} md={11} lg={10} xl={8}>
                     <Grid container spacing={6} justify='center'>
                         <Contact img='kirill.jpg'
                                  name='Кирилл Свирюков'

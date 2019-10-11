@@ -19,7 +19,7 @@ const useStyles = makeStyles(theme => ({
 export default (props) => {
     const classes = useStyles();
     return (
-        <Grid item xl={3} lg={4} md={6} xs={12}>
+        <Grid item xs={12} md={6} lg={4} xl={3}>
             <Card className={classes.card}>
                 <CardMedia image={'/img/' + props.img} component="img"/>
                 <CardContent className={classes.content}>
