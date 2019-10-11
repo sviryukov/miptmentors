@@ -1,7 +1,7 @@
 import mojs from '@mojs/core';
 
 const build = () => new mojs.Shape({
-    parent: document.getElementById('container'),
+    parent: document.getElementById('animation'),
     fill: 'none',
     radius: 181,
     stroke: 'cyan',

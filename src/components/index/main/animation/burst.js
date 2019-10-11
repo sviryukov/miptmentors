@@ -2,7 +2,7 @@ import mojs from '@mojs/core';
 import theme from "../../../../theme";
 
 const build = delay => new mojs.Burst({
-    parent: document.getElementById('container'),
+    parent: document.getElementById('animation'),
     radius: { 110: 200 },
     angle: 30,
     children: {

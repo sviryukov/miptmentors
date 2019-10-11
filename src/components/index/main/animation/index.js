@@ -1,15 +1,20 @@
 import React, {useEffect} from 'react';
-import {Box, Grid} from "@material-ui/core";
+import {Grid, Box} from "@material-ui/core";
 import {makeStyles} from "@material-ui/styles";
-let mojs, points,
+let mojs,
     circle75, circle90, circle15_25, circle15_55, circle100,
     burst,
     circleStatic, circleRolling;
-import theme from "../../../../theme";
 
 const useStyles = makeStyles({
     container: {
-        position: 'relative'
+        height: '420px'
+    },
+    animation: {
+        width: '396px',
+        height: '100%',
+        position: 'relative',
+        marginLeft: 'calc(100% - 396px)'
     }
 });
 
@@ -19,7 +24,6 @@ export default () => {
 
         mojs = require('@mojs/core');
 
-        points = require('./points');
         circle90 = require('./circle90');
         circle15_25 = require('./circle15_25');
         circle15_55 = require('./circle15_55');
@@ -29,8 +33,6 @@ export default () => {
         circleStatic = require('./circle-static');
         circleRolling = require('./circle-rolling');
 
-        const points1 = points.build(theme.palette.secondary.main, [], [3, 4], [6]);
-        const points2 = points.build('cyan', [4, 5, 6], [], [6]);
         const circle90_1 = circle90.build();
         const circle15_25_1 = circle15_25.build();
         const circle15_55_1 = circle15_55.build();
@@ -48,12 +50,12 @@ export default () => {
             circleStatic1, circleRolling1,
             burst1, burst2, burst3,
             [circle100_1, circle75_1, circle15_25_1, circle15_55_1, circle90_1]
-            //, points1, points2
         ).play();
 
     }, []);
     return (
-        <Grid item xs={5} component={Box} display={{ xs: 'none', lg: 'flex' }} id='container' className={classes.container}>
+        <Grid item xs={5} component={Box} display={{ xs: 'none', lg: 'flex' }} className={classes.container}>
+            <Box id='animation' className={classes.animation}/>
         </Grid>
     );
 }

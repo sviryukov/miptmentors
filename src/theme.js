@@ -16,7 +16,7 @@ let theme = createMuiTheme({
 });
 
 theme.typography.h2 = {
-    fontSize: '22px',
+    fontSize: '21px',
     fontWeight: 'normal',
     [theme.breakpoints.up('sm')]: {
         fontSize: '33px'

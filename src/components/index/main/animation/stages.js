@@ -1,5 +1,5 @@
 export default [{
-    parent: document.getElementById('container'),
+    parent: document.getElementById('animation'),
     duration: 4000,
     easing: 'expo.inout'
 }, {
