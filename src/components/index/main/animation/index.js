@@ -47,7 +47,7 @@ export default () => {
 
         new mojs.Timeline({
             repeat: 3600,
-            onPlaybackStart: () => {
+            onStart: () => {
                 document.getElementsByClassName(classes.animation)[0].style.backgroundImage = 'none';
             }
         }).add(
