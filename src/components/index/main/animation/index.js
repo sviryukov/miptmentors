@@ -14,7 +14,8 @@ const useStyles = makeStyles({
         width: '396px',
         height: '100%',
         position: 'relative',
-        marginLeft: 'calc(100% - 396px)'
+        marginLeft: 'calc(100% - 396px)',
+        backgroundImage: 'url(img/main-animation-bg.svg)'
     }
 });
 
@@ -45,7 +46,10 @@ export default () => {
         const circleRolling1 = circleRolling.build();
 
         new mojs.Timeline({
-            repeat: 3600
+            repeat: 3600,
+            onPlaybackStart: () => {
+                document.getElementsByClassName(classes.animation)[0].style.backgroundImage = 'none';
+            }
         }).add(
             circleStatic1, circleRolling1,
             burst1, burst2, burst3,
