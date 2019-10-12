@@ -41,7 +41,6 @@ export default () => {
                 <Select setCategory={handleSetCategory}/>
                 <Grid item xs={12}/>
                 <Grid item xs={10} sm={8} lg={7} xl={8}>
-                    <Fade in={mentorsVisible}>
                         <Grid container spacing={4} className={classes.mentorsContainer}>
                             {mentors.map((mentor, i) => (
                                 (category === 'all' || mentors[i].categories.indexOf(category) !== -1) &&
@@ -49,10 +48,10 @@ export default () => {
                                       name={mentor.name}
                                       img={mentor.img}
                                       education={mentor.education}
-                                      work={mentor.work}/>
+                                      work={mentor.work}
+                                      visible={mentorsVisible}/>
                             ))}
                         </Grid>
-                    </Fade>
                 </Grid>
             </Grid>
         </React.Fragment>

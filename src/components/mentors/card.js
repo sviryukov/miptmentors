@@ -1,5 +1,5 @@
 import React from "react";
-import {Card, CardMedia, CardContent, Grid} from "@material-ui/core";
+import {Card, CardMedia, CardContent, Grid, Grow} from "@material-ui/core";
 import {makeStyles} from "@material-ui/styles";
 
 const useStyles = makeStyles(theme => ({
@@ -20,15 +20,17 @@ export default (props) => {
     const classes = useStyles();
     return (
         <Grid item xs={12} md={6} lg={4} xl={3}>
-            <Card className={classes.card}>
-                <CardMedia image={'/img/' + props.img} component="img"/>
-                <CardContent className={classes.content}>
-                    <p className={classes.name}>{props.name}</p>
-                    {props.education}
-                    <br/>
-                    {props.work}
-                </CardContent>
-            </Card>
+            <Grow in={props.visible}>
+                <Card className={classes.card}>
+                    <CardMedia image={'/img/' + props.img} component="img"/>
+                    <CardContent className={classes.content}>
+                        <p className={classes.name}>{props.name}</p>
+                        {props.education}
+                        <br/>
+                        {props.work}
+                    </CardContent>
+                </Card>
+            </Grow>
         </Grid>
     );
 }
