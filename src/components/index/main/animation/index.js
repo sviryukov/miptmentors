@@ -34,27 +34,14 @@ export default () => {
         circleStatic = require('./circle-static');
         circleRolling = require('./circle-rolling');
 
-        const circle90_1 = circle90.build();
-        const circle15_25_1 = circle15_25.build();
-        const circle15_55_1 = circle15_55.build();
-        const circle75_1 = circle75.build();
-        const circle100_1 = circle100.build();
-        const burst1 = burst.build(12000);
-        const burst2 = burst.build(21000);
-        const burst3 = burst.build(26000);
-        const circleStatic1 = circleStatic.build();
-        const circleRolling1 = circleRolling.build();
+        const shapes = [circle90.build(), circle15_25.build(), circle15_55.build(), circle75.build(), circle100.build(),
+            burst.build(12000), burst.build(21000), burst.build(26000), circleStatic.build()];
 
-        new mojs.Timeline({
-            repeat: 3600,
-            onStart: () => {
-                document.getElementsByClassName(classes.animation)[0].style.backgroundImage = 'none';
-            }
-        }).add(
-            circleStatic1, circleRolling1,
-            burst1, burst2, burst3,
-            [circle100_1, circle75_1, circle15_25_1, circle15_55_1, circle90_1]
-        ).play();
+        const timeline = new mojs.Timeline({ repeat: 3600 }).add(shapes, circleRolling.build(false));
+        const initialTimeline = new mojs.Timeline({
+            onStart: () => document.getElementsByClassName(classes.animation)[0].style.backgroundImage = 'none',
+            onComplete: () => timeline.play()
+        }).add(shapes, circleRolling.build(true)).play();
 
     }, []);
     return (
