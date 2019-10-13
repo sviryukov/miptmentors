@@ -8,8 +8,13 @@ const useStyles = makeStyles(theme => ({
         width: '80px',
         height: '102px'
     },
-    icon: {
-        color: theme.palette.text.light
+    iconButton: {
+        color: theme.palette.text.light,
+        transition: 'all 0.4s',
+        '&:hover': {
+            backgroundColor: theme.palette.secondary.main,
+            color: theme.palette.primary.main
+        }
     }
 }));
 
@@ -17,8 +22,8 @@ export default () => {
     const classes = useStyles();
     return (
         <ListItem className={classes.listItem}>
-            <IconButton href='/signin'>
-                <PersonOutlineOutlined size="medium" className={classes.icon}/>
+            <IconButton href='/signin' className={classes.iconButton}>
+                <PersonOutlineOutlined size="medium"/>
             </IconButton>
         </ListItem>
     );
