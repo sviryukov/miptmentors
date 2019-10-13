@@ -22,7 +22,7 @@ export default () => {
     return (
         <Grid item className={classes.container}>
             <ListItem className={classes.listItem} component={Link} href='./' underline='none'>
-                <Typography variant='h1' className={classes.logo}>
+                <Typography variant='h2' className={classes.logo}>
                     КЛУБ<br/>МЕНТОРОВ<br/>ФИЗТЕХ-СОЮЗА
                 </Typography>
             </ListItem>
