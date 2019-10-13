@@ -1,7 +1,7 @@
 import React from 'react';
 import {ListItem, Link, ListItemText, List, ListItemIcon} from '@material-ui/core';
 import {makeStyles} from '@material-ui/styles';
-import SignInIcon from '@material-ui/icons/ExitToApp';
+import {PersonOutlineOutlined} from '@material-ui/icons';
 
 const useStyles = makeStyles({
     signInText: {
@@ -16,7 +16,7 @@ export default () => {
         <List>
             <ListItem button component={Link} href='/signin'>
                 <ListItemIcon>
-                    <SignInIcon/>
+                    <PersonOutlineOutlined/>
                 </ListItemIcon>
                 <ListItemText primary='Войти' classes={{primary:classes.signInText}}/>
             </ListItem>
