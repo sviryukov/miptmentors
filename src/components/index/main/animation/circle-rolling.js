@@ -1,6 +1,6 @@
 import mojs from '@mojs/core';
 
-const build = initial => new mojs.Shape({
+const build = () => new mojs.Shape({
     parent: document.getElementById('animation'),
     fill: 'none',
     radius: 181,
@@ -10,13 +10,13 @@ const build = initial => new mojs.Shape({
     strokeDasharray: '100%',
     strokeDashoffset: '90%',
     angle: {'0': '360'},
-    duration: 5400,
-    easing: initial ? 'sin.in' : 'linear.none',
-    isShowEnd: false
+    duration: 7200,
+    easing: 'sin.in'
 }).then({
     angle: {'0': '1440'},
-    duration: 21600,
-    easing: 'linear.none'
+    duration: 19800,
+    easing: 'linear.none',
+    repeat: 4909
 });
 
 export { build };
