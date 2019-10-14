@@ -1,9 +1,12 @@
-import React from 'react'
-import {Typography} from "@material-ui/core";
+import React, {useEffect, useRef} from 'react'
+import {Button, Typography} from "@material-ui/core";
 import {makeStyles} from "@material-ui/styles";
 
 const useStyles = makeStyles(theme => ({
     learnMore: {
+        position: 'relative',
+        top: '-50px',
+        opacity: 0,
         width: 'fit-content',
         margin: '10px auto',
         cursor: 'pointer',
@@ -23,10 +26,16 @@ const useStyles = makeStyles(theme => ({
     }
 }));
 
-export default () => {
+export default props => {
     const classes = useStyles();
+    const learnMore = useRef(null);
+    useEffect(() => {
+        learnMore.current.style.transition = 'opacity 0.5s ' + props.animation_delay + 's, top 0.5s ' + props.animation_delay + 's';
+        learnMore.current.style.opacity = 1;
+        learnMore.current.style.top = '0px';
+    });
     return (
-        <Typography className={classes.learnMore}>
+        <Typography className={classes.learnMore} ref={learnMore}>
             Узнать больше ➙
         </Typography>
     );
