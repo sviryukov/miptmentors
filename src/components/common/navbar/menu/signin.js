@@ -7,7 +7,10 @@ const useStyles = makeStyles(theme => ({
     listItem: {
         position: 'relative',
         width: '80px',
-        height: '102px',
+        height: '81px',
+        [theme.breakpoints.up('xl')]: {
+            height: '94px'
+        },
         zIndex: 1,
         color: theme.palette.text.light,
         transition: 'all 0.4s',

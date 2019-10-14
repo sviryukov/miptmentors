@@ -5,9 +5,12 @@ import MenuItem from "./item";
 import MenuSignIn from "./signin";
 import MenuOpenDrawer from "./open-drawer";
 
-const useStyles = makeStyles({
+const useStyles = makeStyles(theme => ({
     container: {
-        width: 'calc(100% - 225px)'
+        width: 'calc(100% - 195px)',
+        [theme.breakpoints.up('xl')]: {
+            width: 'calc(100% - 207px)'
+        }
     },
     list: {
         flexDirection: 'row',
@@ -15,7 +18,7 @@ const useStyles = makeStyles({
         padding: '0px',
         alignItems: 'center'
     }
-});
+}));
 
 export default props => {
     const classes = useStyles();

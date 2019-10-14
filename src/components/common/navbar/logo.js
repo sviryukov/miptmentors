@@ -4,13 +4,20 @@ import {makeStyles} from '@material-ui/styles';
 
 const useStyles = makeStyles(theme => ({
     listItem: {
-        width: '225px',
-        padding: '15px 24px',
-        backgroundColor: theme.palette.secondary.main
+        backgroundColor: theme.palette.secondary.main,
+        width: '195px',
+        padding: '12px 19px',
+        [theme.breakpoints.up('xl')]: {
+            width: '207px',
+            padding: '14px 22px',
+        }
     },
     logo: {
         color: theme.palette.primary.main,
-        fontSize: '24px',
+        fontSize: '19px',
+        [theme.breakpoints.up('xl')]: {
+            fontSize: '22px',
+        },
         lineHeight: '1',
         fontWeight: '100',
         letterSpacing: '-0.01562em'

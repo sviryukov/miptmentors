@@ -6,7 +6,7 @@ import {makeStyles} from '@material-ui/styles';
 const useStyles = makeStyles( theme => ({
     listItem: {
         width: '80px',
-        height: '102px'
+        height: '81px'
     },
     icon: {
         color: theme.palette.text.light
