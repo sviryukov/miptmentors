@@ -7,7 +7,7 @@ import Container from './container';
 const useStyles = makeStyles(theme => ({
     main: {
         [theme.breakpoints.up('sm')]: {
-            height: '730px'
+            height: '830px'
         },
         [theme.breakpoints.up('md')]: {
             height: '100%',
