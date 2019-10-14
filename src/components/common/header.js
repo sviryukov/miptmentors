@@ -4,12 +4,12 @@ import {makeStyles} from "@material-ui/styles";
 
 const useStyles = makeStyles(theme => ({
     container: {
-        marginBottom: "40px",
         paddingTop: "30px",
-        paddingBottom: "90px",
+        paddingBottom: "60px",
         backgroundImage: 'url(/img/header-bg.svg)',
         backgroundPositionX: 'center',
         [theme.breakpoints.up('sm')]: {
+            marginBottom: "40px",
             paddingTop: "20px",
             paddingBottom: "80px"
         }
