@@ -25,7 +25,7 @@ export default (passport, client) => {
 			),
 		);
 		const css = sheets.toString();
-		response.send(template('Клуб Менторов Физтех-Союза', html, "index", css));
+		response.send(template('Клуб Менторов Физтех-Союза - программа наставничества МФТИ', html, "index", css));
 	});
 
 	router.get("/news", (request, response) => {
