@@ -32,12 +32,12 @@ export default () => {
         const shapes = [circle90.build(), circle15_25.build(), circle15_55.build(), circle75.build(), circle100.build(),
             burst.build(12000), burst.build(21000), burst.build(26000), circleStatic.build()];
 
-        const mainTimeline = new mojs.Timeline({ repeat: 3600 }).add(shapes);
+        const mainTimeline = new mojs.Timeline({
+            repeat: 3600,
+            onStart: () => document.getElementsByClassName(classes.animation)[0].style.backgroundImage = 'none'
+        }).add(shapes);
         const circleRollingTimeline = new mojs.Timeline({
-            onStart: () => {
-                document.getElementsByClassName(classes.animation)[0].style.backgroundImage = 'none';
-                mainTimeline.play()
-            }
+            onStart: () => mainTimeline.play()
         }).add(circleRolling.build()).play();
 
     }, []);
