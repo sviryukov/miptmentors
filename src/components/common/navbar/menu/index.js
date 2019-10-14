@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useEffect, useRef} from 'react';
 import {Grid, Box, List} from '@material-ui/core';
 import {makeStyles} from '@material-ui/styles';
 import MenuItem from "./item";
@@ -6,7 +6,10 @@ import MenuSignIn from "./signin";
 import MenuOpenDrawer from "./open-drawer";
 
 const useStyles = makeStyles(theme => ({
-    container: {
+    menuContainer: {
+        position: 'relative',
+        top: '-100px',
+        transition: 'top 0.5s 0.3s',
         width: 'calc(100% - 195px)',
         [theme.breakpoints.up('xl')]: {
             width: 'calc(100% - 207px)'
@@ -22,8 +25,12 @@ const useStyles = makeStyles(theme => ({
 
 export default props => {
     const classes = useStyles();
+    const menuContainer = useRef(null);
+    useEffect(() => {
+        menuContainer.current.style.top = '0px';
+    });
     return (
-        <Grid item className={classes.container}>
+        <Grid item className={classes.menuContainer} ref={menuContainer}>
             <Box component={List} className={classes.list} display={{ xs: 'none', md: 'flex'}}>
                 <MenuItem text='Новости проекта' href='/news' id='news'/>
                 <MenuItem text='Менторы проекта' href='/mentors' id='mentors'/>
