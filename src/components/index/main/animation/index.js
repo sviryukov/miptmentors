@@ -1,5 +1,5 @@
 import React, {useEffect} from 'react';
-import {Grid, Box} from "@material-ui/core";
+import {Grid, Box, Fade} from "@material-ui/core";
 import {makeStyles} from "@material-ui/styles";
 
 const useStyles = makeStyles({
@@ -42,8 +42,10 @@ export default () => {
 
     }, []);
     return (
-        <Grid item xs={5} component={Box} display={{ xs: 'none', lg: 'flex' }} className={classes.container}>
-            <Box id='animation' className={classes.animation}/>
-        </Grid>
+        <Fade in={true} timeout={1500}>
+            <Grid item xs={5} component={Box} display={{ xs: 'none', lg: 'flex' }} className={classes.container}>
+                <Box id='animation' className={classes.animation}/>
+            </Grid>
+        </Fade>
     );
 }
