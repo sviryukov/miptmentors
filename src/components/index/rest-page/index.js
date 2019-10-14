@@ -9,7 +9,7 @@ const useStyles = makeStyles({
         minHeight: '2000px',
         margin: 'auto',
         backgroundColor: '#fafafa',
-        transition: 'width 0.1s, top 0.5s'
+        transition: 'width 0.1s, top 0.5s 0.7s'
     }
 });
 
