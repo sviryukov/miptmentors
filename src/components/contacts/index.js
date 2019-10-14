@@ -16,7 +16,7 @@ export default () => {
                     <Grid container spacing={6} justify='center'>
                         {
                             data.map((contact, i) => (
-                                <Contact { ...contact } key={i} />
+                                <Contact { ...contact } key={i} animation_delay={i*0.1}/>
                             ))
                         }
                     </Grid>
