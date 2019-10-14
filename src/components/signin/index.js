@@ -53,7 +53,7 @@ export default () => {
                         variant='outlined'
                         className={classes.textField}/>
                     <TextField
-                        label='Password'
+                        label='Пароль'
                         type='password'
                         id='password'
                         name='password'
