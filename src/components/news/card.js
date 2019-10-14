@@ -10,7 +10,10 @@ const useStyles = makeStyles(theme => ({
         }
     },
     content: {
-        fontSize: '20px'
+        fontSize: '16px',
+        [theme.breakpoints.up('xl')]: {
+            fontSize: '18px'
+        }
     },
     title: {
         margin: '0px'
