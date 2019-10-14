@@ -11,10 +11,6 @@ let useStyles = makeStyles({
         top: '50px',
         opacity: 0,
         textAlign: 'center'
-    },
-    mounted: {
-        top: '0px',
-        opacity: 1
     }
 });
 
