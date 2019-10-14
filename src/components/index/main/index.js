@@ -6,6 +6,24 @@ import Content from './content';
 import Animation from './animation';
 
 const useStyles = makeStyles(theme => ({
+    main: {
+        height: '670px',
+        [theme.breakpoints.up('sm')]: {
+            height: '730px'
+        },
+        [theme.breakpoints.up('md')]: {
+            height: '100%',
+            minHeight: '700px',
+            maxHeight: '800px'
+        },
+        [theme.breakpoints.up('lg')]: {
+            height: '100%',
+            minHeight: '830px',
+            maxHeight: '1000px'
+        },
+        padding: '0px',
+        backgroundColor: theme.palette.primary.main
+    },
     container: {
         height: '100%',
         marginTop: '40px',
@@ -19,29 +37,6 @@ const useStyles = makeStyles(theme => ({
         [theme.breakpoints.up('xl')]: {
             marginTop: '150px'
         }
-    },
-    main: {
-        height: '650px',
-        [theme.breakpoints.up('sm')]: {
-            height: '780px'
-        },
-        [theme.breakpoints.up('md')]: {
-            height: '100%',
-            minHeight: '750px',
-            maxHeight: '850px'
-        },
-        [theme.breakpoints.up('lg')]: {
-            height: '100%',
-            minHeight: '800px',
-            maxHeight: '950px'
-        },
-        [theme.breakpoints.up('xl')]: {
-            height: '100%',
-            minHeight: '852px',
-            maxHeight: '1100px'
-        },
-        padding: '0px',
-        backgroundColor: theme.palette.primary.main
     }
 }));
 
