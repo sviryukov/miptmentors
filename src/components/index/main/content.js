@@ -1,9 +1,8 @@
 import React from 'react'
 import {Grid, Typography, Button} from "@material-ui/core";
 import {makeStyles} from "@material-ui/styles";
-import theme from "../../../theme";
 
-const useStyles = makeStyles({
+const useStyles = makeStyles(theme => ({
     description: {
         marginBottom: '40px',
         lineHeight: '1.4',
@@ -20,22 +19,20 @@ const useStyles = makeStyles({
         margin: '0px 10px 10px 0px',
         fontSize: '20px'
     }
-});
+}));
 
 export default () => {
     const classes = useStyles();
     return (
         <Grid item xs={12} md={10} lg={7}>
             <Typography variant='h2' className={classes.description} color='secondary'>
-                Программа наставничества для студентов МФТИ
+                Программа наставничества<br/>для студентов МФТИ
             </Typography>
             <Button color='secondary'
                     variant='outlined'
-                    size='large'
                     className={classes.button}>Найти ментора</Button>
             <Button color='secondary'
                     variant='outlined'
-                    size='large'
                     className={classes.button}>Стать ментором</Button>
         </Grid>
     );
