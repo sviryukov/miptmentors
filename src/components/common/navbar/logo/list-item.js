@@ -1,5 +1,5 @@
 import React from 'react';
-import {Grid, ListItem, Link, Typography} from '@material-ui/core';
+import {ListItem, Link, Typography} from '@material-ui/core';
 import {makeStyles} from '@material-ui/styles';
 
 const useStyles = makeStyles(theme => ({
@@ -27,12 +27,10 @@ const useStyles = makeStyles(theme => ({
 export default () => {
     const classes = useStyles();
     return (
-        <Grid item className={classes.container}>
-            <ListItem className={classes.listItem} component={Link} href='./' underline='none'>
-                <Typography variant='h2' className={classes.logo}>
-                    КЛУБ<br/>МЕНТОРОВ<br/>ФИЗТЕХ-СОЮЗА
-                </Typography>
-            </ListItem>
-        </Grid>
+        <ListItem className={classes.listItem} component={Link} href='./' underline='none'>
+            <Typography variant='h2' className={classes.logo}>
+                КЛУБ<br/>МЕНТОРОВ<br/>ФИЗТЕХ-СОЮЗА
+            </Typography>
+        </ListItem>
     );
 };
