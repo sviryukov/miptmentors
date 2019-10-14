@@ -5,7 +5,7 @@ import {makeStyles} from "@material-ui/styles";
 const useStyles = makeStyles({
     restPage: {
         position: 'relative',
-        top: '0px',
+        top: '200px',
         minHeight: '2000px',
         margin: 'auto',
         backgroundColor: '#fafafa',
