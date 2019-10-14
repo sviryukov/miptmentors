@@ -3,12 +3,21 @@ import {Grid, Typography, Button} from "@material-ui/core";
 import {makeStyles} from "@material-ui/styles";
 
 const useStyles = makeStyles(theme => ({
+    grid: {
+        textAlign: 'center',
+        [theme.breakpoints.up('sm')]: {
+            textAlign: 'left'
+        }
+    },
     header: {
         marginBottom: '15px',
         lineHeight: '1.4',
         fontWeight: 'normal',
-        fontSize: '32px',
+        fontSize: '25px',
         [theme.breakpoints.up('sm')]: {
+            fontSize: '40px'
+        },
+        [theme.breakpoints.up('md')]: {
             fontSize: '44px'
         },
         [theme.breakpoints.up('xl')]: {
@@ -20,7 +29,7 @@ const useStyles = makeStyles(theme => ({
         lineHeight: '1.4',
         fontWeight: 'normal',
         color: theme.palette.text.light,
-        fontSize: '15px',
+        fontSize: '20px',
         [theme.breakpoints.up('sm')]: {
             fontSize: '22px'
         },
@@ -30,16 +39,20 @@ const useStyles = makeStyles(theme => ({
     },
     button: {
         margin: '0px 10px 10px 0px',
-        fontSize: '20px'
+        fontSize: '16px',
+        [theme.breakpoints.up('sm')]: {
+            fontSize: '20px'
+        }
     },
     link: {
         width: 'fit-content',
-        marginTop: '10px',
+        margin: '10px auto',
         cursor: 'pointer',
         color: 'cyan',
-        transition: 'all 0.4s',
-        fontSize: '16px',
+        transition: 'color 0.4s',
+        fontSize: '17px',
         [theme.breakpoints.up('sm')]: {
+            margin: '10px 0px',
             fontSize: '20px'
         },
         [theme.breakpoints.up('xl')]: {
@@ -54,7 +67,7 @@ const useStyles = makeStyles(theme => ({
 export default () => {
     const classes = useStyles();
     return (
-        <Grid item xs={12} md={10} lg={7}>
+        <Grid item xs={12} md={10} lg={7} className={classes.grid}>
             <Typography variant='h1' className={classes.header} color='secondary'>
                 Программа наставничества<br/>для студентов МФТИ
             </Typography>

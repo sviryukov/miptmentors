@@ -7,7 +7,6 @@ import Animation from './animation';
 
 const useStyles = makeStyles(theme => ({
     main: {
-        height: '670px',
         [theme.breakpoints.up('sm')]: {
             height: '730px'
         },
@@ -27,9 +26,10 @@ const useStyles = makeStyles(theme => ({
     container: {
         height: '100%',
         marginTop: '40px',
-        padding: '0px 5%',
+        padding: '50px 5% 150px',
         [theme.breakpoints.up('sm')]: {
-            marginTop: '100px'
+            marginTop: '100px',
+            padding: '0px 5%'
         },
         [theme.breakpoints.up('md')]: {
             padding: '0px 20px'
