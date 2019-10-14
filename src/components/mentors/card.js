@@ -20,7 +20,7 @@ export default (props) => {
     const classes = useStyles();
     return (
         <Grid item xs={12} sm={6} md={4} xl={3}>
-            <Grow in={props.visible}>
+            <Grow in={props.visible} timeout={500}>
                 <Card className={classes.card}>
                     <CardMedia image={'/img/' + props.img} component="img"/>
                     <CardContent className={classes.content}>
