@@ -2,7 +2,7 @@ import React from 'react';
 import { hydrate } from 'react-dom';
 import { ThemeProvider } from "@material-ui/styles";
 import Index from '../components/index';
-import theme from "../themeBgDark";
+import theme from "../theme-bg-dark";
 
 function Main() {
     React.useEffect(() => {

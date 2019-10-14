@@ -4,7 +4,7 @@ import { renderToString } from 'react-dom/server';
 import { ServerStyleSheets, ThemeProvider } from "@material-ui/styles";
 import template from './src/template';
 import theme from './src/theme';
-import themeBgDark from './src/themeBgDark';
+import themeBgDark from './src/theme-bg-dark';
 import Index from './src/components/index';
 import News from './src/components/news';
 import Mentors from './src/components/mentors';
