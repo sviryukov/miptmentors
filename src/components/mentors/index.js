@@ -40,7 +40,7 @@ export default () => {
                 <Header text='Менторы проекта'/>
                 <Select setCategory={handleSetCategory}/>
                 <Grid item xs={12}/>
-                <Grid item xs={10} sm={8} lg={7} xl={8}>
+                <Grid item xs={10} lg={7} xl={8}>
                         <Grid container spacing={4} className={classes.mentorsContainer}>
                             {mentors.map((mentor, i) => (
                                 (category === 'all' || mentors[i].categories.indexOf(category) !== -1) &&
