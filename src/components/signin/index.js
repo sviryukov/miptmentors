@@ -23,10 +23,10 @@ export default () => {
             <Grid container justify='center'>
                 <Header text=''/>
                 <Grid item xl={2} lg={3} md={4} sm={6} xs={8} className={classes.grid}>
-                    <SingInHeader/>
-                    <EmailField/>
-                    <PasswordField/>
-                    <Button/>
+                    <SingInHeader animation_delay={0}/>
+                    <EmailField animation_delay={0.1}/>
+                    <PasswordField animation_delay={0.2}/>
+                    <Button animation_delay={0.3}/>
                 </Grid>
             </Grid>
         </React.Fragment>
