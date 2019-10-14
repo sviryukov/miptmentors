@@ -4,6 +4,8 @@ import { ThemeProvider } from "@material-ui/styles";
 import Index from '../components/index';
 import theme from "../theme";
 
+theme.palette.background.default = theme.palette.primary.main;
+
 function Main() {
     React.useEffect(() => {
         const jssStyles = document.querySelector('#jss-server-side');

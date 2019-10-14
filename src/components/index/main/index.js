@@ -20,8 +20,7 @@ const useStyles = makeStyles(theme => ({
             minHeight: '830px',
             maxHeight: '1000px'
         },
-        padding: '0px',
-        backgroundColor: theme.palette.primary.main
+        padding: '0px'
     },
     container: {
         height: '100%',

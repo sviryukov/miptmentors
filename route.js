@@ -16,9 +16,11 @@ export default (passport, client) => {
 
 	router.get("/", (request, response) => {
 		const sheets = new ServerStyleSheets();
+		let darkTheme = theme;
+		darkTheme.palette.background.default = theme.palette.primary.main;
 		const html = renderToString(
 			sheets.collect(
-				<ThemeProvider theme={theme}>
+				<ThemeProvider theme={darkTheme}>
 					<Index/>
 				</ThemeProvider>,
 			),

@@ -1,21 +1,17 @@
 import React, {useEffect, useState} from 'react'
-import {Container, Grid} from "@material-ui/core";
+import {Grid} from "@material-ui/core";
 import {makeStyles} from "@material-ui/styles";
 
-const useStyles = makeStyles(theme => ({
-    background: {
+const useStyles = makeStyles({
+    container: {
         position: 'relative',
         top: '-100px',
-        padding: '0px',
-        backgroundColor: theme.palette.primary.main
-    },
-    container: {
         minHeight: '2000px',
         margin: 'auto',
         backgroundColor: '#fafafa',
         transition: 'width 0.1s ease-out'
     }
-}));
+});
 
 export default () => {
     const classes = useStyles();
@@ -27,10 +23,8 @@ export default () => {
         });
     }, []);
     return (
-        <Container maxWidth={false} className={classes.background}>
-            <Grid container className={classes.container} style={{ width: width + '%' }}>
+        <Grid container className={classes.container} style={{ width: width + '%' }}>
 
-            </Grid>
-        </Container>
+        </Grid>
     );
 };
