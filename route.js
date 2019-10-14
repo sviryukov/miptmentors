@@ -4,6 +4,7 @@ import { renderToString } from 'react-dom/server';
 import { ServerStyleSheets, ThemeProvider } from "@material-ui/styles";
 import template from './src/template';
 import theme from './src/theme';
+import themeBgDark from './src/themeBgDark';
 import Index from './src/components/index';
 import News from './src/components/news';
 import Mentors from './src/components/mentors';
@@ -16,11 +17,9 @@ export default (passport, client) => {
 
 	router.get("/", (request, response) => {
 		const sheets = new ServerStyleSheets();
-		let darkTheme = theme;
-		darkTheme.palette.background.default = theme.palette.primary.main;
 		const html = renderToString(
 			sheets.collect(
-				<ThemeProvider theme={darkTheme}>
+				<ThemeProvider theme={themeBgDark}>
 					<Index/>
 				</ThemeProvider>,
 			),

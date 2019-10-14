@@ -2,9 +2,7 @@ import React from 'react';
 import { hydrate } from 'react-dom';
 import { ThemeProvider } from "@material-ui/styles";
 import Index from '../components/index';
-import theme from "../theme";
-
-theme.palette.background.default = theme.palette.primary.main;
+import theme from "../themeBgDark";
 
 function Main() {
     React.useEffect(() => {
