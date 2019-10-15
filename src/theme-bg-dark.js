@@ -21,7 +21,7 @@ let theme = createMuiTheme({
         h1: {
             fontSize: '24px',
             fontWeight: 'normal',
-            [theme.breakpoints.up('sm')]: {
+            '@media (min-width: 600px)': {
                 fontSize: '30px'
             }
         }
