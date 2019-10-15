@@ -2,7 +2,7 @@ import React from 'react';
 import {makeStyles} from "@material-ui/styles";
 import {Link} from "@material-ui/core";
 
-let useStyles = makeStyles(theme =>({
+let useStyles = makeStyles(theme => ({
     link: {
         color: theme.palette.text.link
     }

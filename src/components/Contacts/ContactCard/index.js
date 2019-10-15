@@ -26,14 +26,14 @@ export default (props) => {
         <Grid item xs={9} sm={7} md={4} lg={3}
               className={classes.contactContainer}
               ref={contactContainer}>
-            <ContactCardImg img={props.img}/>
+            <ContactCardImg img={props.img} name={props.name}/>
             <p><b>{props.name}</b></p>
             <p>{props.role}</p>
             <ContactCardLinks email={props.email}
-                   phone={props.phone}/>
+                              phone={props.phone}/>
             <ContactCardSocialNetworks vk={props.vk}
-                            facebook={props.facebook}
-                            telegram={props.telegram}/>
+                                       facebook={props.facebook}
+                                       telegram={props.telegram}/>
         </Grid>
     );
 };

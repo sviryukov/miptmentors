@@ -1,6 +1,6 @@
 import React, {useEffect, useRef} from 'react';
-import {Grid, Box, List} from '@material-ui/core';
 import {makeStyles} from '@material-ui/styles';
+import {Grid, List, Box} from '@material-ui/core';
 import MenuItem from "./MenuItem";
 import MenuSignIn from "./MenuSignIn";
 import MenuOpenDrawer from "./MenuOpenDrawer";
@@ -31,15 +31,15 @@ export default props => {
     });
     return (
         <Grid item className={classes.menuContainer} ref={menuContainer}>
-            <Box component={List} className={classes.list} display={{ xs: 'none', md: 'flex'}}>
+            <List component={Box} className={classes.list} display={{ xs: 'none', md: 'flex'}}>
                 <MenuItem text='Новости проекта' href='/news' id='news'/>
                 <MenuItem text='Менторы проекта' href='/mentors' id='mentors'/>
                 <MenuItem text='Контакты' href='/contacts' id='contacts'/>
                 <MenuSignIn/>
-            </Box>
-            <Box component={List} className={classes.list} display={{ xs: 'flex', md: 'none'}}>
+            </List>
+            <List component={Box} className={classes.list} display={{ xs: 'flex', md: 'none'}}>
                 <MenuOpenDrawer handleClick={props.handleClick}/>
-            </Box>
+            </List>
         </Grid>
     );
 };

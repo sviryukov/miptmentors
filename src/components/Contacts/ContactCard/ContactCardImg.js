@@ -19,7 +19,7 @@ export default (props) => {
     const classes = useStyles();
     return (
         <Box boxShadow={3} className={classes.imgContainer}>
-            <img className={classes.img} src={'/img/' + props.img}/>
+            <img className={classes.img} src={'/img/' + props.img} alt={props.name}/>
         </Box>
     );
 };

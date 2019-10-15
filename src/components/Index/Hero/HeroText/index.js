@@ -1,6 +1,6 @@
 import React from 'react'
-import {Grid} from "@material-ui/core";
 import {makeStyles} from "@material-ui/styles";
+import {Grid} from "@material-ui/core";
 import HeroTextHeader from './HeroTextHeader';
 import HeroTextDescription from './HeroTextDescription';
 import HeroTextButton from './HeroTextButton';

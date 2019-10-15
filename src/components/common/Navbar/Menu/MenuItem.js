@@ -1,6 +1,5 @@
 import React from 'react';
-import { ListItem, ListItemText } from '@material-ui/core';
-import Link from '@material-ui/core/Link';
+import {ListItem, Link, ListItemText} from '@material-ui/core';
 import {makeStyles} from '@material-ui/styles';
 
 const useStyles = makeStyles(theme => ({

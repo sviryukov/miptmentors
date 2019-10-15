@@ -10,4 +10,4 @@ const build = () => new mojs.Shape({
     strokeDasharray: '100%'
 });
 
-export { build };
+export {build};

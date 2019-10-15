@@ -1,5 +1,5 @@
 import React from 'react';
-import {Divider, Drawer, List} from '@material-ui/core';
+import {Drawer, List, Divider} from '@material-ui/core';
 import DrawerItem from "./DrawerItem";
 import DrawerSignIn from "./DrawerSignIn";
 

@@ -1,6 +1,6 @@
 import React from 'react';
-import {ListItem, Link, ListItemText, List, ListItemIcon} from '@material-ui/core';
 import {makeStyles} from '@material-ui/styles';
+import {List, ListItem, Link, ListItemIcon, ListItemText} from '@material-ui/core';
 import {PersonOutlineOutlined} from '@material-ui/icons';
 
 const useStyles = makeStyles({
@@ -18,7 +18,7 @@ export default () => {
                 <ListItemIcon>
                     <PersonOutlineOutlined/>
                 </ListItemIcon>
-                <ListItemText primary='Войти' classes={{primary:classes.drawerSignInText}}/>
+                <ListItemText primary='Войти' classes={{primary: classes.drawerSignInText}}/>
             </ListItem>
         </List>
     );

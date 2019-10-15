@@ -1,6 +1,6 @@
 import React from "react";
-import {Card, CardActionArea, CardMedia, Grid, CardContent} from "@material-ui/core";
 import {makeStyles} from "@material-ui/styles";
+import {Grid, Card, CardActionArea, CardMedia, CardContent} from "@material-ui/core";
 
 const useStyles = makeStyles(theme => ({
     newsCard: {
@@ -29,9 +29,9 @@ export default (props) => {
     const classes = useStyles();
     let dateObj = new Date(props.date);
     let date = "";
-    if(dateObj.getDate() < 10) date += "0";
+    if (dateObj.getDate() < 10) date += "0";
     date += dateObj.getDate() + ".";
-    if(dateObj.getMonth() < 10) date += "0";
+    if (dateObj.getMonth() < 10) date += "0";
     date += dateObj.getMonth() + ".";
     date += dateObj.getFullYear();
     return (

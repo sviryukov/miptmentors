@@ -1,6 +1,6 @@
 import React from 'react';
-import { ListItem, Link, ListItemText } from '@material-ui/core';
 import {makeStyles} from '@material-ui/styles';
+import {ListItem, Link, ListItemText} from '@material-ui/core';
 
 const useStyles = makeStyles({
     drawerItemText: {
@@ -13,7 +13,7 @@ export default (props) => {
     const classes = useStyles();
     return (
         <ListItem button component={Link} href={props.href}>
-            <ListItemText primary={props.text} classes={{primary:classes.drawerItemText}}/>
+            <ListItemText primary={props.text} classes={{primary: classes.drawerItemText}}/>
         </ListItem>
     );
 };

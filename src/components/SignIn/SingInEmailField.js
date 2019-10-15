@@ -1,6 +1,6 @@
 import React, {useEffect, useRef} from 'react';
-import {TextField} from '@material-ui/core';
 import {makeStyles} from '@material-ui/styles';
+import {TextField} from '@material-ui/core';
 
 let useStyles = makeStyles({
     singInEmailField: {

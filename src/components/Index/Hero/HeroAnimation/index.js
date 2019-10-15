@@ -1,6 +1,6 @@
 import React, {useEffect} from 'react';
-import {Fade, Grid, Box} from "@material-ui/core";
 import {makeStyles} from "@material-ui/styles";
+import {Fade, Grid, Box} from "@material-ui/core";
 
 const useStyles = makeStyles({
     heroAnimation: {
@@ -34,14 +34,15 @@ export default () => {
         }).add(shapes);
         const circleRollingTimeline = new mojs.Timeline({
             onStart: () => mainTimeline.play()
-        }).add(circleRolling.build()).play();
+        }).add(circleRolling.build());
+        circleRollingTimeline.play();
 
     }, []);
     return (
         <Fade in={true} timeout={1500}>
             <Grid item
                   component={Box}
-                  display={{ xs: 'none', lg: 'flex' }}
+                  display={{xs: 'none', lg: 'flex'}}
                   className={classes.heroAnimation}
                   id='hero-animation'/>
         </Fade>

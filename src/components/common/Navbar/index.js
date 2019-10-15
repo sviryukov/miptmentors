@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
-import {Grid, Hidden} from '@material-ui/core';
 import {makeStyles} from '@material-ui/styles';
+import {Grid, Hidden} from '@material-ui/core';
 import Logo from './Logo';
 import Menu from './Menu';
 import Drawer from './Drawer';

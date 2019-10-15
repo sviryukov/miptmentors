@@ -1,6 +1,6 @@
 import React from 'react';
-import {Link, ListItem} from '@material-ui/core';
 import {makeStyles} from '@material-ui/styles';
+import {ListItem, Link} from '@material-ui/core';
 import {PersonOutlineOutlined} from "@material-ui/icons";
 
 const useStyles = makeStyles(theme => ({

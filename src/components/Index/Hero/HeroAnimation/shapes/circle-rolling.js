@@ -19,4 +19,4 @@ const build = () => new mojs.Shape({
     repeat: 4909
 });
 
-export { build };
+export {build};

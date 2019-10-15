@@ -3,18 +3,18 @@ import theme from "../../../../../theme";
 
 const build = delay => new mojs.Burst({
     parent: document.getElementById('hero-animation'),
-    radius: { 110: 200 },
+    radius: {110: 200},
     angle: 30,
     children: {
         shape: 'line',
         radius: 10,
         stroke: theme.palette.secondary.main,
         strokeDasharray: '100%',
-        strokeDashoffset: { '-100%' : '100%' },
+        strokeDashoffset: {'-100%': '100%'},
         duration: 700,
-        easing:'quad.out',
+        easing: 'quad.out',
         delay: delay + 300
     }
 });
 
-export { build };
+export {build};

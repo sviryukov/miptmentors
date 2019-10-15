@@ -1,3 +1,4 @@
+import mojs from '@mojs/core';
 import stages from "../stages";
 import theme from "../../../../../theme";
 
@@ -36,4 +37,4 @@ const build = () => new mojs.Shape({
     radius: {'100': '70'}
 });
 
-export { build };
+export {build};

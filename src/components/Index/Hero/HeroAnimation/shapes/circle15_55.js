@@ -1,3 +1,4 @@
+import mojs from '@mojs/core';
 import stages from "../stages";
 
 const build = () => new mojs.Shape({
@@ -40,4 +41,4 @@ const build = () => new mojs.Shape({
     angle: {'81': '153'}
 });
 
-export { build };
+export {build};

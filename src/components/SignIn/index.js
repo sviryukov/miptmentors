@@ -1,6 +1,6 @@
 import React from 'react';
-import {Grid, CssBaseline} from '@material-ui/core';
 import {makeStyles} from '@material-ui/styles';
+import {CssBaseline, Grid} from '@material-ui/core';
 import Navbar from '../common/Navbar';
 import PageHeader from '../common/PageHeader';
 import SingInHeader from './SingInHeader';

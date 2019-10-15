@@ -4,7 +4,7 @@ import {Link} from "@material-ui/core";
 import Vk from "../../common/VkIcon";
 import {Facebook, Telegram} from "@material-ui/icons";
 
-let useStyles = makeStyles(theme =>({
+let useStyles = makeStyles(theme => ({
     icon: {
         color: theme.palette.text.secondary,
         fontSize: '30px',

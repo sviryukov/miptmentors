@@ -1,8 +1,8 @@
 import React from "react";
-import {Card, CardMedia, CardContent, Grid, Grow} from "@material-ui/core";
 import {makeStyles} from "@material-ui/styles";
+import {Grid, Grow, Card, CardMedia, CardContent} from "@material-ui/core";
 
-const useStyles = makeStyles(theme => ({
+const useStyles = makeStyles({
     mentorCard: {
         boxShadow: 'none',
         borderRadius: '0px'
@@ -14,7 +14,7 @@ const useStyles = makeStyles(theme => ({
     mentorCardName: {
         fontWeight: 'bold'
     }
-}));
+});
 
 export default (props) => {
     const classes = useStyles();

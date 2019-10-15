@@ -11,7 +11,7 @@ export default () => {
         }
         window.scrollTo(0, 0);
     }, []);
-return (
+    return (
         <React.Fragment>
             <CssBaseline/>
             <Navbar/>

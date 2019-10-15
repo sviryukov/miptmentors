@@ -1,6 +1,6 @@
 import React from 'react';
-import {ListItem, Link, Typography} from '@material-ui/core';
 import {makeStyles} from '@material-ui/styles';
+import {ListItem, Link, Typography} from '@material-ui/core';
 
 const useStyles = makeStyles(theme => ({
     logoListItem: {

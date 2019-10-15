@@ -1,3 +1,4 @@
+import mojs from '@mojs/core';
 import theme from "../../../../../theme";
 
 const build = () => new mojs.Shape({
@@ -20,4 +21,4 @@ const build = () => new mojs.Shape({
     duration: 6000
 });
 
-export { build };
+export {build};

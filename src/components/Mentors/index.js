@@ -1,7 +1,7 @@
-import axios from 'axios';
 import React, {useEffect, useState} from 'react';
-import {CssBaseline, Grid, Fade} from "@material-ui/core";
 import {makeStyles} from "@material-ui/styles";
+import axios from 'axios';
+import {CssBaseline, Grid} from "@material-ui/core";
 import Navbar from '../common/Navbar';
 import PageHeader from '../common/PageHeader';
 import MentorsSelect from "./MentorsSelect";
@@ -43,11 +43,11 @@ export default () => {
                     {mentors.map((mentor, i) => (
                         (category === 'all' || mentors[i].categories.indexOf(category) !== -1) &&
                         <MentorCard key={mentor.name}
-                              name={mentor.name}
-                              img={mentor.img}
-                              education={mentor.education}
-                              work={mentor.work}
-                              visible={mentorsVisible}/>
+                                    name={mentor.name}
+                                    img={mentor.img}
+                                    education={mentor.education}
+                                    work={mentor.work}
+                                    visible={mentorsVisible}/>
                     ))}
                 </Grid>
             </Grid>

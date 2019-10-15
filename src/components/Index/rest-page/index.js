@@ -1,6 +1,6 @@
 import React, {useEffect, useRef, useState} from 'react'
-import {Grid} from "@material-ui/core";
 import {makeStyles} from "@material-ui/styles";
+import {Grid} from "@material-ui/core";
 
 const useStyles = makeStyles({
     restPage: {
@@ -25,7 +25,7 @@ export default () => {
         });
     }, []);
     return (
-        <Grid container className={classes.restPage} style={{ width: width + '%' }} ref={restPage}>
+        <Grid container className={classes.restPage} style={{width: width + '%'}} ref={restPage}>
 
         </Grid>
     );

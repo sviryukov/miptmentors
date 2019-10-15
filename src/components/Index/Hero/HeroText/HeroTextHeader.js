@@ -1,6 +1,6 @@
-import React, {useEffect, useRef} from 'react'
-import {Button, Typography} from "@material-ui/core";
+import React, {useEffect, useRef} from 'react';
 import {makeStyles} from "@material-ui/styles";
+import {Typography} from "@material-ui/core";
 
 const useStyles = makeStyles(theme => ({
     heroTextHeader: {

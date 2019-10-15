@@ -1,6 +1,6 @@
 import React from 'react';
-import {Grid, Select, MenuItem} from "@material-ui/core";
 import {makeStyles} from "@material-ui/styles";
+import {Grid, Select, MenuItem} from "@material-ui/core";
 
 const useStyles = makeStyles({
     mentorsSelectContainer: {

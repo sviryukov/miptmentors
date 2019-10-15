@@ -1,15 +1,15 @@
 import React, {useEffect, useRef} from 'react';
-import {Grid, Typography} from '@material-ui/core';
 import {makeStyles} from '@material-ui/styles';
+import {Grid} from '@material-ui/core';
 import ListItem from "./LogoListItem";
 
-const useStyles = makeStyles(theme => ({
+const useStyles = makeStyles({
     logoContainer: {
         position: 'relative',
         top: '-100px',
         transition: 'top 0.5s 0.2s'
     }
-}));
+});
 
 export default () => {
     const classes = useStyles();

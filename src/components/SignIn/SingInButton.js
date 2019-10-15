@@ -1,6 +1,6 @@
 import React, {useEffect, useRef} from 'react';
-import {Button} from '@material-ui/core';
 import {makeStyles} from '@material-ui/styles';
+import {Button} from '@material-ui/core';
 
 let useStyles = makeStyles({
     singInButton: {
