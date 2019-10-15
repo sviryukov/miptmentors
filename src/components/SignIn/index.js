@@ -9,7 +9,7 @@ import SingInPasswordField from './SingInPasswordField';
 import SingInButton from "./SingInButton";
 
 let useStyles = makeStyles({
-    singIn: {
+    singInContainer: {
         textAlign: "center"
     }
 });
@@ -22,7 +22,7 @@ export default () => {
             <Navbar/>
             <Grid container justify='center'>
                 <PageHeader text=''/>
-                <Grid item xl={2} lg={3} md={4} sm={6} xs={8} className={classes.singIn}>
+                <Grid item xl={2} lg={3} md={4} sm={6} xs={8} className={classes.singInContainer}>
                     <SingInHeader animation_delay={0}/>
                     <SingInEmailField animation_delay={0.1}/>
                     <SingInPasswordField animation_delay={0.2}/>

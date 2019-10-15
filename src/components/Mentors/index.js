@@ -39,19 +39,16 @@ export default () => {
             <Grid container justify='center'>
                 <PageHeader text='Менторы проекта'/>
                 <MentorsSelect setCategory={handleSetCategory}/>
-                <Grid item xs={12}/>
-                <Grid item xs={10} lg={7} xl={8}>
-                        <Grid container spacing={4} className={classes.mentorsContainer}>
-                            {mentors.map((mentor, i) => (
-                                (category === 'all' || mentors[i].categories.indexOf(category) !== -1) &&
-                                <MentorCard key={mentor.name}
-                                      name={mentor.name}
-                                      img={mentor.img}
-                                      education={mentor.education}
-                                      work={mentor.work}
-                                      visible={mentorsVisible}/>
-                            ))}
-                        </Grid>
+                <Grid container spacing={4} item xs={10} lg={7} xl={8} className={classes.mentorsContainer}>
+                    {mentors.map((mentor, i) => (
+                        (category === 'all' || mentors[i].categories.indexOf(category) !== -1) &&
+                        <MentorCard key={mentor.name}
+                              name={mentor.name}
+                              img={mentor.img}
+                              education={mentor.education}
+                              work={mentor.work}
+                              visible={mentorsVisible}/>
+                    ))}
                 </Grid>
             </Grid>
         </React.Fragment>

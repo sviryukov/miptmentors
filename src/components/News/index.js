@@ -27,7 +27,7 @@ export default () => {
             <Navbar/>
             <Grid container justify='center'>
                 <PageHeader text='Новости проекта'/>
-                <Grid item container xs={12} sm={8} lg={9} spacing={4} className={classes.newsContainer}>
+                <Grid container spacing={4} item xs={12} sm={8} lg={9} className={classes.newsContainer}>
                     {news.map(newsItem => (
                         <NewsCard key={newsItem._id}
                               title={newsItem.title}

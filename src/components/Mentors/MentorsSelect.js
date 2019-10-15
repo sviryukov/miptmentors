@@ -1,11 +1,15 @@
 import React from 'react';
-import {FormControl, Select, MenuItem, Grid} from "@material-ui/core";
+import {Grid, Select, MenuItem} from "@material-ui/core";
 import {makeStyles} from "@material-ui/styles";
 
 const useStyles = makeStyles({
+    mentorsSelectContainer: {
+        textAlign: 'center'
+    },
     mentorsSelect: {
-        width: "100%",
-        marginBottom: '50px'
+        width: "220px",
+        marginBottom: '50px',
+        textAlign: 'left'
     }
 });
 
@@ -17,15 +21,13 @@ export default props => {
         props.setCategory(event.target.value);
     };
     return (
-        <Grid item xl={2} lg={3} md={4} sm={6} xs={8}>
-            <FormControl className={classes.mentorsSelect}>
-                <Select value={category} onChange={handleChange}>
-                    <MenuItem value={'all'}>Все направления</MenuItem>
-                    <MenuItem value={'business'}>Бизнес направление</MenuItem>
-                    <MenuItem value={'career'}>Карьерное направление</MenuItem>
-                    <MenuItem value={'science'}>Научное направление</MenuItem>
-                </Select>
-            </FormControl>
+        <Grid item xs={12} className={classes.mentorsSelectContainer}>
+            <Select value={category} onChange={handleChange} className={classes.mentorsSelect}>
+                <MenuItem value={'all'}>Все направления</MenuItem>
+                <MenuItem value={'business'}>Бизнес направление</MenuItem>
+                <MenuItem value={'career'}>Карьерное направление</MenuItem>
+                <MenuItem value={'science'}>Научное направление</MenuItem>
+            </Select>
         </Grid>
     );
 };

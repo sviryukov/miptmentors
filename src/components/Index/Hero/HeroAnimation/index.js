@@ -1,16 +1,12 @@
 import React, {useEffect} from 'react';
-import {Grid, Box, Fade} from "@material-ui/core";
+import {Fade, Grid, Box} from "@material-ui/core";
 import {makeStyles} from "@material-ui/styles";
 
 const useStyles = makeStyles({
-    heroAnimationContainer: {
-        height: '420px'
-    },
     heroAnimation: {
         width: '396px',
-        height: '100%',
+        height: '420px',
         position: 'relative',
-        marginLeft: 'calc(100% - 396px)',
         backgroundImage: 'url(img/hero-animation-bg.svg)'
     }
 });
@@ -43,12 +39,11 @@ export default () => {
     }, []);
     return (
         <Fade in={true} timeout={1500}>
-            <Grid item xs={5}
+            <Grid item
                   component={Box}
                   display={{ xs: 'none', lg: 'flex' }}
-                  className={classes.heroAnimationContainer}>
-                <Box id='hero-animation' className={classes.heroAnimation}/>
-            </Grid>
+                  className={classes.heroAnimation}
+                  id='hero-animation'/>
         </Fade>
     );
 }

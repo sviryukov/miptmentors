@@ -6,6 +6,7 @@ import HeroAnimation from "./HeroAnimation";
 
 const useStyles = makeStyles(theme => ({
     hero: {
+        margin: 'auto',
         marginTop: '40px',
         padding: '50px 5% 150px',
         [theme.breakpoints.up('sm')]: {
@@ -36,11 +37,9 @@ const useStyles = makeStyles(theme => ({
 export default () => {
     const classes = useStyles();
     return (
-        <Grid container justify='center'>
-            <Grid item container xs={12} md={10} xl={9} className={classes.hero}>
-                <HeroText/>
-                <HeroAnimation/>
-            </Grid>
+        <Grid container justify='space-between' item xs={12} md={10} xl={9} className={classes.hero}>
+            <HeroText/>
+            <HeroAnimation/>
         </Grid>
     );
 };
