@@ -1,7 +1,9 @@
 import React, {useEffect} from 'react';
-import {CssBaseline} from "@material-ui/core";
+import {Box, CssBaseline, Grid} from "@material-ui/core";
 import Main from './main';
+import Navbar from '../common/Navbar';
 import RestPage from './rest-page';
+import Hero from "./main";
 
 export default () => {
     useEffect(() => {
@@ -13,7 +15,8 @@ export default () => {
     return (
         <React.Fragment>
             <CssBaseline/>
-            <Main/>
+            <Navbar/>
+            <Hero/>
             <RestPage/>
         </React.Fragment>
     )
