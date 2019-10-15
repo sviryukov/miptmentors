@@ -12,6 +12,9 @@ const useStyles = makeStyles(theme => ({
             marginBottom: "40px",
             paddingTop: "20px",
             paddingBottom: "80px"
+        },
+        [theme.breakpoints.up('xl')]: {
+            backgroundSize: 'cover'
         }
     },
     pageHeader: {

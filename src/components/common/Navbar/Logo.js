@@ -1,6 +1,7 @@
 import React from 'react';
 import {makeStyles} from '@material-ui/styles';
-import {ListItem, Link, Typography} from '@material-ui/core';
+import {Grid, ListItem, Link, Typography} from '@material-ui/core';
+import {SlideFromTop} from "../animations";
 
 const useStyles = makeStyles(theme => ({
     logoListItem: {
@@ -27,10 +28,12 @@ const useStyles = makeStyles(theme => ({
 export default () => {
     const classes = useStyles();
     return (
-        <ListItem className={classes.logoListItem} component={Link} href='./' underline='none'>
-            <Typography variant='h2' className={classes.logo}>
-                КЛУБ<br/>МЕНТОРОВ<br/>ФИЗТЕХ-СОЮЗА
-            </Typography>
-        </ListItem>
+        <SlideFromTop component={Grid} item>
+            <ListItem className={classes.logoListItem} component={Link} href='./' underline='none'>
+                <Typography variant='h2' className={classes.logo}>
+                    КЛУБ<br/>МЕНТОРОВ<br/>ФИЗТЕХ-СОЮЗА
+                </Typography>
+            </ListItem>
+        </SlideFromTop>
     );
 };
