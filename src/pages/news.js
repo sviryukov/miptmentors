@@ -1,7 +1,7 @@
 import React from 'react';
 import { hydrate } from 'react-dom';
 import { ThemeProvider } from "@material-ui/styles";
-import News from '../components/news';
+import News from '../components/News';
 import theme from "../theme";
 
 function Main() {

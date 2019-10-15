@@ -1,7 +1,7 @@
 import React from 'react';
 import { hydrate } from 'react-dom';
 import { ThemeProvider } from "@material-ui/styles";
-import Signin from '../components/signin';
+import SignIn from '../components/SignIn';
 import theme from "../theme";
 
 function Main() {
@@ -13,7 +13,7 @@ function Main() {
     }, []);
     return (
         <ThemeProvider theme={theme}>
-            <Signin/>
+            <SignIn/>
         </ThemeProvider>
     );
 }

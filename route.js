@@ -5,11 +5,11 @@ import { ServerStyleSheets, ThemeProvider } from "@material-ui/styles";
 import template from './src/template';
 import theme from './src/theme';
 import themeBgDark from './src/theme-bg-dark';
-import Index from './src/components/index';
-import News from './src/components/news';
-import Mentors from './src/components/mentors';
-import Contacts from './src/components/contacts';
-import Signin from './src/components/signin';
+import Index from './src/components/Index';
+import News from './src/components/News';
+import Mentors from './src/components/Mentors';
+import Contacts from './src/components/Contacts';
+import Signin from './src/components/SignIn';
 
 export default (passport, client) => {
 	
@@ -28,7 +28,7 @@ export default (passport, client) => {
 		response.send(template('Клуб Менторов Физтех-Союза - программа наставничества МФТИ', html, "index", css));
 	});
 
-	router.get("/news", (request, response) => {
+	router.get("/News", (request, response) => {
 		const sheets = new ServerStyleSheets();
 		const html = renderToString(
 			sheets.collect(
@@ -50,7 +50,7 @@ export default (passport, client) => {
 		});
 	});
 
-	router.get("/mentors", (request, response) => {
+	router.get("/Mentors", (request, response) => {
 		const sheets = new ServerStyleSheets();
 		const html = renderToString(
 			sheets.collect(
@@ -68,7 +68,7 @@ export default (passport, client) => {
 		});
 	});
 
-	router.get("/contacts", (request, response) => {
+	router.get("/Contacts", (request, response) => {
 		const sheets = new ServerStyleSheets();
 		const html = renderToString(
 			sheets.collect(
@@ -81,7 +81,7 @@ export default (passport, client) => {
 		response.send(template('Контакты | Клуб Менторов Физтех-Союза', html, "contacts", css));
 	});
 
-	router.get("/signin", checkIfAuthenticated, (request, response) => {
+	router.get("/SignIn", checkIfAuthenticated, (request, response) => {
 		const sheets = new ServerStyleSheets();
 		const html = renderToString(
 			sheets.collect(
@@ -102,7 +102,7 @@ const checkIfNotAuthenticated = (request, response, next) => {
 	if(request.isAuthenticated()){
 		next();
 	} else{
-		response.redirect("/signin");
+		response.redirect("/SignIn");
 	}
 };
 const checkIfAuthenticated = (request, response, next) => {

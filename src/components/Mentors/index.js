@@ -1,0 +1,59 @@
+import axios from 'axios';
+import React, {useEffect, useState} from 'react';
+import {CssBaseline, Grid, Fade} from "@material-ui/core";
+import {makeStyles} from "@material-ui/styles";
+import Navbar from '../common/Navbar';
+import PageHeader from '../common/PageHeader';
+import MentorsSelect from "./MentorsSelect";
+import MentorCard from './MentorCard';
+
+let useStyles = makeStyles({
+    mentorsContainer: {
+        justifyContent: 'center'
+    }
+});
+
+export default () => {
+    const classes = useStyles();
+    const [mentors, setMentors] = useState([]);
+    const [category, setCategory] = useState('all');
+    const [mentorsVisible, setMentorsVisible] = useState(false);
+    useEffect(() => {
+        axios.get("/mentors_data")
+            .then(res => {
+                setMentors(res.data);
+                setMentorsVisible(true);
+            });
+    }, []);
+    const handleSetCategory = newCategory => {
+        setMentorsVisible(false);
+        setTimeout(() => {
+            setCategory(newCategory);
+            setMentorsVisible(true);
+        }, 300);
+    };
+    return (
+        <React.Fragment>
+            <CssBaseline/>
+            <Navbar/>
+            <Grid container justify='center'>
+                <PageHeader text='Менторы проекта'/>
+                <MentorsSelect setCategory={handleSetCategory}/>
+                <Grid item xs={12}/>
+                <Grid item xs={10} lg={7} xl={8}>
+                        <Grid container spacing={4} className={classes.mentorsContainer}>
+                            {mentors.map((mentor, i) => (
+                                (category === 'all' || mentors[i].categories.indexOf(category) !== -1) &&
+                                <MentorCard key={mentor.name}
+                                      name={mentor.name}
+                                      img={mentor.img}
+                                      education={mentor.education}
+                                      work={mentor.work}
+                                      visible={mentorsVisible}/>
+                            ))}
+                        </Grid>
+                </Grid>
+            </Grid>
+        </React.Fragment>
+    );
+};
