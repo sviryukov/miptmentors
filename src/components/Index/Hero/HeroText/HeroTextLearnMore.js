@@ -10,6 +10,7 @@ const useStyles = makeStyles(theme => ({
         cursor: 'pointer',
         color: 'cyan',
         fontSize: '17px',
+        transition: 'color 0.4s',
         [theme.breakpoints.up('sm')]: {
             margin: '10px 0px',
             fontSize: '20px'
@@ -28,7 +29,6 @@ export default props => {
     return (
         <FadeFromTop component={Typography}
                      delay={props.animation_delay}
-                     transitions='color 0.4s'
                      className={classes.heroTextLearnMore}>
             Узнать больше ➙
         </FadeFromTop>

@@ -3,6 +3,7 @@ import {CssBaseline} from "@material-ui/core";
 import Navbar from '../common/Navbar';
 import Hero from "./Hero";
 import RestPage from './rest-page';
+import {SlideFromBottom} from "../common/animations";
 
 export default () => {
     useEffect(() => {
@@ -16,7 +17,11 @@ export default () => {
             <CssBaseline/>
             <Navbar/>
             <Hero/>
-            <RestPage/>
+            <SlideFromBottom delay={0.5}
+                             interval={300}
+                             final_position={-100}>
+                <RestPage/>
+            </SlideFromBottom>
         </React.Fragment>
     )
 };
