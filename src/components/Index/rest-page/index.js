@@ -1,13 +1,13 @@
 import React, {useEffect, useState} from 'react'
 import {makeStyles} from "@material-ui/styles";
 import {Grid} from "@material-ui/core";
-import {SlideFromBottom} from "../../common/animations";
 
 const useStyles = makeStyles({
     restPage: {
         minHeight: '2000px',
         margin: 'auto',
-        backgroundColor: '#fafafa'
+        backgroundColor: '#fafafa',
+        transition: 'width 0.3s'
     }
 });
 
@@ -21,14 +21,9 @@ export default () => {
         });
     }, []);
     return (
-        <SlideFromBottom component={Grid}
-                         delay={0.5}
-                         interval={300}
-                         final_position={-100}
-                         container
-                         className={classes.restPage}
-                         style={{width: width + '%'}}>
-
-        </SlideFromBottom>
+        <Grid container
+              className={classes.restPage}
+              style={{width: width + '%'}}>
+        </Grid>
     );
 };
