@@ -25,8 +25,8 @@ export default () => {
         <React.Fragment>
             <CssBaseline/>
             <Navbar/>
+            <PageHeader text='Новости проекта'/>
             <Grid container justify='center'>
-                <PageHeader text='Новости проекта'/>
                 <Grid container spacing={4} item xs={12} sm={8} lg={9} className={classes.newsContainer}>
                     {news.map(newsItem => (
                         <NewsCard key={newsItem._id}

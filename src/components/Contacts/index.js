@@ -10,8 +10,8 @@ export default () => {
         <React.Fragment>
             <CssBaseline/>
             <Navbar/>
+            <PageHeader text='Контакты'/>
             <Grid container justify='center'>
-                <PageHeader text='Контакты'/>
                 <Grid container spacing={6} justify='center' item xs={11} sm={8} md={11} lg={10} xl={8}>
                     {
                         data.map((contact, i) => (

@@ -1,9 +1,10 @@
 import React from 'react';
 import {makeStyles} from "@material-ui/styles";
-import {Grid, Typography} from "@material-ui/core";
+import {Typography} from "@material-ui/core";
 
 const useStyles = makeStyles(theme => ({
     pageHeaderContainer: {
+        width: '100%',
         paddingTop: "30px",
         paddingBottom: "60px",
         backgroundImage: 'url(/img/header-bg.svg)',
@@ -28,10 +29,10 @@ const useStyles = makeStyles(theme => ({
 export default props => {
     const classes = useStyles();
     return (
-        <Grid item xs={12} className={classes.pageHeaderContainer}>
+        <div className={classes.pageHeaderContainer}>
             <Typography variant='h1' className={classes.pageHeader}>
                 {props.text}
             </Typography>
-        </Grid>
+        </div>
     );
 };

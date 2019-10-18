@@ -20,8 +20,8 @@ export default () => {
         <React.Fragment>
             <CssBaseline/>
             <Navbar/>
+            <PageHeader text=''/>
             <Grid container justify='center'>
-                <PageHeader text=''/>
                 <Grid item xl={2} lg={3} md={4} sm={6} xs={8} className={classes.singInContainer}>
                     <SingInHeader animation_delay={0}/>
                     <SingInEmailField animation_delay={0.1}/>

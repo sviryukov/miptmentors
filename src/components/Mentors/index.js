@@ -36,8 +36,8 @@ export default () => {
         <React.Fragment>
             <CssBaseline/>
             <Navbar/>
+            <PageHeader text='Менторы проекта'/>
             <Grid container justify='center'>
-                <PageHeader text='Менторы проекта'/>
                 <MentorsSelect setCategory={handleSetCategory}/>
                 <Grid container spacing={4} item xs={10} lg={7} xl={8} className={classes.mentorsContainer}>
                     {mentors.map((mentor, i) => (
