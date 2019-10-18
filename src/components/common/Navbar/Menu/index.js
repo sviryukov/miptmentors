@@ -1,7 +1,6 @@
 import React from 'react';
 import {makeStyles} from '@material-ui/styles';
 import {Grid, List, Box} from '@material-ui/core';
-import {SlideFromTop} from "../../animations";
 import MenuItem from "./MenuItem";
 import MenuSignIn from "./MenuSignIn";
 import MenuOpenDrawer from "./MenuOpenDrawer";
@@ -24,7 +23,7 @@ const useStyles = makeStyles(theme => ({
 export default props => {
     const classes = useStyles();
     return (
-        <SlideFromTop component={Grid} delay={0.3} item className={classes.menuContainer}>
+        <Grid item className={classes.menuContainer}>
             <List component={Box} className={classes.list} display={{ xs: 'none', md: 'flex'}}>
                 <MenuItem text='Новости проекта' href='/news' id='news'/>
                 <MenuItem text='Менторы проекта' href='/mentors' id='mentors'/>
@@ -34,6 +33,6 @@ export default props => {
             <List component={Box} className={classes.list} display={{ xs: 'flex', md: 'none'}}>
                 <MenuOpenDrawer handleClick={props.handleClick}/>
             </List>
-        </SlideFromTop>
+        </Grid>
     );
 };
