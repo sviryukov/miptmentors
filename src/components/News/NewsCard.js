@@ -1,7 +1,8 @@
 import React from "react";
 import {makeStyles} from "@material-ui/styles";
-import {Grid, Card, CardActionArea, CardMedia, CardContent} from "@material-ui/core";
+import {Grid, Card, CardActionArea, CardContent} from "@material-ui/core";
 import {FadeFromBottom} from "../common/animations";
+import NewsCardImg from "./NewsCardImg";
 
 const useStyles = makeStyles(theme => ({
     newsCard: {
@@ -42,7 +43,7 @@ export default (props) => {
                         className={classes.newsCard}>
             <Card>
                 <CardActionArea>
-                    <CardMedia image={'/img/' + props.img.replace('.', 'min.')} className={classes.media} component="img"/>
+                    <NewsCardImg image={'/img/' + props.img.replace('.', 'min.')}/>
                     <CardContent className={classes.newsCardContent}>
                         <p className={classes.newsCardTitle}>{props.title}</p>
                         <p className={classes.newsCardDate}>{date}</p>
