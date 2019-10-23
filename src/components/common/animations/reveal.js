@@ -29,7 +29,7 @@ export default (delay = 100) => {
             }
         });
         passedBreakPoints.map((break_point_i, passed_break_point_i) => {
-            breakPoints.slice(break_point_i - passed_break_point_i, 1);
+            breakPoints.splice(break_point_i - passed_break_point_i, 1);
         });
         if(breakPoints.length === 0) window.removeEventListener('scroll', checkBreakPoints);
     };
