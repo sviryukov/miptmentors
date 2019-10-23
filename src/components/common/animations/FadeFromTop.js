@@ -6,6 +6,7 @@ export default ({
                     duration = 0.5,
                     interval = 50,
                     final_position = 0,
+                    on_scroll = false,
                     component = Div,
                     style,
                     ...props
@@ -23,8 +24,14 @@ export default ({
         if (componentTransition !== '')
             fadeFromTop.current.style.transition = componentTransition + ', ' + fadeFromTopTransition;
         else fadeFromTop.current.style.transition = fadeFromTopTransition;
-        fadeFromTop.current.style.opacity = 1;
-        fadeFromTop.current.style.top = final_position + 'px';
+        if (on_scroll) {
+            fadeFromTop.current.className += " revealElement";
+            fadeFromTop.current.dataset.revealOffsetTop = interval;
+            fadeFromTop.current.dataset.finalPosition = final_position;
+        } else {
+            fadeFromTop.current.style.opacity = 1;
+            fadeFromTop.current.style.top = final_position + 'px';
+        }
     });
     const Component = component;
     return (
