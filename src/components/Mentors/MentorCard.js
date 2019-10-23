@@ -5,7 +5,8 @@ import {Grid, Grow, Card, CardMedia, CardContent} from "@material-ui/core";
 const useStyles = makeStyles({
     mentorCard: {
         boxShadow: 'none',
-        borderRadius: '0px'
+        borderRadius: '0px',
+        backgroundColor: 'transparent'
     },
     mentorCardContent: {
         height: '115px',
