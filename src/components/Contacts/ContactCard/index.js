@@ -15,8 +15,8 @@ let useStyles = makeStyles({
 export default props => {
     const classes = useStyles();
     return (
-        <FadeFromBottom component={Grid}
-                        delay={props.animation_delay}
+        <FadeFromBottom on_scroll
+                        component={Grid}
                         item xs={9} sm={7} md={4} lg={3}
                         className={classes.contactContainer}>
             <ContactCardImg img={props.img} name={props.name}/>
