@@ -8,27 +8,27 @@ const useStyles = makeStyles(theme => ({
     hero: {
         margin: 'auto',
         marginTop: '40px',
-        padding: '50px 5% 150px',
+        padding: '50px 5% 50px',
         [theme.breakpoints.up('sm')]: {
-            height: '650px',
+            height: '550px',
             marginTop: '100px',
             padding: '0px 5%'
         },
         [theme.breakpoints.up('md')]: {
-            height: 'calc(100% - 180px)',
-            minHeight: '520px',
-            maxHeight: '620px',
+            height: 'calc(100% - 280px)',
+            minHeight: '420px',
+            maxHeight: '520px',
             padding: '0px 20px'
         },
         [theme.breakpoints.up('lg')]: {
-            height: 'calc(100% - 180px)',
-            minHeight: '580px',
-            maxHeight: '820px'
+            height: 'calc(100% - 280px)',
+            minHeight: '480px',
+            maxHeight: '720px'
         },
         [theme.breakpoints.up('xl')]: {
-            height: 'calc(100% - 244px)',
-            minHeight: '660px',
-            maxHeight: '756px',
+            height: 'calc(100% - 344px)',
+            minHeight: '560px',
+            maxHeight: '656px',
             marginTop: '150px'
         }
     }

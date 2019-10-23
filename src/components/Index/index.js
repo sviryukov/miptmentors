@@ -19,8 +19,7 @@ export default () => {
             <Navbar/>
             <Hero/>
             <SlideFromBottom delay={0.5}
-                             interval={300}
-                             final_position={-100}>
+                             interval={300}>
                 <RestPage/>
             </SlideFromBottom>
             <Footer/>
