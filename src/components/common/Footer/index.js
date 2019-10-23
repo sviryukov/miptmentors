@@ -9,7 +9,6 @@ import PhystechUnionLink from "./PhystechUnionLink";
 const useStyles = makeStyles({
     footer: {
         width: '100%',
-        marginTop: '100px',
         padding: '40px 0px',
         backgroundColor: '#27282c',
         justifyContent: 'center'
