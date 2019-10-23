@@ -9,6 +9,9 @@ import SingInPasswordField from './SingInPasswordField';
 import SingInButton from "./SingInButton";
 
 let useStyles = makeStyles({
+    signInPage: {
+        minHeight: 'calc(100% - 356px)'
+    },
     singInContainer: {
         textAlign: "center"
     }
@@ -21,7 +24,7 @@ export default () => {
             <CssBaseline/>
             <Navbar/>
             <PageHeader text=''/>
-            <Grid container justify='center'>
+            <Grid container justify='center' className={classes.signInPage}>
                 <Grid item xl={2} lg={3} md={4} sm={6} xs={8} className={classes.singInContainer}>
                     <SingInHeader animation_delay={0}/>
                     <SingInEmailField animation_delay={0.1}/>
