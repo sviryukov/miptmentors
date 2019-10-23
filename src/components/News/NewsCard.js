@@ -43,7 +43,7 @@ export default (props) => {
                         className={classes.newsCard}>
             <Card>
                 <CardActionArea>
-                    <NewsCardImg image={'/img/' + props.img.replace('.', 'min.')}/>
+                    <NewsCardImg image={'/img/' + props.img.replace('.', 'min.')} alt={props.title}/>
                     <CardContent className={classes.newsCardContent}>
                         <p className={classes.newsCardTitle}>{props.title}</p>
                         <p className={classes.newsCardDate}>{date}</p>

@@ -19,7 +19,7 @@ export default (props) => {
     const classes = useStyles();
     return (
         <div className={classes.newsCardImgContainer}>
-            <img src={props.image} className={classes.newsCardImg}/>
+            <img src={props.image} className={classes.newsCardImg} alt={props.alt}/>
         </div>
     );
 }
