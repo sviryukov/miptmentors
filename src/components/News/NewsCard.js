@@ -42,7 +42,7 @@ export default (props) => {
                         className={classes.newsCard}>
             <Card>
                 <CardActionArea>
-                    <CardMedia image={'/img/' + props.img} className={classes.media} component="img"/>
+                    <CardMedia image={'/img/' + props.img.replace('.', 'min.')} className={classes.media} component="img"/>
                     <CardContent className={classes.newsCardContent}>
                         <p className={classes.newsCardTitle}>{props.title}</p>
                         <p className={classes.newsCardDate}>{date}</p>
