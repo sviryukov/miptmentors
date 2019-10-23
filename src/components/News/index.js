@@ -4,6 +4,7 @@ import axios from 'axios';
 import {CssBaseline, Grid} from "@material-ui/core";
 import Navbar from '../common/Navbar';
 import PageHeader from '../common/PageHeader';
+import {reveal} from "../common/animations";
 import NewsCard from './NewsCard';
 
 let useStyles = makeStyles({
@@ -19,6 +20,7 @@ export default () => {
         axios.get("/news_data")
             .then(res => {
                 setNews(res.data);
+                reveal();
             });
     }, []);
     return (

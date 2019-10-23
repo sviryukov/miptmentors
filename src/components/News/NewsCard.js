@@ -1,6 +1,7 @@
 import React from "react";
 import {makeStyles} from "@material-ui/styles";
 import {Grid, Card, CardActionArea, CardMedia, CardContent} from "@material-ui/core";
+import {FadeFromBottom} from "../common/animations";
 
 const useStyles = makeStyles(theme => ({
     newsCard: {
@@ -35,7 +36,10 @@ export default (props) => {
     date += dateObj.getMonth() + ".";
     date += dateObj.getFullYear();
     return (
-        <Grid item lg={4} md={6} xs={12} className={classes.newsCard}>
+        <FadeFromBottom on_scroll
+                        component={Grid}
+                        item lg={4} md={6} xs={12}
+                        className={classes.newsCard}>
             <Card>
                 <CardActionArea>
                     <CardMedia image={'/img/' + props.img} className={classes.media} component="img"/>
@@ -45,6 +49,6 @@ export default (props) => {
                     </CardContent>
                 </CardActionArea>
             </Card>
-        </Grid>
+        </FadeFromBottom>
     );
 }
