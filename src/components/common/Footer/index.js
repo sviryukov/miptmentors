@@ -1,30 +1,51 @@
 import React from "react";
 import {makeStyles} from "@material-ui/styles";
 import {Grid} from "@material-ui/core";
-import FooterMenu from './FooterMenu';
-import FooterButtons from "./FooterButtons";
-import FooterContacts from "./FooterContacts";
-import PhystechUnionLink from "./PhystechUnionLink";
+import ReturnToTop from "./ReturnToTop";
+import FooterMenu from "./FooterMenu";
+import FooterSocial from "./FooterSocial";
 
-const useStyles = makeStyles({
+const useStyles = makeStyles(theme => ({
     footer: {
-        width: '100%',
-        padding: '40px 0px',
+        width: 'calc(100% - 70px)',
+        padding: '0px 50px 50px',
+        [theme.breakpoints.up('md')]: {
+            padding: '50px 120px'
+        },
         backgroundColor: '#27282c',
-        justifyContent: 'center'
+        fontSize: '17px'
+    },
+    footerMenuContainer: {
+        paddingTop: '50px',
+        order: 2,
+        [theme.breakpoints.up('md')]: {
+            order: 1
+        }
+    },
+    footerSocialContainer: {
+        paddingTop: '50px',
+        order: 1,
+        textAlign: 'center',
+        [theme.breakpoints.up('md')]: {
+            order: 2,
+            textAlign: 'right'
+        }
     }
-});
+}));
 
 export default () => {
     const classes = useStyles();
     return (
-        <Grid container className={classes.footer}>
-            <Grid item xs={10} md={6} lg={5}>
-                <FooterMenu/>
-                <FooterButtons/>
-                <FooterContacts/>
+        <Grid container>
+            <ReturnToTop/>
+            <Grid container item className={classes.footer}>
+                <Grid item xs={12} md={6} className={classes.footerMenuContainer}>
+                    <FooterMenu/>
+                </Grid>
+                <Grid item xs={12} md={6} className={classes.footerSocialContainer}>
+                    <FooterSocial/>
+                </Grid>
             </Grid>
-            <PhystechUnionLink/>
         </Grid>
     );
 }
