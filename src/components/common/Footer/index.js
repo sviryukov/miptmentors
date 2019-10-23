@@ -18,7 +18,7 @@ const useStyles = makeStyles({
 export default () => {
     const classes = useStyles();
     return (
-        <Grid container spacing={4} className={classes.footer}>
+        <Grid container className={classes.footer}>
             <Grid item xs={10} md={6} lg={5}>
                 <FooterMenu/>
                 <FooterButtons/>
