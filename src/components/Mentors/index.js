@@ -4,8 +4,10 @@ import axios from 'axios';
 import {CssBaseline, Grid} from "@material-ui/core";
 import Navbar from '../common/Navbar';
 import PageHeader from '../common/PageHeader';
+import Page from "../common/Page";
 import MentorsSelect from "./MentorsSelect";
 import MentorCard from './MentorCard';
+import Footer from "../common/Footer";
 
 let useStyles = makeStyles({
     mentorsContainer: {
@@ -37,7 +39,7 @@ export default () => {
             <CssBaseline/>
             <Navbar/>
             <PageHeader text='Менторы проекта'/>
-            <Grid container justify='center'>
+            <Page>
                 <MentorsSelect setCategory={handleSetCategory}/>
                 <Grid container spacing={4} item xs={10} lg={7} xl={8} className={classes.mentorsContainer}>
                     {mentors.map((mentor, i) => (
@@ -50,7 +52,8 @@ export default () => {
                                     visible={mentorsVisible}/>
                     ))}
                 </Grid>
-            </Grid>
+            </Page>
+            <Footer/>
         </React.Fragment>
     );
 };

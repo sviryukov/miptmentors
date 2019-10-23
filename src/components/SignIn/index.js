@@ -3,15 +3,14 @@ import {makeStyles} from '@material-ui/styles';
 import {CssBaseline, Grid} from '@material-ui/core';
 import Navbar from '../common/Navbar';
 import PageHeader from '../common/PageHeader';
+import Page from "../common/Page";
 import SingInHeader from './SingInHeader';
 import SingInEmailField from './SingInEmailField';
 import SingInPasswordField from './SingInPasswordField';
 import SingInButton from "./SingInButton";
+import Footer from "../common/Footer";
 
 let useStyles = makeStyles({
-    signInPage: {
-        minHeight: 'calc(100% - 356px)'
-    },
     singInContainer: {
         textAlign: "center"
     }
@@ -24,14 +23,15 @@ export default () => {
             <CssBaseline/>
             <Navbar/>
             <PageHeader text=''/>
-            <Grid container justify='center' className={classes.signInPage}>
+            <Page>
                 <Grid item xl={2} lg={3} md={4} sm={6} xs={8} className={classes.singInContainer}>
                     <SingInHeader animation_delay={0}/>
                     <SingInEmailField animation_delay={0.1}/>
                     <SingInPasswordField animation_delay={0.2}/>
                     <SingInButton animation_delay={0.3}/>
                 </Grid>
-            </Grid>
+            </Page>
+            <Footer/>
         </React.Fragment>
     );
 };

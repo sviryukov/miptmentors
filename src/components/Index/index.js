@@ -4,6 +4,7 @@ import Navbar from '../common/Navbar';
 import Hero from "./Hero";
 import RestPage from './rest-page';
 import {SlideFromBottom} from "../common/animations";
+import Footer from "../common/Footer";
 
 export default () => {
     useEffect(() => {
@@ -22,6 +23,7 @@ export default () => {
                              final_position={-100}>
                 <RestPage/>
             </SlideFromBottom>
+            <Footer/>
         </React.Fragment>
     )
 };
