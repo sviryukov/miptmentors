@@ -8,7 +8,6 @@ import flash from "connect-flash";
 import route from "./route";
 
 const uri = "mongodb+srv://admin:3f0O89m2lFJz0HWt@cluster0-n7ena.mongodb.net/test?retryWrites=true&w=majority";
-//const uri =  "mongodb://admin:XFBeah49615@node39300-env-9199521.jcloud.kz";
 
 const app = express();
 
