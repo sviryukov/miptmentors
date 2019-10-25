@@ -4,6 +4,7 @@ import {Grid, List, Box} from '@material-ui/core';
 import MenuItem from "./MenuItem";
 import MenuSignIn from "./MenuSignIn";
 import MenuOpenDrawer from "./MenuOpenDrawer";
+import MenuJoin from "./MenuJoin";
 
 const useStyles = makeStyles(theme => ({
     menuContainer: {
@@ -28,6 +29,7 @@ export default props => {
                 <MenuItem text='Новости проекта' href='/news' id='news'/>
                 <MenuItem text='Менторы проекта' href='/mentors' id='mentors'/>
                 <MenuItem text='Контакты' href='/contacts' id='contacts'/>
+                <MenuJoin/>
                 <MenuSignIn/>
             </List>
             <List component={Box} className={classes.menuList} display={{ xs: 'flex', md: 'none'}}>

@@ -5,8 +5,9 @@ import {PersonOutlineOutlined} from "@material-ui/icons";
 
 const useStyles = makeStyles(theme => ({
     MenuSignInListItem: {
-        width: '80px',
+        width: '40px',
         height: '81px',
+        paddingLeft: '0px',
         [theme.breakpoints.up('xl')]: {
             height: '94px'
         },
