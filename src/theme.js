@@ -13,7 +13,7 @@ let theme = createMuiTheme({
             light: '#fff'
         },
         background: {
-            default: '#fff'
+            default: '#f7f7f7'
         }
     },
     typography: {
