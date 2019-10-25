@@ -5,7 +5,6 @@ import {renderToString} from 'react-dom/server';
 import {ServerStyleSheets, ThemeProvider} from "@material-ui/styles";
 import template from './src/template';
 import theme from './src/theme';
-import themeBgDark from './src/theme-bg-dark';
 import Index from './src/components/Index';
 import News from './src/components/News';
 import Mentors from './src/components/Mentors';
@@ -20,7 +19,16 @@ export default (passport, client) => {
         const sheets = new ServerStyleSheets();
         const html = renderToString(
             sheets.collect(
-                <ThemeProvider theme={themeBgDark}>
+                <ThemeProvider theme={{
+                    ...theme,
+                    palette: {
+                        ...theme.palette,
+                        background: {
+                            ...theme.palette.background,
+                            default: theme.palette.primary.main
+                        }
+                    }
+                }}>
                     <Index/>
                 </ThemeProvider>,
             ),
