@@ -8,7 +8,7 @@ const useStyles = makeStyles(theme => ({
         lineHeight: '1.4',
         fontWeight: '100',
         fontSize: '25px',
-        color: theme.palette.secondary.dark,
+        color: theme.palette.primary.main,
         [theme.breakpoints.up('sm')]: {
             fontSize: '40px'
         },

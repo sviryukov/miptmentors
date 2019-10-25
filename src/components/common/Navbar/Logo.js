@@ -12,7 +12,7 @@ const useStyles = makeStyles(theme => ({
         }
     },
     logo: {
-        color: theme.palette.secondary.dark,
+        color: theme.palette.primary.main,
         fontSize: '19px',
         [theme.breakpoints.up('xl')]: {
             fontSize: '22px',
