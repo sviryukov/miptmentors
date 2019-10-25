@@ -12,35 +12,10 @@ const useStyles = makeStyles(theme => ({
         },
         textAlign: 'center',
         textTransform: 'uppercase',
-        zIndex: 1,
         color: theme.palette.text.light,
-        transition: 'all 0.4s',
-        '&::after': {
-            display: 'block',
-            position: 'absolute',
-            top: 0,
-            left: 0,
-            bottom: 0,
-            right: 0,
-            margin: 'auto',
-            width: '100%',
-            height: '1px',
-            content: "'.'",
-            color: 'transparent',
-            background: theme.palette.secondary.main,
-            visibility: 'none',
-            opacity: 0,
-            zIndex: '-1',
-            transition: 'all 0.4s'
-        },
         '&:hover': {
             textDecoration: 'none',
-            color: theme.palette.primary.main,
-            '&::after': {
-                opacity: 1,
-                visibility: 'visible',
-                height: '100%'
-            }
+            color: theme.palette.secondary.main
         }
     }
 }));
