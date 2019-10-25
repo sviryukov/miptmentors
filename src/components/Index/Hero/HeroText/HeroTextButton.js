@@ -1,7 +1,6 @@
 import React from 'react';
 import {makeStyles} from "@material-ui/styles";
 import {Button} from "@material-ui/core";
-import {FadeFromTop} from "../../../common/animations";
 
 const useStyles = makeStyles(theme => ({
     heroTextButton: {
@@ -16,12 +15,10 @@ const useStyles = makeStyles(theme => ({
 export default props => {
     const classes = useStyles();
     return (
-        <FadeFromTop component={Button}
-                     delay={props.animation_delay}
-                     color='secondary'
-                     variant='outlined'
-                     className={classes.heroTextButton}>
+        <Button color='secondary'
+                variant='outlined'
+                className={classes.heroTextButton}>
             {props.text}
-        </FadeFromTop>
+        </Button>
     );
 };

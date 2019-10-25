@@ -25,10 +25,10 @@ export default () => {
             <PageHeader text=''/>
             <Page>
                 <Grid item xl={2} lg={3} md={4} sm={6} xs={8} className={classes.singInContainer}>
-                    <SingInHeader animation_delay={0}/>
-                    <SingInEmailField animation_delay={0.1}/>
-                    <SingInPasswordField animation_delay={0.2}/>
-                    <SingInButton animation_delay={0.3}/>
+                    <SingInHeader/>
+                    <SingInEmailField/>
+                    <SingInPasswordField/>
+                    <SingInButton/>
                 </Grid>
             </Page>
             <Footer/>

@@ -1,7 +1,6 @@
 import React from 'react';
 import {makeStyles} from "@material-ui/styles";
 import {Typography} from "@material-ui/core";
-import {FadeFromTop} from "../../../common/animations";
 
 const useStyles = makeStyles(theme => ({
     heroTextLearnMore: {
@@ -24,13 +23,11 @@ const useStyles = makeStyles(theme => ({
     }
 }));
 
-export default props => {
+export default () => {
     const classes = useStyles();
     return (
-        <FadeFromTop component={Typography}
-                     delay={props.animation_delay}
-                     className={classes.heroTextLearnMore}>
+        <Typography className={classes.heroTextLearnMore}>
             Узнать больше ➙
-        </FadeFromTop>
+        </Typography>
     );
 };

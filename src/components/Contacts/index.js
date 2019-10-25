@@ -1,17 +1,13 @@
-import React, {useEffect} from 'react';
+import React from 'react';
 import {CssBaseline, Grid} from "@material-ui/core";
 import Navbar from '../common/Navbar';
 import PageHeader from "../common/PageHeader";
 import Page from "../common/Page";
-import {reveal} from "../common/animations";
 import ContactCard from './ContactCard';
 import data from './data';
 import Footer from '../common/Footer';
 
 export default () => {
-    useEffect(() => {
-        reveal();
-    }, []);
     return (
         <React.Fragment>
             <CssBaseline/>
