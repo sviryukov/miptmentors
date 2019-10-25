@@ -14,7 +14,11 @@ const useStyles = makeStyles(theme => ({
             paddingTop: "20px",
             paddingBottom: "80px"
         },
+        [theme.breakpoints.up('lg')]: {
+            marginBottom: "70px"
+        },
         [theme.breakpoints.up('xl')]: {
+            marginBottom: "100px",
             backgroundSize: 'cover'
         }
     },
