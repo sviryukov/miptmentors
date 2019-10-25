@@ -3,7 +3,7 @@ import Div from "./Div";
 
 export default ({
                     delay = 0,
-                    duration = 0.5,
+                    duration = 0.4,
                     interval = 100,
                     final_position = 0,
                     on_scroll = false,
