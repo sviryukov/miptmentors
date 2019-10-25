@@ -4,7 +4,6 @@ import {makeStyles} from '@material-ui/styles';
 
 const useStyles = makeStyles(theme => ({
     menuListItem: {
-        position: 'relative',
         width: 'auto',
         height: '81px',
         [theme.breakpoints.up('xl')]: {
