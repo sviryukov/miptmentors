@@ -12,7 +12,6 @@ const useStyles = makeStyles(theme => ({
             height: '94px'
         },
         zIndex: 1,
-        color: theme.palette.text.light,
         '&:hover': {
             textDecoration: 'none',
             color: theme.palette.secondary.main

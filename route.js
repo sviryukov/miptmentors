@@ -19,16 +19,7 @@ export default (passport, client) => {
         const sheets = new ServerStyleSheets();
         const html = renderToString(
             sheets.collect(
-                <ThemeProvider theme={{
-                    ...theme,
-                    palette: {
-                        ...theme.palette,
-                        background: {
-                            ...theme.palette.background,
-                            default: theme.palette.primary.main
-                        }
-                    }
-                }}>
+                <ThemeProvider theme={theme}>
                     <Index/>
                 </ThemeProvider>,
             ),

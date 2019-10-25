@@ -7,8 +7,9 @@ const useStyles = makeStyles(theme => ({
         width: 'fit-content',
         margin: '10px auto',
         cursor: 'pointer',
-        color: 'cyan',
+        color: theme.palette.primary.main,
         fontSize: '17px',
+        fontWeight: '100',
         transition: 'color 0.4s',
         [theme.breakpoints.up('sm')]: {
             margin: '10px 0px',
@@ -18,7 +19,7 @@ const useStyles = makeStyles(theme => ({
             fontSize: '22px'
         },
         '&:hover': {
-            color: 'magenta'
+            color: theme.palette.secondary.main
         }
     }
 }));

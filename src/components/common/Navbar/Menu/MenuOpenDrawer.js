@@ -7,9 +7,6 @@ const useStyles = makeStyles( theme => ({
     menuOpenDrawerListItem: {
         width: '80px',
         height: '81px'
-    },
-    menuOpenDrawerIcon: {
-        color: theme.palette.text.light
     }
 }));
 

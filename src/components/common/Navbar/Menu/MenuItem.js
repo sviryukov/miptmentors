@@ -12,7 +12,6 @@ const useStyles = makeStyles(theme => ({
         },
         textAlign: 'center',
         textTransform: 'uppercase',
-        color: theme.palette.text.light,
         '&:hover': {
             textDecoration: 'none',
             color: theme.palette.secondary.main

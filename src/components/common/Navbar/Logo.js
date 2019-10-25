@@ -4,7 +4,6 @@ import {Grid, ListItem, Link, Typography} from '@material-ui/core';
 
 const useStyles = makeStyles(theme => ({
     logoListItem: {
-        backgroundColor: theme.palette.secondary.main,
         width: '195px',
         padding: '12px 19px',
         [theme.breakpoints.up('xl')]: {
@@ -13,7 +12,7 @@ const useStyles = makeStyles(theme => ({
         }
     },
     logo: {
-        color: theme.palette.primary.main,
+        color: theme.palette.secondary.dark,
         fontSize: '19px',
         [theme.breakpoints.up('xl')]: {
             fontSize: '22px',

@@ -5,12 +5,13 @@ import Logo from './Logo';
 import Menu from './Menu';
 import Drawer from './Drawer';
 
-const useStyles = makeStyles(theme => ({
+const useStyles = makeStyles({
     container: {
         padding: '0px',
-        backgroundColor: theme.palette.primary.main
+        borderBottom: '1px solid #dadada',
+        backgroundColor: '#fff'
     }
-}));
+});
 
 export default () => {
     const classes = useStyles();
