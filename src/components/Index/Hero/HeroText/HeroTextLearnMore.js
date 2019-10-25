@@ -5,7 +5,7 @@ import {Typography} from "@material-ui/core";
 const useStyles = makeStyles(theme => ({
     heroTextLearnMore: {
         width: 'fit-content',
-        margin: '10px auto',
+        margin: '10px 0px',
         cursor: 'pointer',
         color: theme.palette.primary.main,
         fontSize: '17px',
