@@ -3,7 +3,7 @@ import {makeStyles} from '@material-ui/styles';
 import {Grid, ListItem, Link, Typography} from '@material-ui/core';
 
 const useStyles = makeStyles(theme => ({
-    logoListItem: {
+    logo: {
         width: '195px',
         padding: '12px 19px',
         [theme.breakpoints.up('xl')]: {
@@ -11,7 +11,7 @@ const useStyles = makeStyles(theme => ({
             padding: '14px 22px',
         }
     },
-    logo: {
+    logoText: {
         color: theme.palette.primary.main,
         fontSize: '19px',
         [theme.breakpoints.up('xl')]: {
@@ -27,8 +27,8 @@ export default () => {
     const classes = useStyles();
     return (
         <Grid item>
-            <ListItem className={classes.logoListItem} component={Link} href='./' underline='none'>
-                <Typography variant='h2' className={classes.logo}>
+            <ListItem className={classes.logo} component={Link} href='./' underline='none'>
+                <Typography variant='h2' className={classes.logoText}>
                     КЛУБ<br/>МЕНТОРОВ<br/>ФИЗТЕХ-СОЮЗА
                 </Typography>
             </ListItem>
