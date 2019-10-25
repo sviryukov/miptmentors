@@ -18,7 +18,7 @@ export default () => {
             <CssBaseline/>
             <Navbar/>
             <Hero/>
-            <SlideFromBottom delay={0.5}
+            <SlideFromBottom duration={0.5}
                              interval={300}>
                 <RestPage/>
             </SlideFromBottom>
