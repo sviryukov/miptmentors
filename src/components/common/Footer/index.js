@@ -10,10 +10,13 @@ const useStyles = makeStyles(theme => ({
         width: 'calc(100% - 70px)',
         padding: '0px 50px 50px',
         [theme.breakpoints.up('md')]: {
-            padding: '50px 120px'
+            padding: '0px 80px 50px'
         },
-        backgroundColor: '#27282c',
-        fontSize: '17px'
+        [theme.breakpoints.up('xl')]: {
+            padding: '50px 120px',
+            fontSize: '17px'
+        },
+        backgroundColor: '#27282c'
     },
     footerMenuContainer: {
         paddingTop: '50px',
