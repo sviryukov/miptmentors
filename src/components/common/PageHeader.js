@@ -5,23 +5,16 @@ import {Typography} from "@material-ui/core";
 const useStyles = makeStyles(theme => ({
     pageHeaderContainer: {
         width: '100%',
-        margin: "40px 0px",
-        [theme.breakpoints.up('sm')]: {
-            margin: "50px 0px"
+        marginBottom: "70px",
+        padding: "30px 0px",
+        [theme.breakpoints.up('md')]: {
+            padding: "50px 0px",
         },
-        [theme.breakpoints.up('lg')]: {
-            margin: "70px 0px"
-        },
-        [theme.breakpoints.up('xl')]: {
-            margin: "100px 0px"
-        }
+        background: 'linear-gradient(45deg, #52aa96, #52aa52)'
     },
     pageHeader: {
-        [theme.breakpoints.up('sm')]: {
-            textAlign: 'center'
-        },
-        textTransform: 'uppercase',
-        color: theme.palette.primary.main
+        textAlign: 'center',
+        color: theme.palette.text.light
     }
 }));
 
