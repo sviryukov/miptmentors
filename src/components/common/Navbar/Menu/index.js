@@ -2,13 +2,13 @@ import React from 'react';
 import {makeStyles} from '@material-ui/styles';
 import {Grid, List, Box} from '@material-ui/core';
 import MenuItem from "./MenuItem";
-import MenuSignIn from "./MenuSignIn";
 import MenuOpenDrawer from "./MenuOpenDrawer";
 import MenuJoin from "./MenuJoin";
+import MenuContacts from "./MenuContacts";
 
 const useStyles = makeStyles(theme => ({
     menuContainer: {
-        width: 'calc(100% - 195px)',
+        width: 'calc(100% - 179px)',
         [theme.breakpoints.up('xl')]: {
             width: 'calc(100% - 207px)'
         }
@@ -30,7 +30,7 @@ export default props => {
                 <MenuItem text='Менторы проекта' href='/mentors' id='mentors'/>
                 <MenuItem text='Контакты' href='/contacts' id='contacts'/>
                 <MenuJoin/>
-                <MenuSignIn/>
+                <MenuContacts/>
             </List>
             <List component={Box} className={classes.menuList} display={{ xs: 'flex', md: 'none'}}>
                 <MenuOpenDrawer handleClick={props.handleClick}/>
