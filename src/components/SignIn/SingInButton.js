@@ -14,7 +14,7 @@ export default () => {
     return (
         <Button variant="contained"
                 size="large"
-                color="primary"
+                color="secondary"
                 className={classes.singInButton}>
             Войти
         </Button>

@@ -1,12 +1,11 @@
 import React from 'react';
 import {makeStyles} from '@material-ui/styles';
-import {Typography, Avatar} from '@material-ui/core';
-import {Lock} from '@material-ui/icons';
+import {Typography} from '@material-ui/core';
 
 let useStyles = makeStyles(theme => ({
     signInHeader: {
         marginBottom: '20px',
-        textAlign: 'center'
+        fontWeight: '100'
     },
     signInHeaderIcon: {
         width: '40px',
@@ -21,9 +20,6 @@ export default () => {
     return (
         <Typography variant='h4'
                     className={classes.signInHeader}>
-            <Avatar className={classes.signInHeaderIcon}>
-                <Lock/>
-            </Avatar>
             Войти
         </Typography>
     );
