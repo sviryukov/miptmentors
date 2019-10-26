@@ -4,7 +4,7 @@ import {Grid} from "@material-ui/core";
 
 let useStyles = makeStyles({
     page: {
-        minHeight: 'calc(100% - 429px)',
+        minHeight: 'calc(100% - 235px)',
         marginBottom: '100px'
     }
 });
