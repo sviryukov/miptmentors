@@ -8,7 +8,6 @@ import SingInButton from "./SingInButton";
 
 let useStyles = makeStyles(theme => ({
     singInContainer: {
-        position: 'relative',
         borderRadius: '4px',
         padding: '100px 40px 40px',
         [theme.breakpoints.up('sm')]: {
@@ -17,7 +16,7 @@ let useStyles = makeStyles(theme => ({
         [theme.breakpoints.up('md')]: {
             marginRight: '30%',
             padding: '100px 70px',
-            top: '-150px',
+            marginTop: '-150px',
             backgroundColor: '#fff'
         }
     }
