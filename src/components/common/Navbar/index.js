@@ -1,6 +1,7 @@
 import React, {useState} from 'react';
 import {makeStyles} from '@material-ui/styles';
 import {Grid, Hidden} from '@material-ui/core';
+import TopBar from './TopBar';
 import Logo from './Logo';
 import Menu from './Menu';
 import Drawer from './Drawer';
@@ -25,6 +26,7 @@ export default () => {
     return (
         <React.Fragment>
             <Grid container className={classes.container}>
+                <TopBar/>
                 <Logo/>
                 <Menu handleClick={toggleDrawer(true)}/>
             </Grid>
