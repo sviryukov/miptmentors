@@ -3,7 +3,7 @@ import {makeStyles} from "@material-ui/styles";
 import {Grid} from "@material-ui/core";
 import ReturnToTop from "./ReturnToTop";
 import FooterMenu from "./FooterMenu";
-import FooterSocial from "./FooterSocial";
+import PhystechUnionSocial from '../PhystechUnionSocial';
 
 const useStyles = makeStyles(theme => ({
     footer: {
@@ -27,6 +27,7 @@ const useStyles = makeStyles(theme => ({
     },
     footerSocialContainer: {
         paddingTop: '50px',
+        color: '#fff',
         order: 1,
         textAlign: 'center',
         [theme.breakpoints.up('md')]: {
@@ -46,7 +47,10 @@ export default () => {
                     <FooterMenu/>
                 </Grid>
                 <Grid item xs={12} md={6} className={classes.footerSocialContainer}>
-                    <FooterSocial/>
+                    <PhystechUnionSocial.Vk/>
+                    <PhystechUnionSocial.Facebook/>
+                    <PhystechUnionSocial.Instagram/>
+                    <PhystechUnionSocial.Telegram/>
                 </Grid>
             </Grid>
         </Grid>
