@@ -17,7 +17,7 @@ let useStyles = makeStyles(theme => ({
             marginRight: '30%',
             padding: '100px 70px',
             marginTop: '-150px',
-            backgroundColor: '#fff'
+            backgroundColor: theme.palette.background.paper
         }
     }
 }));

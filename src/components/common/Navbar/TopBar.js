@@ -12,7 +12,7 @@ const useStyles = makeStyles(theme => ({
     },
     topBarLink: {
         lineHeight: '40px',
-        color: '#fff',
+        color: theme.palette.secondary.contrastText,
         '&:hover': {
             color: theme.palette.secondary.light,
             textDecoration: 'none'

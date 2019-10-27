@@ -2,14 +2,14 @@ import React, {useEffect, useState} from 'react'
 import {makeStyles} from "@material-ui/styles";
 import {Grid, Box} from "@material-ui/core";
 
-const useStyles = makeStyles({
+const useStyles = makeStyles(theme => ({
     restPage: {
         minHeight: '2000px',
         margin: 'auto',
-        backgroundColor: '#fff',
+        backgroundColor: theme.palette.background.paper,
         transition: 'width 0.3s'
     }
-});
+}));
 
 export default () => {
     const classes = useStyles();

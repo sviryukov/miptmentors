@@ -4,7 +4,7 @@ import {ListItem, Link, ListItemText} from '@material-ui/core';
 
 const useStyles = makeStyles(theme => ({
     drawerListItem: {
-        borderTop: '1px solid #fff',
+        borderTop: '1px solid ' + theme.palette.background.paper,
         backgroundColor: theme.palette.background.default
     },
     drawerListItemText: {

@@ -3,7 +3,7 @@ import {makeStyles} from "@material-ui/styles";
 import {Box, List} from '@material-ui/core';
 import DrawerItem from "./DrawerListItem";
 
-const useStyles = makeStyles({
+const useStyles = makeStyles(theme => ({
     drawerContainer: {
         width: '100%',
         height: 'calc(100% - 121px)',
@@ -16,14 +16,14 @@ const useStyles = makeStyles({
         width: '100%',
         padding: '0px',
         height: '100%',
-        backgroundColor: '#fff',
+        backgroundColor: theme.palette.background.paper,
         position: 'absolute',
         transition: 'left 0.4s'
     },
     drawerList: {
         padding: '0px'
     }
-});
+}));
 
 export default props => {
     const classes = useStyles();

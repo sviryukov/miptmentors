@@ -27,7 +27,7 @@ const useStyles = makeStyles(theme => ({
     },
     footerSocialContainer: {
         paddingTop: '50px',
-        color: '#fff',
+        color: theme.palette.secondary.contrastText,
         order: 1,
         textAlign: 'center',
         [theme.breakpoints.up('md')]: {

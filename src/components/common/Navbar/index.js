@@ -6,13 +6,13 @@ import Logo from './Logo';
 import Menu from './Menu';
 import Drawer from './Drawer';
 
-const useStyles = makeStyles({
+const useStyles = makeStyles(theme => ({
     container: {
         padding: '0px',
-        borderBottom: '1px solid #dadada',
-        backgroundColor: '#fff'
+        borderBottom: '1px solid ' + theme.palette.divider,
+        backgroundColor: theme.palette.background.paper
     }
-});
+}));
 
 export default () => {
     const classes = useStyles();
