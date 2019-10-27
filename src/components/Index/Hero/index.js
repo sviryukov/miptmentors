@@ -6,7 +6,6 @@ import HeroText from "./HeroText";
 const useStyles = makeStyles(theme => ({
     hero: {
         margin: 'auto',
-        marginTop: '40px',
         padding: '50px 5% 50px',
         [theme.breakpoints.up('sm')]: {
             height: '510px',
