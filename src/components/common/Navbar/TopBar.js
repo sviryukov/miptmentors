@@ -14,7 +14,7 @@ const useStyles = makeStyles(theme => ({
         lineHeight: '40px',
         color: '#fff',
         '&:hover': {
-            color: theme.palette.secondary.main,
+            color: theme.palette.secondary.light,
             textDecoration: 'none'
         }
     },
