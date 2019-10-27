@@ -10,7 +10,7 @@ const useStyles = makeStyles(theme => ({
         [theme.breakpoints.up('md')]: {
             padding: "50px 0px",
         },
-        background: 'linear-gradient(45deg, #52aa96, #52aa52)'
+        background: 'linear-gradient(45deg, ' + theme.palette.secondary.light + ', ' + theme.palette.secondary.dark + ')'
     },
     pageHeader: {
         textAlign: 'center',

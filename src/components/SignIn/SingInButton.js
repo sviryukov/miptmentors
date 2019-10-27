@@ -4,8 +4,7 @@ import {Button} from '@material-ui/core';
 
 let useStyles = makeStyles({
     singInButton: {
-        marginTop: "20px",
-        marginBottom: "20px",
+        marginTop: "20px"
     }
 });
 

@@ -6,7 +6,7 @@ import {OpenInNew} from "@material-ui/icons";
 const useStyles = makeStyles(theme => ({
     topBar: {
         height: '40px',
-        backgroundColor: '#273742',
+        backgroundColor: '#162225',
         fontWeight: 'bold',
         justifyContent: 'center'
     },

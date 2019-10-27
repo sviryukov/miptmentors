@@ -8,7 +8,7 @@ let useStyles = makeStyles(theme => ({
         [theme.breakpoints.up('md')]: {
             height: '250px',
         },
-        background: 'linear-gradient(45deg, #52aa96, #52aa52)',
+        background: 'linear-gradient(45deg, ' + theme.palette.secondary.light + ', ' + theme.palette.secondary.dark + ')'
     }
 }));
 
