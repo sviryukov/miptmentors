@@ -30,7 +30,7 @@ export default props => {
     return (
         <Box className={classes.drawerContainer} style={{
             zIndex: props.drawerOpen ? '10' : '-1'
-        }}>
+        }} display={{xs: 'block', md: 'none'}}>
             <Box className={classes.drawer}
                  style={{
                      left: props.drawerOpen ? '0%' : '100%'
