@@ -16,7 +16,8 @@ const useStyles = makeStyles(theme => ({
         '&:hover': {
             textDecoration: 'none',
             color: theme.palette.secondary.main
-        }
+        },
+        transition: 'color 0.4s'
     }
 }));
 
