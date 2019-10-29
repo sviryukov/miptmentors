@@ -10,7 +10,7 @@ const useStyles = makeStyles(theme => ({
         color: theme.palette.primary.main,
         fontSize: '17px',
         fontWeight: '100',
-        transition: 'color 0.4s',
+        transition: 'color 0.2s',
         [theme.breakpoints.up('sm')]: {
             margin: '10px 0px',
             fontSize: '20px'
