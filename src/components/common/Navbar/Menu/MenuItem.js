@@ -15,7 +15,7 @@ const useStyles = makeStyles(theme => ({
             textDecoration: 'none',
             color: theme.palette.secondary.main
         },
-        transition: 'color 0.4s'
+        transition: 'color 0.2s'
     }
 }));
 
