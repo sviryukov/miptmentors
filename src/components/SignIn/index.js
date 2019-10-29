@@ -15,7 +15,7 @@ export default () => {
                 <BackgroundGradient/>
                 <SignInForm/>
                 <Grid component={Box} display={{xs: 'none', md: 'flex'}}
-                      item xs={5} lg={4}/>
+                      item xs={5} lg={4} xl={3}/>
             </Page>
             <Footer/>
         </React.Fragment>

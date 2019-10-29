@@ -9,14 +9,18 @@ import SingInButton from "./SingInButton";
 let useStyles = makeStyles(theme => ({
     singInContainer: {
         borderRadius: '4px',
-        padding: '100px 40px 40px',
+        padding: '80px 30px 40px',
         [theme.breakpoints.up('sm')]: {
             padding: '100px 150px 40px'
         },
         [theme.breakpoints.up('md')]: {
-            padding: '100px 66px',
-            marginTop: '100px',
+            height: '409px',
+            padding: '64px',
+            marginTop: '80px',
             backgroundColor: theme.palette.background.paper
+        },
+        [theme.breakpoints.up('xl')]: {
+            marginTop: '120px'
         }
     }
 }));
