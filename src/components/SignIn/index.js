@@ -1,9 +1,9 @@
 import React from 'react';
-import {CssBaseline} from '@material-ui/core';
+import {CssBaseline, Grid, Box} from "@material-ui/core";
 import Navbar from '../common/Navbar';
 import Page from "../common/Page";
 import BackgroundGradient from '../common/BackgroundGradient';
-import SignInContainer from './SignInContainer';
+import SignInForm from './SignInForm';
 import Footer from "../common/Footer";
 
 export default () => {
@@ -13,7 +13,9 @@ export default () => {
             <Navbar/>
             <Page>
                 <BackgroundGradient/>
-                <SignInContainer/>
+                <SignInForm/>
+                <Grid component={Box} display={{xs: 'none', md: 'flex'}}
+                      item xs={5} lg={4}/>
             </Page>
             <Footer/>
         </React.Fragment>

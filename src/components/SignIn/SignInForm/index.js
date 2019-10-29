@@ -14,8 +14,7 @@ let useStyles = makeStyles(theme => ({
             padding: '100px 150px 40px'
         },
         [theme.breakpoints.up('md')]: {
-            marginRight: '30%',
-            padding: '100px 70px',
+            padding: '100px 66px',
             marginTop: '100px',
             backgroundColor: theme.palette.background.paper
         }
@@ -27,7 +26,7 @@ export default () => {
     return (
         <Grid component={Box}
               boxShadow={{xs: 0, md: 3}}
-              item xs={12}  md={5} lg={4} xl={3}
+              item xs={12} md={5} lg={4} xl={3}
               className={classes.singInContainer}>
             <SingInHeader/>
             <SingInEmailField/>
