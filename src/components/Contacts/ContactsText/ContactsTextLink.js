@@ -10,7 +10,7 @@ const useStyles = makeStyles(theme => ({
         color: 'inherit',
         transition: 'color 0.2s',
         '&:hover': {
-            color: theme.palette.primary.main,
+            color: theme.palette.secondary.main,
             textDecoration: 'none'
         }
     },
