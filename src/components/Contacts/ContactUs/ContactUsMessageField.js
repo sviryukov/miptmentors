@@ -11,12 +11,12 @@ let useStyles = makeStyles({
 export default () => {
     const classes = useStyles();
     return (
-        <TextField type='text'
+        <TextField label='Ваш вопрос'
+                   type='text'
                    multiline
                    rows={5}
                    id='message'
                    name='message'
-                   placeholder='Ваш вопрос'
                    margin='normal'
                    variant='outlined'
                    className={classes.contactUsEmailField}/>
