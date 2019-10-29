@@ -16,7 +16,7 @@ let useStyles = makeStyles(theme => ({
         [theme.breakpoints.up('md')]: {
             marginRight: '30%',
             padding: '100px 70px',
-            marginTop: '-150px',
+            marginTop: '100px',
             backgroundColor: theme.palette.background.paper
         }
     }
