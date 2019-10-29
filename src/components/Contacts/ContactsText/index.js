@@ -12,11 +12,12 @@ const useStyles = makeStyles(theme => ({
             padding: '40px 140px 0px'
         },
         [theme.breakpoints.up('md')]: {
-            height: '440px',
-            padding: '140px 81px'
+            height: '485px',
+            padding: '155px 70px'
         },
         [theme.breakpoints.up('xl')]: {
-            padding: '140px 100px'
+            height: '555px',
+            padding: '195px 100px'
         }
     },
     contactsTextSocialIcon: {
