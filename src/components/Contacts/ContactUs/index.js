@@ -16,7 +16,7 @@ let useStyles = makeStyles(theme => ({
         [theme.breakpoints.up('md')]: {
             height: '489px',
             padding: '64px',
-            marginTop: '80px',
+            margin: '80px 0px 50px',
             backgroundColor: theme.palette.background.paper
         },
         [theme.breakpoints.up('xl')]: {
