@@ -6,8 +6,9 @@ const useStyles = makeStyles(theme => ({
     heroTextHeader: {
         marginBottom: '15px',
         lineHeight: '1.4',
-        fontWeight: 'normal',
+        fontWeight: '100',
         fontSize: '25px',
+        color: theme.palette.primary.main,
         [theme.breakpoints.up('sm')]: {
             fontSize: '40px'
         },

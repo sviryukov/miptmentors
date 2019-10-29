@@ -5,11 +5,12 @@ import {Typography} from "@material-ui/core";
 const useStyles = makeStyles(theme => ({
     heroTextLearnMore: {
         width: 'fit-content',
-        margin: '10px auto',
+        margin: '10px 0px',
         cursor: 'pointer',
-        color: 'cyan',
+        color: theme.palette.primary.main,
         fontSize: '17px',
-        transition: 'color 0.4s',
+        fontWeight: '100',
+        transition: 'color 0.2s',
         [theme.breakpoints.up('sm')]: {
             margin: '10px 0px',
             fontSize: '20px'
@@ -18,7 +19,7 @@ const useStyles = makeStyles(theme => ({
             fontSize: '22px'
         },
         '&:hover': {
-            color: 'magenta'
+            color: theme.palette.secondary.main
         }
     }
 }));

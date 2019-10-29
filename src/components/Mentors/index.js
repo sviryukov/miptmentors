@@ -37,11 +37,11 @@ export default () => {
     return (
         <React.Fragment>
             <CssBaseline/>
-            <Navbar/>
+            <Navbar current='mentors'/>
             <PageHeader text='Менторы проекта'/>
             <Page>
                 <MentorsSelect setCategory={handleSetCategory}/>
-                <Grid container spacing={4} item xs={10} lg={7} xl={8} className={classes.mentorsContainer}>
+                <Grid container spacing={4} item xs={10} md={11} lg={9} xl={8} className={classes.mentorsContainer}>
                     {mentors.map((mentor, i) => (
                         (category === 'all' || mentors[i].categories.indexOf(category) !== -1) &&
                         <MentorCard key={mentor.name}

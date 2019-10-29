@@ -16,7 +16,7 @@ export default props => {
     const classes = useStyles();
     return (
         <Button color='secondary'
-                variant='outlined'
+                variant='contained'
                 className={classes.heroTextButton}>
             {props.text}
         </Button>

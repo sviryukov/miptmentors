@@ -1,24 +1,13 @@
 import React from 'react'
-import {makeStyles} from "@material-ui/styles";
 import {Grid} from "@material-ui/core";
 import HeroTextHeader from './HeroTextHeader';
 import HeroTextDescription from './HeroTextDescription';
 import HeroTextButton from './HeroTextButton';
 import HeroTextLearnMore from './HeroTextLearnMore';
 
-const useStyles = makeStyles(theme => ({
-    heroText: {
-        textAlign: 'center',
-        [theme.breakpoints.up('sm')]: {
-            textAlign: 'left'
-        }
-    }
-}));
-
 export default () => {
-    const classes = useStyles();
     return (
-        <Grid item xs={12} md={10} lg={7} className={classes.heroText}>
+        <Grid item xs={12} md={10} lg={7}>
             <HeroTextHeader animation_delay={0}/>
             <HeroTextDescription animation_delay={0.1}/>
             <HeroTextButton text='Найти ментора' animation_delay={0.2}/>
