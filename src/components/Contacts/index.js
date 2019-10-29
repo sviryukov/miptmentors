@@ -11,7 +11,7 @@ export default () => {
     return (
         <React.Fragment>
             <CssBaseline/>
-            <Navbar/>
+            <Navbar current='contacts'/>
             <Page>
                 <BackgroundGradient/>
                 <ContactUs/>

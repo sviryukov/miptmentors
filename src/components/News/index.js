@@ -28,7 +28,7 @@ export default () => {
     return (
         <React.Fragment>
             <CssBaseline/>
-            <Navbar/>
+            <Navbar current='news'/>
             <PageHeader text='Новости проекта'/>
             <Page>
                 <Grid container spacing={4} item xs={12} sm={8} lg={9} className={classes.newsContainer}>

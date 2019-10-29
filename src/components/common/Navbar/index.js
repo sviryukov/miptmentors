@@ -14,7 +14,7 @@ const useStyles = makeStyles(theme => ({
     }
 }));
 
-export default () => {
+export default props => {
     const classes = useStyles();
     const [drawerOpen, setDrawerOpen] = useState(false);
     const toggleDrawer = open => event => {
@@ -32,7 +32,8 @@ export default () => {
                 <Logo/>
                 <Menu handleDrawerOpenClick={toggleDrawer(true)}
                       handleDrawerCloseClick={toggleDrawer(false)}
-                      drawerOpen={drawerOpen}/>
+                      drawerOpen={drawerOpen}
+                      current={props.current}/>
             </Grid>
         </React.Fragment>
     );

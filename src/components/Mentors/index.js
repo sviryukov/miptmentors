@@ -37,7 +37,7 @@ export default () => {
     return (
         <React.Fragment>
             <CssBaseline/>
-            <Navbar/>
+            <Navbar current='mentors'/>
             <PageHeader text='Менторы проекта'/>
             <Page>
                 <MentorsSelect setCategory={handleSetCategory}/>

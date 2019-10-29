@@ -16,13 +16,29 @@ const useStyles = makeStyles(theme => ({
             color: theme.palette.secondary.main
         },
         transition: 'color 0.2s'
+    },
+    menuListItemCurrent: {
+        width: 'auto',
+        height: '81px',
+        [theme.breakpoints.up('xl')]: {
+            height: '94px'
+        },
+        paddingBottom: '6px',
+        borderBottom: '2px solid',
+        textAlign: 'center',
+        textTransform: 'uppercase',
+        '&:hover': {
+            textDecoration: 'none',
+            color: theme.palette.secondary.main
+        },
+        transition: 'color 0.2s'
     }
 }));
 
 export default props => {
     const classes = useStyles();
     return (
-        <ListItem className={classes.menuListItem}
+        <ListItem className={props.current ? classes.menuListItemCurrent : classes.menuListItem}
                   component={Link}
                   href={props.href}
                   id={props.id}>
