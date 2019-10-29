@@ -33,20 +33,16 @@ export default () => {
                 </Link>
             </Box>
             <Box className={classes.footerMenuList}>
-                <Link href='/news' className={classes.footerMenuLink}>
+                <Link href={'/news'} className={classes.footerMenuLink}>
                     Новости проекта
                 </Link>
                 <br/>
-                <Link href='/mentors' className={classes.footerMenuLink}>
+                <Link href={'/mentors'} className={classes.footerMenuLink}>
                     Менторы проекта
                 </Link>
                 <br/>
-                <Link href='/contacts' className={classes.footerMenuLink}>
+                <Link href={'/contacts'} className={classes.footerMenuLink}>
                     Контакты
-                </Link>
-                <br/>
-                <Link href='/signin' className={classes.footerMenuLink}>
-                    Войти
                 </Link>
             </Box>
             <Box className={classes.footerMenuListBold}>
@@ -57,9 +53,6 @@ export default () => {
                 <Link href='#' className={classes.footerMenuLink}>
                     Стать ментором
                 </Link>
-            </Box>
-            <Box className={classes.footerMenuCopyright}>
-                © 2019 Физтех-Союз
             </Box>
         </React.Fragment>
     );
