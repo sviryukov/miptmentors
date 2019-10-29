@@ -24,7 +24,7 @@ export default props => {
     const Icon = props.icon;
     return (
         <React.Fragment>
-            <Grid component={Link} href={props.href}
+            <Grid component={Link} href={props.href} target='_blanc'
                   item
                   container
                   className={classes.contactsTextLink}>
