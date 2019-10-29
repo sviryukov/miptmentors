@@ -1,7 +1,7 @@
 import React from 'react';
 import {makeStyles} from '@material-ui/styles';
 import {Grid, Link} from '@material-ui/core';
-import {OpenInNew} from "@material-ui/icons";
+import TopBarIcon from './TopBarIcon';
 
 const useStyles = makeStyles(theme => ({
     topBar: {
@@ -13,6 +13,7 @@ const useStyles = makeStyles(theme => ({
     topBarLink: {
         lineHeight: '40px',
         color: theme.palette.secondary.contrastText,
+        transition: 'color 0.2s',
         '&:hover': {
             color: theme.palette.secondary.light,
             textDecoration: 'none'
@@ -33,7 +34,7 @@ export default () => {
               className={classes.topBar}>
             <Link href='http://phystechunion.org' target='_blank' className={classes.topBarLink}>
                 Вступайте в Физтех-Союз
-                <OpenInNew fontSize='small' color='inherit' className={classes.topBarLinkIcon}/>
+                <TopBarIcon fontSize='small' color='inherit' className={classes.topBarLinkIcon}/>
             </Link>
         </Grid>
     );
