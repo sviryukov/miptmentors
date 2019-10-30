@@ -8,12 +8,14 @@ import ContactUsButton from "./ContactUsButton";
 
 let useStyles = makeStyles(theme => ({
     contactUsContainer: {
+        order: '3',
         borderRadius: '4px',
-        padding: '80px 30px 40px',
+        padding: '80px 30px 00px',
         [theme.breakpoints.up('sm')]: {
-            padding: '100px 150px 40px'
+            padding: '80px 150px 00px'
         },
         [theme.breakpoints.up('md')]: {
+            order: '2',
             height: '489px',
             padding: '64px',
             margin: '80px 0px 50px',

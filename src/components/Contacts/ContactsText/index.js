@@ -1,43 +1,66 @@
 import React from 'react';
 import {makeStyles} from '@material-ui/styles';
-import {Grid, Box} from "@material-ui/core";
-import {Email, Phone, OpenInNew} from "@material-ui/icons";
-import ContactsTextLink from "./ContactsTextLink";
+import {Grid, Link, Typography} from "@material-ui/core";
+import ContactsTextFacebook from "./ContactsTextFacebook";
+import ContactsTextVk from "./ContactsTextVk";
+import ContactsTextInstagram from "./ContactsTextInstagram";
+import ContactsTextTelegram from "./ContactsTextTelegram";
 
 const useStyles = makeStyles(theme => ({
     contactsText: {
-        height: '185px',
-        padding: '40px 20px 0px',
+        order: '2',
+        padding: '80px 30px 80px',
+        background: 'linear-gradient(45deg, ' + theme.palette.secondary.light + ', ' + theme.palette.secondary.dark + ')',
         [theme.breakpoints.up('sm')]: {
-            padding: '40px 140px 0px'
+            padding: '80px 150px 80px'
         },
         [theme.breakpoints.up('md')]: {
-            height: '485px',
-            padding: '155px 70px'
+            order: '3',
+            height: '489px',
+            padding: '202px 64px 64px',
+            margin: '80px 0px 50px',
+            background: 'transparent'
         },
         [theme.breakpoints.up('xl')]: {
-            height: '555px',
-            padding: '195px 100px'
+            marginTop: '120px'
         }
     },
-    contactsTextSocialIcon: {
-        transition: 'color 0.2s',
+    contactsTextLink: {
+        fontSize: '20px',
+        fontWeight: '100',
         '&:hover': {
-            color: theme.palette.primary.main
-        }
+            textDecoration: 'none'
+        },
+        color: theme.palette.secondary.contrastText
+    },
+    contactsTextFollowUs: {
+        padding: '30px 0px',
+        fontSize: '20px',
+        fontWeight: '100',
+        color: theme.palette.secondary.contrastText
     }
 }));
 
 export default () => {
     const classes = useStyles();
     return (
-        <Grid component={Box} display={{xs: 'none', md: 'flex'}}
-              container
-              item xs={12} md={5} lg={4} xl={3}
+        <Grid item xs={12} md={5} lg={4} xl={3}
               className={classes.contactsText}>
-            <ContactsTextLink href='mailto:sviryukov.k@phystech.edu' text='sviryukov.k@phystech.edu' icon={Email}/>
-            <ContactsTextLink href='tel:+79250479358' text='+7 (925) 047-93-58' icon={Phone}/>
-            <ContactsTextLink href='http://phystechunion.org' text='Физтех-Союз' icon={OpenInNew}/>
+            <Link href='#' className={classes.contactsTextLink}>
+                sviryukov.k@phystech.edu
+            </Link>
+            <br/>
+            <Link href='#' className={classes.contactsTextLink}>
+                +7 (925) 047-93-58
+            </Link>
+            <Typography className={classes.contactsTextFollowUs}>
+                Подписывайтесь на нас:
+            </Typography>
+            <ContactsTextFacebook/>
+            <ContactsTextVk/>
+            <br/>
+            <ContactsTextInstagram/>
+            <ContactsTextTelegram/>
         </Grid>
     );
 };
