@@ -6,7 +6,7 @@ import TopBarIcon from './TopBarIcon';
 const useStyles = makeStyles(theme => ({
     topBar: {
         height: '40px',
-        backgroundColor: '#162225',
+        backgroundColor: theme.palette.text.primary,
         fontWeight: 'bold',
         justifyContent: 'center'
     },

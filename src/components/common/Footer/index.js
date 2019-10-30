@@ -16,7 +16,7 @@ const useStyles = makeStyles(theme => ({
             padding: '20px 120px',
             fontSize: '17px'
         },
-        backgroundColor: '#27282c'
+        backgroundColor: theme.palette.text.primary
     },
     footerMenuContainer: {
         paddingTop: '50px',
