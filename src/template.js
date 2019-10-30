@@ -7,13 +7,9 @@ export default (title, body, script, css) => {
 				`<title>${title}</title>` +
 				`<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap"/>` +
 				`<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons"/>` +
+				`<link rel="stylesheet" href="/css/main.css" type="text/css"/>` +
 				`<link rel="shortcut icon" href="/img/favicon.ico" type="image/x-icon">` +
 				`<style id="jss-server-side">${css}</style>` +
-				`<style>` +
-					`html, body, #root {` +
-						`height: 100%` +
-					`}` +
-				`</style>` +
 			`</head>` +
 			`<body>` +
 				`<div id="root">${body}</div>` +
