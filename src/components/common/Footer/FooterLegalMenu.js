@@ -29,8 +29,7 @@ export default () => {
     const classes = useStyles();
     return (
         <React.Fragment>
-            <Box component={Link} href='#'
-                 className={classes.footerMenuHeader}>
+            <Box className={classes.footerMenuHeader}>
                 Правовая информация
             </Box>
             <Box component={Link} href='#'
