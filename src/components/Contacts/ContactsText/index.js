@@ -11,6 +11,8 @@ const useStyles = makeStyles(theme => ({
         order: '2',
         padding: '80px 30px 80px',
         background: 'linear-gradient(45deg, ' + theme.palette.secondary.light + ', ' + theme.palette.secondary.dark + ')',
+        shapeOutside: 'polygon(0 0, 100% 0, 100% 405px, 66% 375px, 0 395px)',
+        clipPath: 'polygon(0 0, 100% 0, 100% 405px, 66% 375px, 0 395px)',
         [theme.breakpoints.up('sm')]: {
             padding: '80px 150px 80px'
         },
@@ -19,7 +21,9 @@ const useStyles = makeStyles(theme => ({
             height: '489px',
             padding: '202px 64px 64px',
             margin: '80px 0px 50px',
-            background: 'transparent'
+            background: 'transparent',
+            shapeOutside: 'none',
+            clipPath: 'none'
         },
         [theme.breakpoints.up('xl')]: {
             marginTop: '120px'
