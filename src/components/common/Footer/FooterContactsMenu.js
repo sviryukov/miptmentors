@@ -6,8 +6,11 @@ import FooterContactsMenuSocial from "./FooterContactsMenuSocial";
 const useStyles = makeStyles(theme => ({
     footerMenuLink: {
         display: 'block',
-        color: theme.palette.secondary.contrastText,
+        padding: '4px 0px',
+        color: '#d9d9d9',
+        transition: 'color 0.1s',
         '&:hover': {
+            color: theme.palette.secondary.contrastText,
             textDecoration: 'none'
         }
     }
@@ -17,7 +20,7 @@ export default () => {
     const classes = useStyles();
     return (
         <React.Fragment>
-            <Box className={classes.footerMenuLink}>
+            <Box>
                 <FooterContactsMenuSocial/>
             </Box>
             <Box component={Link} href='tel:+79250479358'

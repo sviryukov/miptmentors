@@ -17,8 +17,10 @@ const useStyles = makeStyles(theme => ({
     footerMenuLink: {
         display: 'block',
         paddingBottom: '15px',
-        color: theme.palette.secondary.contrastText,
+        transition: 'color 0.1s',
+        color: '#d9d9d9',
         '&:hover': {
+            color: theme.palette.secondary.contrastText,
             textDecoration: 'none'
         }
     }
@@ -31,7 +33,7 @@ export default () => {
             <Box display={{xs: 'block', sm: 'none'}}
                  component={Link} href={'/'}
                  className={classes.footerMenuHeader}>
-                Клуб Менторов Физтех-Союза
+                Клуб Менторов Физтех&#8209;Союза
             </Box>
             <Box display={{xs: 'none', sm: 'block'}}
                  component={Link} href={'/'}

@@ -6,12 +6,17 @@ import {Link} from "@material-ui/core";
 
 const useStyles = makeStyles(theme => ({
     phystechUnionSocialLink: {
-        paddingRight: '10px',
+        marginRight: '10px',
         [theme.breakpoints.up('md')]: {
-            paddingRight: '0px',
-            paddingLeft: '10px'
+            marginRight: '0px',
+            marginLeft: '10px'
         },
-        color: 'inherit',
+        transition: 'color 0.1s',
+        color: '#d9d9d9',
+        '&:hover': {
+            color: theme.palette.secondary.contrastText,
+            textDecoration: 'none'
+        },
         fontSize: '30px'
     }
 }));

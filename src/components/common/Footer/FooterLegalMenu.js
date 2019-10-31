@@ -18,8 +18,10 @@ const useStyles = makeStyles(theme => ({
     footerMenuLink: {
         display: 'block',
         paddingBottom: '15px',
-        color: theme.palette.secondary.contrastText,
+        transition: 'color 0.1s',
+        color: '#d9d9d9',
         '&:hover': {
+            color: theme.palette.secondary.contrastText,
             textDecoration: 'none'
         }
     }
