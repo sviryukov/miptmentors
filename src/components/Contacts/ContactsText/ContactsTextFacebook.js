@@ -18,7 +18,7 @@ const useStyles = makeStyles(theme => ({
 export default () => {
     const classes = useStyles();
     return (
-        <Link href='https://www.facebook.com/phystech/' className={classes.contactsTextFacebook}>
+        <Link href='https://www.facebook.com/phystech/' target='_blank' className={classes.contactsTextFacebook}>
             facebook
         </Link>
     );

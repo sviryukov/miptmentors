@@ -17,7 +17,7 @@ const useStyles = makeStyles(theme => ({
 export default () => {
     const classes = useStyles();
     return (
-        <Link href='https://vk.com/phystechunion' target='_blanc' className={classes.contactsTextVk}>
+        <Link href='https://vk.com/phystechunion' target='_blank' className={classes.contactsTextVk}>
             ВКонтакте
         </Link>
     );

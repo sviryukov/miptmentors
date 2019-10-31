@@ -38,8 +38,8 @@ export default props => {
                 <List className={classes.drawerList}>
                     <DrawerItem text='Новости проекта' href='/news'/>
                     <DrawerItem text='Менторы проекта' href='/mentors'/>
-                    <DrawerItem text='Найти ментора' href='#'/>
-                    <DrawerItem text='Стать ментором' href='#'/>
+                    <DrawerItem text='Найти ментора' href='/findmentor'/>
+                    <DrawerItem text='Стать ментором' href='/becomementor'/>
                     <DrawerItem text='Контакты' href='/contacts'/>
                 </List>
             </Box>

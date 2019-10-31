@@ -24,7 +24,7 @@ const useStyles = makeStyles(theme => ({
 export default () => {
     const classes = useStyles();
     return (
-        <Link href='http://phystechunion.org' traget='_blank'
+        <Link href='http://phystechunion.org' target='_blank'
               className={classes.contactsTextPhystechUnion}>
             Физтех-Союз
             <OpenInNew className={classes.contactsTextPhystechUnionIcon}/>

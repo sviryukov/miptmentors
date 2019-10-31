@@ -31,15 +31,14 @@ export default () => {
     const classes = useStyles();
     return (
         <React.Fragment>
-            <Box component={Link} href='#'
-                 className={classes.footerMenuHeader}>
+            <Box className={classes.footerMenuHeader}>
                 Принять участие
             </Box>
-            <Box component={Link} href='#'
+            <Box component={Link} href={'/findmentor'}
                  className={classes.footerMenuLink}>
                 Найти ментора
             </Box>
-            <Box component={Link} href='#'
+            <Box component={Link} href={'/becomementor'}
                  className={classes.footerMenuLink}>
                 Стать ментором
             </Box>

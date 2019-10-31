@@ -52,7 +52,7 @@ export default () => {
                  className={classes.footerMenuLink}>
                 Контакты
             </Box>
-            <Box component={Link} href={'http://phystechunion.org'} target='_blanc'
+            <Box component={Link} href={'http://phystechunion.org'} target='_blank'
                  className={classes.footerMenuLink}>
                 Физтех-Союз
             </Box>

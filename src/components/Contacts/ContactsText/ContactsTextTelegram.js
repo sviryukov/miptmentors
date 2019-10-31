@@ -18,7 +18,7 @@ const useStyles = makeStyles(theme => ({
 export default () => {
     const classes = useStyles();
     return (
-        <Link href='http://t.me/phystechunion' target='_blanc' className={classes.contactsTextTelegram}>
+        <Link href='http://t.me/phystechunion' target='_blank' className={classes.contactsTextTelegram}>
             Telegram
         </Link>
     );

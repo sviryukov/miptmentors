@@ -53,11 +53,11 @@ export default () => {
     return (
         <Grid item xs={12} md={5} lg={4} xl={3}
               className={classes.contactsText}>
-            <Link href='#' className={classes.contactsTextLink}>
+            <Link href='mailto:sviryukov.k@phystech.edu' className={classes.contactsTextLink}>
                 sviryukov.k@phystech.edu
             </Link>
             <br/>
-            <Link href='#' className={classes.contactsTextLink}>
+            <Link href='tel:+79250479358' className={classes.contactsTextLink}>
                 +7 (925) 047-93-58
             </Link>
             <br/>

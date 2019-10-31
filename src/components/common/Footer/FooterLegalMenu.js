@@ -34,9 +34,9 @@ export default () => {
             <Box className={classes.footerMenuHeader}>
                 Правовая информация
             </Box>
-            <Box component={Link} href='#'
+            <Box component={Link} href='https://phystech-union.org/wp-content/uploads/2019/08/Confidential_p-u.pdf' target='_blank'
                  className={classes.footerMenuLink}>
-                Согласие на обработку<br/>персональных данных
+                Политика конфиденциальности
             </Box>
         </React.Fragment>
     );

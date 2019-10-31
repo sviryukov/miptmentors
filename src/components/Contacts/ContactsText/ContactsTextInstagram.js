@@ -19,7 +19,7 @@ const useStyles = makeStyles(theme => ({
 export default () => {
     const classes = useStyles();
     return (
-        <Link href='https://www.instagram.com/phystechunion/' target='_blanc' className={classes.contactsTextInstagram}>
+        <Link href='https://www.instagram.com/phystechunion/' target='_blank' className={classes.contactsTextInstagram}>
             Instagram
         </Link>
     );

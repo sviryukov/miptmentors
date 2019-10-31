@@ -32,7 +32,7 @@ export default () => {
         <Grid container
               item xs={12}
               className={classes.topBar}>
-            <Link href='http://phystechunion.org' target='_blank' className={classes.topBarLink}>
+            <Link href='https://spasibophystech.ru/' target='_blank' className={classes.topBarLink}>
                 Вступайте в Физтех-Союз
                 <TopBarIcon fontSize='small' color='inherit' className={classes.topBarLinkIcon}/>
             </Link>
