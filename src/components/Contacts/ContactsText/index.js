@@ -1,6 +1,7 @@
 import React from 'react';
 import {makeStyles} from '@material-ui/styles';
 import {Grid, Link, Typography} from "@material-ui/core";
+import ContactsTextPhystechUnion from './ContactsTextPhystechUnion';
 import ContactsTextFacebook from "./ContactsTextFacebook";
 import ContactsTextVk from "./ContactsTextVk";
 import ContactsTextInstagram from "./ContactsTextInstagram";
@@ -19,7 +20,7 @@ const useStyles = makeStyles(theme => ({
         [theme.breakpoints.up('md')]: {
             order: '3',
             height: '489px',
-            padding: '202px 64px 64px',
+            padding: '170px 64px 64px',
             margin: '80px 0px 50px',
             background: 'transparent',
             shapeOutside: 'none',
@@ -59,6 +60,8 @@ export default () => {
             <Link href='#' className={classes.contactsTextLink}>
                 +7 (925) 047-93-58
             </Link>
+            <br/>
+            <ContactsTextPhystechUnion/>
             <Typography className={classes.contactsTextFollowUs}>
                 Подписывайтесь на нас:
             </Typography>
