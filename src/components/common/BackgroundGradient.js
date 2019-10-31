@@ -11,11 +11,11 @@ let useStyles = makeStyles(theme => ({
             height: '100%',
         },
         background: 'linear-gradient(45deg, ' + theme.palette.secondary.light + ', ' + theme.palette.secondary.dark + ')',
-        shapeOutside: 'polygon(0 217px, 66% 247px, 100% 187px, 100% 100%, 0 100%)',
-        clipPath: 'polygon(0 217px, 66% 247px, 100% 187px, 100% 100%, 0 100%)',
+        shapeOutside: 'polygon(0 185px, 66% 215px, 100% 155px, 100% 100%, 0 100%)',
+        clipPath: 'polygon(0 185px, 66% 215px, 100% 155px, 100% 100%, 0 100%)',
         [theme.breakpoints.up('xl')]: {
-            shapeOutside: 'polygon(0 227px, 66% 267px, 100% 187px, 100% 100%, 0 100%)',
-            clipPath: 'polygon(0 227px, 66% 267px, 100% 187px, 100% 100%, 0 100%)'
+            shapeOutside: 'polygon(0 220px, 66% 260px, 100% 180px, 100% 100%, 0 100%)',
+            clipPath: 'polygon(0 220px, 66% 260px, 100% 180px, 100% 100%, 0 100%)'
         },
         zIndex: '-1'
     }
