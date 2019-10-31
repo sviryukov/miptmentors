@@ -5,8 +5,10 @@ import {Link} from "@material-ui/core";
 const useStyles = makeStyles(theme => ({
     contactsTextVk: {
         fontSize: '30px',
-        color: theme.palette.secondary.contrastText,
+        transition: 'color 0.1s',
+        color: '#e5e5e5',
         '&:hover': {
+            color: theme.palette.secondary.contrastText,
             textDecoration: 'none'
         }
     }

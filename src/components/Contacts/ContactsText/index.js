@@ -32,10 +32,12 @@ const useStyles = makeStyles(theme => ({
     contactsTextLink: {
         fontSize: '20px',
         fontWeight: '100',
+        transition: 'color 0.1s',
+        color: '#e5e5e5',
         '&:hover': {
+            color: theme.palette.secondary.contrastText,
             textDecoration: 'none'
-        },
-        color: theme.palette.secondary.contrastText
+        }
     },
     contactsTextFollowUs: {
         padding: '30px 0px',

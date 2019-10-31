@@ -7,8 +7,10 @@ const useStyles = makeStyles(theme => ({
         paddingRight: '20px',
         fontSize: '40px',
         fontFamily: 'billabong',
-        color: theme.palette.secondary.contrastText,
+        transition: 'color 0.1s',
+        color: '#e5e5e5',
         '&:hover': {
+            color: theme.palette.secondary.contrastText,
             textDecoration: 'none'
         }
     }

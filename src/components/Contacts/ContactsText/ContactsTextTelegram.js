@@ -6,8 +6,10 @@ const useStyles = makeStyles(theme => ({
     contactsTextTelegram: {
         fontSize: '30px',
         fontWeight: '100',
-        color: theme.palette.secondary.contrastText,
+        transition: 'color 0.1s',
+        color: '#e5e5e5',
         '&:hover': {
+            color: theme.palette.secondary.contrastText,
             textDecoration: 'none'
         }
     }
