@@ -6,6 +6,7 @@ import DrawerItem from "./DrawerListItem";
 const useStyles = makeStyles(theme => ({
     drawerContainer: {
         width: '100%',
+        minWidth: '360px',
         height: 'calc(100% - 121px)',
         position: 'absolute',
         top: '121px',
