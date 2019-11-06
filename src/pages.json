@@ -1,0 +1,38 @@
+[
+  {
+    "url": "/",
+    "title": "Клуб Менторов Физтех-Союза - программа наставничества МФТИ",
+    "script": "home",
+    "component_name": "Home"
+  },
+  {
+    "url": "/news",
+    "title": "Новости проекта | Клуб Менторов Физтех-Союза",
+    "script": "news",
+    "component_name": "News"
+  },
+  {
+    "url": "/mentors",
+    "title": "Менторы проекта | Клуб Менторов Физтех-Союза",
+    "script": "mentors",
+    "component_name": "Mentors"
+  },
+  {
+    "url": "/contacts",
+    "title": "Контакты | Клуб Менторов Физтех-Союза",
+    "script": "contacts",
+    "component_name": "Contacts"
+  },
+  {
+    "url": "/findmentor",
+    "title": "Найти ментора | Клуб Менторов Физтех-Союза",
+    "script": "findmentor",
+    "component_name": "FindMentor"
+  },
+  {
+    "url": "/becomementor",
+    "title": "Стать ментором | Клуб Менторов Физтех-Союза",
+    "script": "becomementor",
+    "component_name": "BecomeMentor"
+  }
+]
