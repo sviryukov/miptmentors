@@ -3,20 +3,20 @@ import {makeStyles} from '@material-ui/styles';
 import {Typography} from '@material-ui/core';
 
 let useStyles = makeStyles({
-    signInHeader: {
+    formHeader: {
         marginBottom: '20px',
         fontWeight: '100'
     }
 });
 
-const SignInHeader = () => {
+const FormHeader = props => {
     const classes = useStyles();
     return (
         <Typography variant='h4'
-                    className={classes.signInHeader}>
-            Войти
+                    className={classes.formHeader}>
+            {props.text}
         </Typography>
     );
 };
 
-export {SignInHeader};
+export {FormHeader};

@@ -1,7 +1,7 @@
 import React from 'react';
 import {makeStyles} from '@material-ui/styles';
 import {Grid, Box} from '@material-ui/core';
-import {SignInHeader} from './SingInHeader';
+import {FormHeader} from '../../common/FormHeader';
 import {SignInEmailField} from './SingInEmailField';
 import {SignInPasswordField} from './SingInPasswordField';
 import {SignInButton} from "./SingInButton";
@@ -32,7 +32,7 @@ const SignInForm = () => {
               boxShadow={{xs: 0, md: 3}}
               item xs={12} md={5} lg={4} xl={3}
               className={classes.singInForm}>
-            <SignInHeader/>
+            <FormHeader text='Войти'/>
             <SignInEmailField/>
             <SignInPasswordField/>
             <SignInButton/>

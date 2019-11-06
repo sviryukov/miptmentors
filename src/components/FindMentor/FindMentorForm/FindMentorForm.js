@@ -1,6 +1,7 @@
 import React from 'react';
 import {makeStyles} from '@material-ui/styles';
 import {Grid, Box} from '@material-ui/core';
+import {FormHeader} from "../../common/FormHeader";
 
 let useStyles = makeStyles(theme => ({
     findMentorForm: {
@@ -10,7 +11,6 @@ let useStyles = makeStyles(theme => ({
             padding: '100px 150px 40px'
         },
         [theme.breakpoints.up('md')]: {
-            height: '445px',
             padding: '64px',
             marginTop: '80px',
             backgroundColor: theme.palette.background.paper
@@ -26,8 +26,9 @@ const FindMentorForm = () => {
     return (
         <Grid component={Box}
               boxShadow={{xs: 0, md: 3}}
-              item xs={12} md={5} lg={4} xl={3}
+              item xs={12} md={6} lg={5} xl={4}
               className={classes.findMentorForm}>
+            <FormHeader text='Найти ментора'/>
         </Grid>
     );
 };

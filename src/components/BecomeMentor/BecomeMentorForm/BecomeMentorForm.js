@@ -1,6 +1,7 @@
 import React from 'react';
 import {makeStyles} from '@material-ui/styles';
 import {Grid, Box} from '@material-ui/core';
+import {FormHeader} from "../../common/FormHeader";
 
 let useStyles = makeStyles(theme => ({
     becomeMentorForm: {
@@ -28,6 +29,7 @@ const BecomeMentorForm =  () => {
               boxShadow={{xs: 0, md: 3}}
               item xs={12} md={5} lg={4} xl={3}
               className={classes.becomeMentorForm}>
+            <FormHeader text='Стать ментором'/>
         </Grid>
     );
 };
