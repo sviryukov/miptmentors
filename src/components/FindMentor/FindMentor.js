@@ -10,7 +10,7 @@ const FindMentor = () => {
     return (
         <React.Fragment>
             <CssBaseline/>
-            <Navbar/>
+            <Navbar current='findmentor'/>
             <Page>
                 <BackgroundGradient/>
                 <FindMentorForm/>
