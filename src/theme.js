@@ -1,6 +1,5 @@
 import { createMuiTheme } from '@material-ui/core/styles';
 
-// noinspection JSCheckFunctionSignatures
 let theme = createMuiTheme({
     palette: {
         primary: {
