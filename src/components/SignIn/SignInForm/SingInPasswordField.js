@@ -8,7 +8,7 @@ let useStyles = makeStyles({
     }
 });
 
-export default () => {
+const SignInPasswordField = () => {
     const classes = useStyles();
     return (
         <TextField label='Пароль'
@@ -21,3 +21,5 @@ export default () => {
                    className={classes.singInPasswordField}/>
     );
 };
+
+export {SignInPasswordField};

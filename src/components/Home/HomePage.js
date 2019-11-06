@@ -3,7 +3,7 @@ import {makeStyles} from "@material-ui/styles";
 import {Grid, Box} from "@material-ui/core";
 
 const useStyles = makeStyles(theme => ({
-    restPage: {
+    homePage: {
         minHeight: '2000px',
         margin: 'auto',
         backgroundColor: theme.palette.background.paper,
@@ -11,7 +11,7 @@ const useStyles = makeStyles(theme => ({
     }
 }));
 
-export default () => {
+const HomePage = props => {
     const classes = useStyles();
     const [width, setWidth] = useState(90);
     useEffect(() => {
@@ -24,8 +24,10 @@ export default () => {
         <Grid component={Box}
               boxShadow={3}
               container
-              className={classes.restPage}
-              style={{width: width + '%'}}>
-        </Grid>
+              className={classes.homePage}
+              children={props.children}
+              style={{width: width + '%'}}/>
     );
 };
+
+export {HomePage};

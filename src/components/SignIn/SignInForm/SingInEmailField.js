@@ -8,7 +8,7 @@ let useStyles = makeStyles({
     }
 });
 
-export default () => {
+const SignInEmailField = () => {
     const classes = useStyles();
     return (
         <TextField label='Email'
@@ -21,3 +21,5 @@ export default () => {
                    className={classes.singInEmailField}/>
     );
 };
+
+export {SignInEmailField};

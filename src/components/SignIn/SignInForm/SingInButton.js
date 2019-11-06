@@ -8,7 +8,7 @@ let useStyles = makeStyles({
     }
 });
 
-export default () => {
+const SignInButton = () => {
     const classes = useStyles();
     return (
         <Button variant="contained"
@@ -19,3 +19,5 @@ export default () => {
         </Button>
     );
 };
+
+export {SignInButton};

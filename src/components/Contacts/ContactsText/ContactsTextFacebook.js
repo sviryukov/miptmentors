@@ -15,7 +15,7 @@ const useStyles = makeStyles(theme => ({
     }
 }));
 
-export default () => {
+const ContactsTextFacebook = () => {
     const classes = useStyles();
     return (
         <Link href='https://www.facebook.com/phystech/' target='_blank' className={classes.contactsTextFacebook}>
@@ -23,3 +23,5 @@ export default () => {
         </Link>
     );
 };
+
+export {ContactsTextFacebook};

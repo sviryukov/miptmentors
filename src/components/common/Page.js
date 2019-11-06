@@ -10,7 +10,7 @@ let useStyles = makeStyles({
     }
 });
 
-export default props => {
+const Page = props => {
     const classes = useStyles();
     return (
         <Grid container justify='center' className={classes.page}>
@@ -18,3 +18,5 @@ export default props => {
         </Grid>
     );
 };
+
+export {Page};

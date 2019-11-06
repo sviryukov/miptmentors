@@ -24,7 +24,7 @@ const useStyles = makeStyles(theme => ({
     }
 }));
 
-export default () => {
+const HeroTextLearnMore = () => {
     const classes = useStyles();
     return (
         <Typography className={classes.heroTextLearnMore}>
@@ -32,3 +32,5 @@ export default () => {
         </Typography>
     );
 };
+
+export {HeroTextLearnMore};

@@ -9,7 +9,7 @@ let useStyles = makeStyles({
     }
 });
 
-export default () => {
+const SignInHeader = () => {
     const classes = useStyles();
     return (
         <Typography variant='h4'
@@ -18,3 +18,5 @@ export default () => {
         </Typography>
     );
 };
+
+export {SignInHeader};

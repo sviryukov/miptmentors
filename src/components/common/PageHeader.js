@@ -18,7 +18,7 @@ const useStyles = makeStyles(theme => ({
     }
 }));
 
-export default props => {
+const PageHeader = props => {
     const classes = useStyles();
     return (
         <div className={classes.pageHeaderContainer}>
@@ -28,3 +28,5 @@ export default props => {
         </div>
     );
 };
+
+export {PageHeader};

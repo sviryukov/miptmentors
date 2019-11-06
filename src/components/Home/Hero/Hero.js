@@ -1,7 +1,7 @@
 import React from 'react'
 import {makeStyles} from "@material-ui/styles";
 import {Grid} from "@material-ui/core";
-import HeroText from "./HeroText";
+import {HeroText} from "./HeroText";
 
 const useStyles = makeStyles(theme => ({
     hero: {
@@ -32,7 +32,7 @@ const useStyles = makeStyles(theme => ({
     }
 }));
 
-export default () => {
+const Hero = () => {
     const classes = useStyles();
     return (
         <Grid container justify='space-between' item xs={12} md={10} xl={9} className={classes.hero}>
@@ -40,3 +40,5 @@ export default () => {
         </Grid>
     );
 };
+
+export {Hero};

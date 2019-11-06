@@ -13,7 +13,7 @@ const useStyles = makeStyles({
     }
 });
 
-export default props => {
+const MentorsSelect = props => {
     const classes = useStyles();
     const [category, setCategory] = React.useState('all');
     const handleChange = event => {
@@ -31,3 +31,5 @@ export default props => {
         </Grid>
     );
 };
+
+export {MentorsSelect};

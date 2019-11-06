@@ -1,7 +1,7 @@
 import React from 'react';
-import { hydrate } from 'react-dom';
-import { ThemeProvider } from "@material-ui/styles";
-import SignIn from '../components/SignIn';
+import {hydrate} from 'react-dom';
+import {ThemeProvider} from "@material-ui/styles";
+import {SignIn} from '../components/SignIn';
 import theme from "../theme";
 
 function Main() {

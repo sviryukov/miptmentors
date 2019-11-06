@@ -1,8 +1,8 @@
 import React from "react";
 import {makeStyles} from "@material-ui/styles";
-import Vk from "../VkIcon";
+import {VkIcon} from "../VkIcon";
 import {Facebook, Instagram, Telegram} from "@material-ui/icons";
-import {Link} from "@material-ui/core";
+import {Box, Link} from "@material-ui/core";
 
 const useStyles = makeStyles(theme => ({
     phystechUnionSocialLink: {
@@ -21,15 +21,15 @@ const useStyles = makeStyles(theme => ({
     }
 }));
 
-export default () => {
+const FooterContactsMenuSocial = () => {
     const classes = useStyles();
     return (
-        <React.Fragment>
+        <Box>
             <Link href='https://www.facebook.com/phystech/' target='_blank' className={classes.phystechUnionSocialLink}>
                 <Facebook/>
             </Link>
             <Link href='https://vk.com/phystechunion' target='_blank' className={classes.phystechUnionSocialLink}>
-                <Vk/>
+                <VkIcon/>
             </Link>
             <Link href='https://www.instagram.com/phystechunion/' target='_blank' className={classes.phystechUnionSocialLink}>
                 <Instagram/>
@@ -37,6 +37,8 @@ export default () => {
             <Link href='http://t.me/phystechunion' target='_blank' className={classes.phystechUnionSocialLink}>
                 <Telegram/>
             </Link>
-        </React.Fragment>
+        </Box>
     );
 };
+
+export {FooterContactsMenuSocial};

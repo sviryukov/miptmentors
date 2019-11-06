@@ -13,7 +13,7 @@ const useStyles = makeStyles(theme => ({
     }
 }));
 
-export default (props) => {
+const DrawerItem = (props) => {
     const classes = useStyles();
     return (
         <ListItem button
@@ -24,3 +24,5 @@ export default (props) => {
         </ListItem>
     );
 };
+
+export {DrawerItem};

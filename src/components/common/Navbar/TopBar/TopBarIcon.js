@@ -1,7 +1,7 @@
 import React from "react";
 import {SvgIcon} from "@material-ui/core";
 
-export default (props) => (
+const TopBarIcon = (props) => (
     <SvgIcon {...props} width="50" height="50" viewBox="0 0 13.229166 13.229167">
         <g id="layer1"
            transform="translate(0,-283.77081)">
@@ -61,3 +61,5 @@ export default (props) => (
         </g>
     </SvgIcon>
 );
+
+export {TopBarIcon};

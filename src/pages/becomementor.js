@@ -1,7 +1,7 @@
 import React from 'react';
-import { hydrate } from 'react-dom';
-import { ThemeProvider } from "@material-ui/styles";
-import BecomeMentor from '../components/BecomeMentor';
+import {hydrate} from 'react-dom';
+import {ThemeProvider} from "@material-ui/styles";
+import {BecomeMentor} from '../components/BecomeMentor';
 import theme from "../theme";
 
 function Main() {

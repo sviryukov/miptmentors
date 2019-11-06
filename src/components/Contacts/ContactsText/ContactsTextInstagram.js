@@ -16,7 +16,7 @@ const useStyles = makeStyles(theme => ({
     }
 }));
 
-export default () => {
+const ContactsTextInstagram = () => {
     const classes = useStyles();
     return (
         <Link href='https://www.instagram.com/phystechunion/' target='_blank' className={classes.contactsTextInstagram}>
@@ -24,3 +24,5 @@ export default () => {
         </Link>
     );
 };
+
+export {ContactsTextInstagram};

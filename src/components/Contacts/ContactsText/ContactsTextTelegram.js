@@ -15,7 +15,7 @@ const useStyles = makeStyles(theme => ({
     }
 }));
 
-export default () => {
+const ContactsTextTelegram = () => {
     const classes = useStyles();
     return (
         <Link href='http://t.me/phystechunion' target='_blank' className={classes.contactsTextTelegram}>
@@ -23,3 +23,5 @@ export default () => {
         </Link>
     );
 };
+
+export {ContactsTextTelegram};

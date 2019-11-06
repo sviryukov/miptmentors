@@ -1,7 +1,7 @@
 import React from 'react';
-import { hydrate } from 'react-dom';
-import { ThemeProvider } from "@material-ui/styles";
-import Index from '../components/Index';
+import {hydrate} from 'react-dom';
+import {ThemeProvider} from "@material-ui/styles";
+import {Home} from '../components/Home';
 import theme from "../theme";
 
 function Main() {
@@ -13,7 +13,7 @@ function Main() {
     }, []);
     return (
         <ThemeProvider theme={theme}>
-            <Index/>
+            <Home/>
         </ThemeProvider>
     );
 }

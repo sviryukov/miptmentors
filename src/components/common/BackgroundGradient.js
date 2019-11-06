@@ -21,10 +21,12 @@ let useStyles = makeStyles(theme => ({
     }
 }));
 
-export default () => {
+const BackgroundGradient = () => {
     const classes = useStyles();
     return (
         <Grid item xs={12}
               className={classes.backgroundGradient}/>
     );
 };
+
+export {BackgroundGradient};

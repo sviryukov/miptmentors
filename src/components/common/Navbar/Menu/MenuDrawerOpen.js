@@ -14,7 +14,7 @@ const useStyles = makeStyles({
     }
 });
 
-export default props => {
+const MenuDrawerOpen = props => {
     const classes = useStyles();
     return (
         <Box className={classes.menuDrawerOpenListItem}
@@ -27,3 +27,5 @@ export default props => {
         </Box>
     );
 };
+
+export {MenuDrawerOpen};

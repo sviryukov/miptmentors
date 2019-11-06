@@ -21,7 +21,7 @@ const useStyles = makeStyles(theme => ({
     }
 }));
 
-export default () => {
+const HeroTextHeader = () => {
     const classes = useStyles();
     return (
         <Typography variant='h1'
@@ -31,3 +31,5 @@ export default () => {
         </Typography>
     );
 };
+
+export {HeroTextHeader};

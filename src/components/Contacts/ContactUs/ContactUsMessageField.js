@@ -8,7 +8,7 @@ let useStyles = makeStyles({
     }
 });
 
-export default () => {
+const ContactUsMessageField = () => {
     const classes = useStyles();
     return (
         <TextField label='Ваш вопрос'
@@ -22,3 +22,5 @@ export default () => {
                    className={classes.contactUsEmailField}/>
     );
 };
+
+export {ContactUsMessageField};

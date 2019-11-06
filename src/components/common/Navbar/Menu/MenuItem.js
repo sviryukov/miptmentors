@@ -35,7 +35,7 @@ const useStyles = makeStyles(theme => ({
     }
 }));
 
-export default props => {
+const MenuItem = props => {
     const classes = useStyles();
     return (
         <ListItem className={props.current ? classes.menuListItemCurrent : classes.menuListItem}
@@ -46,3 +46,5 @@ export default props => {
         </ListItem>
     );
 };
+
+export {MenuItem};

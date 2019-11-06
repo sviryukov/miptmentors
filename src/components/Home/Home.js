@@ -1,12 +1,12 @@
 import React, {useEffect} from 'react';
 import {CssBaseline} from "@material-ui/core";
-import Navbar from '../common/Navbar';
-import Hero from "./Hero";
-import RestPage from './rest-page';
+import {Navbar} from '../common/Navbar';
+import {Hero} from "./Hero";
+import {HomePage} from './HomePage';
 import {SlideFromBottom} from "../common/animations";
-import Footer from "../common/Footer";
+import {Footer} from "../common/Footer";
 
-export default () => {
+const Home = () => {
     useEffect(() => {
         if ('scrollRestoration' in window.history) {
             window.history.scrollRestoration = 'manual';
@@ -20,9 +20,11 @@ export default () => {
             <Hero/>
             <SlideFromBottom duration={0.5}
                              interval={300}>
-                <RestPage/>
+                <HomePage/>
             </SlideFromBottom>
             <Footer/>
         </React.Fragment>
     )
 };
+
+export {Home};

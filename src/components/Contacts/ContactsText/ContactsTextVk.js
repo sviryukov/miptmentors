@@ -14,7 +14,7 @@ const useStyles = makeStyles(theme => ({
     }
 }));
 
-export default () => {
+const ContactsTextVk = () => {
     const classes = useStyles();
     return (
         <Link href='https://vk.com/phystechunion' target='_blank' className={classes.contactsTextVk}>
@@ -22,3 +22,5 @@ export default () => {
         </Link>
     );
 };
+
+export {ContactsTextVk};

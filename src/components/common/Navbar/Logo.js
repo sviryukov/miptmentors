@@ -23,7 +23,7 @@ const useStyles = makeStyles(theme => ({
     }
 }));
 
-export default () => {
+const Logo = () => {
     const classes = useStyles();
     return (
         <Grid item>
@@ -35,3 +35,5 @@ export default () => {
         </Grid>
     );
 };
+
+export {Logo};

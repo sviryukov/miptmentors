@@ -15,11 +15,13 @@ const useStyles = makeStyles({
     }
 });
 
-export default (props) => {
+const NewsCardImg = props => {
     const classes = useStyles();
     return (
         <div className={classes.newsCardImgContainer}>
-            <img src={props.image} className={classes.newsCardImg} alt={props.alt}/>
+            <img src={'/img/' + props.image} className={classes.newsCardImg} alt={props.alt}/>
         </div>
     );
-}
+};
+
+export {NewsCardImg};

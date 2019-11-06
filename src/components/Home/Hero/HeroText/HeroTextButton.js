@@ -12,7 +12,7 @@ const useStyles = makeStyles(theme => ({
     }
 }));
 
-export default props => {
+const HeroTextButton = props => {
     const classes = useStyles();
     return (
         <Button color='secondary'
@@ -22,3 +22,5 @@ export default props => {
         </Button>
     );
 };
+
+export {HeroTextButton};

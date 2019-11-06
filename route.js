@@ -5,13 +5,13 @@ import {renderToString} from 'react-dom/server';
 import {ServerStyleSheets, ThemeProvider} from "@material-ui/styles";
 import template from './src/template';
 import theme from './src/theme';
-import Index from './src/components/Index';
-import News from './src/components/News';
-import Mentors from './src/components/Mentors';
-import Contacts from './src/components/Contacts';
-import FindMentor from './src/components/FindMentor';
-import BecomeMentor from './src/components/BecomeMentor';
-import Signin from './src/components/SignIn';
+import {Home} from './src/components/Home';
+import {News} from './src/components/News';
+import {Mentors} from './src/components/Mentors';
+import {Contacts} from './src/components/Contacts';
+import {FindMentor} from './src/components/FindMentor';
+import {BecomeMentor} from './src/components/BecomeMentor';
+import {SignIn} from './src/components/SignIn';
 
 export default (passport, client) => {
 
@@ -22,12 +22,12 @@ export default (passport, client) => {
         const html = renderToString(
             sheets.collect(
                 <ThemeProvider theme={theme}>
-                    <Index/>
+                    <Home/>
                 </ThemeProvider>,
             ),
         );
         const css = sheets.toString();
-        response.send(template('Клуб Менторов Физтех-Союза - программа наставничества МФТИ', html, "index", css));
+        response.send(template('Клуб Менторов Физтех-Союза - программа наставничества МФТИ', html, "home", css));
     });
 
     router.get("/News", (request, response) => {
@@ -88,7 +88,7 @@ export default (passport, client) => {
         const html = renderToString(
             sheets.collect(
                 <ThemeProvider theme={theme}>
-                    <Signin/>
+                    <SignIn/>
                 </ThemeProvider>,
             ),
         );
