@@ -34,5 +34,11 @@
     "title": "Стать ментором | Клуб Менторов Физтех-Союза",
     "script": "becomementor",
     "component_name": "BecomeMentor"
+  },
+  {
+    "url": "/signin",
+    "title": "Войти | Клуб Менторов Физтех-Союза",
+    "script": "signin",
+    "component_name": "SignIn"
   }
 ]
