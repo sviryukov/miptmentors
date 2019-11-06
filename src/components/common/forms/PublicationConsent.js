@@ -15,7 +15,7 @@ let useStyles = makeStyles({
 
 const PublicationConsent = () => {
     const classes = useStyles();
-    const [consent, setConsent] = useState(true);
+    const [consent, setConsent] = useState('true');
     const handleChange = event => setConsent(event.target.value);
     return (
         <Box className={classes.publicationConsent}>
@@ -27,10 +27,10 @@ const PublicationConsent = () => {
                         onChange={handleChange}>
                 <FormControlLabel control={<Radio/>}
                                   label='Согласен(-на)'
-                                  value={true}/>
+                                  value='true'/>
                 <FormControlLabel control={<Radio/>}
                                   label='Не согласен(-на)'
-                                  value={false}/>
+                                  value='false'/>
             </RadioGroup>
         </Box>
     );

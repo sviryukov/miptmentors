@@ -18,7 +18,7 @@ const FindMentorFormTracks = () => {
     return (
         <Box className={classes.findMentorFormTracks}>
             <Typography className={classes.findMentorFormTracksHeader}>
-                Выберите одно или несколько направлений наставничества *
+                Выберите одно или несколько направлений наставничества&nbsp;*
             </Typography>
             <FormControlLabel control={<Checkbox/>}
                               label='Бизнес'/>

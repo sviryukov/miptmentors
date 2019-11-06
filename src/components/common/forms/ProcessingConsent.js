@@ -20,7 +20,7 @@ const ProcessingConsent = () => {
     return (
         <Box className={classes.processingConsent}>
             <FormControlLabel control={<Checkbox/>}
-                              label='Согласен(-на) на обработку персональных данных *'/>
+                              label='Согласен(-на) на обработку персональных данных&nbsp;*'/>
             <br/>
             <br/>
             <Link href='https://phystech-union.org/wp-content/uploads/2019/08/Confidential_p-u.pdf' target='_blank'
