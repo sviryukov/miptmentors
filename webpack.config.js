@@ -6,7 +6,9 @@ module.exports = {
         news: './src/pages/news.js',
         mentors: './src/pages/mentors.js',
         contacts: './src/pages/contacts.js',
-        signin: './src/pages/signin.js'
+        signin: './src/pages/signin.js',
+        findmentor: './src/pages/findmentor.js',
+        becomementor: './src/pages/becomementor.js'
     },
     output: {
         path: path.join(__dirname, '/assets/js'),

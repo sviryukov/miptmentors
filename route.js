@@ -9,6 +9,8 @@ import Index from './src/components/Index';
 import News from './src/components/News';
 import Mentors from './src/components/Mentors';
 import Contacts from './src/components/Contacts';
+import FindMentor from './src/components/FindMentor';
+import BecomeMentor from './src/components/BecomeMentor';
 import Signin from './src/components/SignIn';
 
 export default (passport, client) => {
@@ -92,6 +94,32 @@ export default (passport, client) => {
         );
         const css = sheets.toString();
         response.send(template('Вход | Клуб Менторов Физтех-Союза', html, "signin", css));
+    });
+
+    router.get("/findmentor", (request, response) => {
+        const sheets = new ServerStyleSheets();
+        const html = renderToString(
+            sheets.collect(
+                <ThemeProvider theme={theme}>
+                    <FindMentor/>
+                </ThemeProvider>,
+            ),
+        );
+        const css = sheets.toString();
+        response.send(template('Найти ментора | Клуб Менторов Физтех-Союза', html, "findmentor", css));
+    });
+
+    router.get("/becomementor", (request, response) => {
+        const sheets = new ServerStyleSheets();
+        const html = renderToString(
+            sheets.collect(
+                <ThemeProvider theme={theme}>
+                    <BecomeMentor/>
+                </ThemeProvider>,
+            ),
+        );
+        const css = sheets.toString();
+        response.send(template('Стать ментором | Клуб Менторов Физтех-Союза', html, "becomementor", css));
     });
 
     return router;
