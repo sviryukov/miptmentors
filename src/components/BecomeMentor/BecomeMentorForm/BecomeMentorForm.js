@@ -1,7 +1,7 @@
 import React from 'react';
 import {makeStyles} from '@material-ui/styles';
 import {Grid, Box} from '@material-ui/core';
-import {FormHeader} from "../../common/FormHeader";
+import {FormHeader} from "../../common/forms/FormHeader";
 import {ShortTextField} from "../../common/forms/ShortTextField";
 import {LongTextField} from "../../common/forms/LongTextField";
 import {Textarea} from "../../common/forms/Textarea";

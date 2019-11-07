@@ -1,7 +1,7 @@
 import React from 'react';
 import {makeStyles} from '@material-ui/styles';
 import {Grid, Box} from '@material-ui/core';
-import {FormHeader} from "../../common/FormHeader";
+import {FormHeader} from "../../common/forms/FormHeader";
 import {ContactUsEmailField} from "./ContactUsEmailField";
 import {ContactUsMessageField} from "./ContactUsMessageField";
 import {ContactUsButton} from "./ContactUsButton";
