@@ -8,11 +8,11 @@ import {HeroTextLearnMore} from './HeroTextLearnMore';
 const HeroText = () => {
     return (
         <Grid item xs={12} md={10} lg={7}>
-            <HeroTextHeader animation_delay={0}/>
-            <HeroTextDescription animation_delay={0.1}/>
-            <HeroTextButton text='Найти ментора' animation_delay={0.2}/>
-            <HeroTextButton text='Стать ментором' animation_delay={0.2}/>
-            <HeroTextLearnMore animation_delay={0.3}/>
+            <HeroTextHeader/>
+            <HeroTextDescription/>
+            <HeroTextButton text='Найти ментора' href={'/findmentor'}/>
+            <HeroTextButton text='Стать ментором' href={'/becomementor'}/>
+            <HeroTextLearnMore/>
         </Grid>
     );
 };

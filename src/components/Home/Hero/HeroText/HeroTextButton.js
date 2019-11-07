@@ -17,6 +17,7 @@ const HeroTextButton = props => {
     return (
         <Button color='secondary'
                 variant='contained'
+                href={props.href}
                 className={classes.heroTextButton}>
             {props.text}
         </Button>
