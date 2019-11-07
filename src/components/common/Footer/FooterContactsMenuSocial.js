@@ -5,7 +5,10 @@ import {Facebook, Instagram, Telegram} from "@material-ui/icons";
 import {Box, Link} from "@material-ui/core";
 
 const useStyles = makeStyles(theme => ({
-    phystechUnionSocialLink: {
+    footerContactsMenuSocial: {
+        paddingBottom: '10px'
+    },
+    footerContactsMenuSocialLink: {
         marginRight: '10px',
         [theme.breakpoints.up('md')]: {
             marginRight: '0px',
@@ -24,17 +27,17 @@ const useStyles = makeStyles(theme => ({
 const FooterContactsMenuSocial = () => {
     const classes = useStyles();
     return (
-        <Box>
-            <Link href='https://www.facebook.com/phystech/' target='_blank' className={classes.phystechUnionSocialLink}>
+        <Box className={classes.footerContactsMenuSocial}>
+            <Link href='https://www.facebook.com/phystech/' target='_blank' className={classes.footerContactsMenuSocialLink}>
                 <Facebook/>
             </Link>
-            <Link href='https://vk.com/phystechunion' target='_blank' className={classes.phystechUnionSocialLink}>
+            <Link href='https://vk.com/phystechunion' target='_blank' className={classes.footerContactsMenuSocialLink}>
                 <VkIcon/>
             </Link>
-            <Link href='https://www.instagram.com/phystechunion/' target='_blank' className={classes.phystechUnionSocialLink}>
+            <Link href='https://www.instagram.com/phystechunion/' target='_blank' className={classes.footerContactsMenuSocialLink}>
                 <Instagram/>
             </Link>
-            <Link href='http://t.me/phystechunion' target='_blank' className={classes.phystechUnionSocialLink}>
+            <Link href='http://t.me/phystechunion' target='_blank' className={classes.footerContactsMenuSocialLink}>
                 <Telegram/>
             </Link>
         </Box>
