@@ -38,8 +38,8 @@ const Mentors = () => {
         <React.Fragment>
             <CssBaseline/>
             <Navbar current='mentors'/>
-            <PageHeader text='Менторы проекта'/>
             <Page>
+                <PageHeader text='Менторы проекта'/>
                 <MentorsSelect setCategory={handleSetCategory}/>
                 <Grid container spacing={4} item xs={10} md={11} lg={9} xl={8} className={classes.mentorsContainer}>
                     {mentors.map((mentor, i) => (

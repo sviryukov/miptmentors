@@ -6,7 +6,8 @@ let useStyles = makeStyles({
     page: {
         position: 'relative',
         minHeight: 'calc(100% - 135px)',
-        paddingBottom: '100px'
+        paddingBottom: '100px',
+        alignContent: 'flex-start'
     }
 });
 
