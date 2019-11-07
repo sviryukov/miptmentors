@@ -5,16 +5,14 @@ import {Typography} from "@material-ui/core";
 const useStyles = makeStyles(theme => ({
     pageHeaderContainer: {
         width: '100%',
-        marginBottom: "70px",
-        padding: "30px 0px",
+        padding: "70px 0px 50px",
         [theme.breakpoints.up('md')]: {
-            padding: "50px 0px",
-        },
-        background: 'linear-gradient(45deg, ' + theme.palette.secondary.light + ', ' + theme.palette.secondary.dark + ')'
+            padding: "100px 0px 60px",
+        }
     },
     pageHeader: {
         textAlign: 'center',
-        color: theme.palette.text.light
+        color: theme.palette.text.primary
     }
 }));
 
