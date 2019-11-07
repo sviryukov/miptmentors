@@ -4,7 +4,6 @@ import {Grid, Box} from '@material-ui/core';
 import {FormHeader} from "../../common/forms/FormHeader";
 import {ShortTextField} from "../../common/forms/ShortTextField";
 import {LongTextField} from "../../common/forms/LongTextField";
-import {Textarea} from "../../common/forms/Textarea";
 import {BecomeMentorFormMeetFreq} from "./BecomeMentorFormMeetFreq";
 import {PublicationConsent} from "../../common/forms/PublicationConsent";
 import {ProcessingConsent} from "../../common/forms/ProcessingConsent";
@@ -39,7 +38,7 @@ const BecomeMentorForm =  () => {
             <ShortTextField label='Имя *' name='name'/>
             <ShortTextField label='Фамилия *' name='surname'/>
             <LongTextField label='Образование' name='education'/>
-            <Textarea label='Место работы и должность' name='work'/>
+            <LongTextField label='Место работы и должность' name='work'/>
             <BecomeMentorFormMeetFreq/>
             <ShortTextField label='Телефон *' name='phone'/>
             <ShortTextField label='E-mail *' name='email'/>
