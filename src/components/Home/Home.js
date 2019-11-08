@@ -3,7 +3,6 @@ import {CssBaseline} from "@material-ui/core";
 import {Navbar} from '../common/Navbar';
 import {Hero} from "./Hero";
 import {HomePage} from './HomePage';
-import {SlideFromBottom} from "../common/animations";
 import {HomeAboutProject} from "./HomeAboutProject";
 import {HomeCountUpsContainer} from "./HomeCountUpsContainer";
 import {HomePhystechUnion} from "./HomePhystechUnion";
@@ -22,15 +21,12 @@ const Home = () => {
             <CssBaseline/>
             <Navbar/>
             <Hero/>
-            <SlideFromBottom duration={0.5}
-                             interval={300}>
-                <HomePage>
-                    <HomeAboutProject/>
-                    <HomeCountUpsContainer/>
-                    <HomePhystechUnion/>
-                    <HomePartnersContainer/>
-                </HomePage>
-            </SlideFromBottom>
+            <HomePage>
+                <HomeAboutProject/>
+                <HomeCountUpsContainer/>
+                <HomePhystechUnion/>
+                <HomePartnersContainer/>
+            </HomePage>
             <Footer/>
         </React.Fragment>
     )
