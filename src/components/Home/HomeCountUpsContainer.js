@@ -9,8 +9,8 @@ const useStyles = makeStyles(theme => ({
         padding: '140px 0px',
         justifyContent: 'center',
         background: 'linear-gradient(45deg, ' + theme.palette.secondary.light + ', ' + theme.palette.secondary.dark + ')',
-        shapeOutside: 'polygon(0 30px, 66% 60px, 100% 0px, 100% 100%, 0 100%)',
-        clipPath: 'polygon(0 30px, 66% 60px, 100% 0px, 100% 100%, 0 100%)',
+        shapeOutside: 'polygon(0 30px, 66% 60px, 100% 0px, 100% 100%, 33% calc(100% - 60px), 0 calc(100% - 30px))',
+        clipPath: 'polygon(0 30px, 66% 60px, 100% 0px, 100% 100%, 33% calc(100% - 60px), 0 calc(100% - 30px))',
         color: theme.palette.text.light
     }
 }));
@@ -18,7 +18,7 @@ const useStyles = makeStyles(theme => ({
 const HomeCountUpsContainer = () => {
     const classes = useStyles();
     return (
-        <CountUpReveal component={Grid} offset={-350}
+        <CountUpReveal component={Grid} offset={-50}
                        item xs={12}
                        container spacing={4}
                        className={classes.homeCountUpsContainer}>
