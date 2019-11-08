@@ -4,11 +4,11 @@ import {Grid, Link} from "@material-ui/core";
 
 const useStyles = makeStyles({
     homePartnerItem: {
-        width: 'fit-content',
+        height: 'fit-content',
         textAlign: 'center'
     },
     homePartnerItemImg: {
-        height: '188px'
+        height: '176px'
     }
 });
 

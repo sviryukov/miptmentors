@@ -6,7 +6,7 @@ import {HomePartnerItem} from "./HomePartnerItem";
 
 const useStyles = makeStyles({
     homePartnersContainer: {
-        paddingTop: '132px',
+        paddingTop: '116px',
         justifyContent: 'center'
     }
 });

@@ -4,6 +4,9 @@ import {Grid, Typography} from "@material-ui/core";
 import {CountUp} from "../common/Countup";
 
 const useStyles = makeStyles({
+    homeCountUpItemContainer: {
+        height: 'fit-content'
+    },
     homeCountUpItem: {
         width: '100%',
         fontWeight: '100',
@@ -23,7 +26,8 @@ const useStyles = makeStyles({
 const HomeCountUpItem = props => {
     const classes = useStyles();
     return (
-        <Grid item xs={12} sm={4} md={3} xl={2}>
+        <Grid item xs={12} sm={4} md={3} xl={2}
+              className={classes.homeCountUpItemContainer}>
             <CountUp final={props.finalValue}
                      interval={props.interval}
                      className={classes.homeCountUpItem}/>
