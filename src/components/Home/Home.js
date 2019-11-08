@@ -1,4 +1,4 @@
-import React, {useEffect} from 'react';
+import React from 'react';
 import {CssBaseline} from "@material-ui/core";
 import {Navbar} from '../common/Navbar';
 import {Hero} from "./Hero";
@@ -10,12 +10,6 @@ import {HomePartnersContainer} from "./HomePartnersContainer";
 import {Footer} from "../common/Footer";
 
 const Home = () => {
-    useEffect(() => {
-        if ('scrollRestoration' in window.history) {
-            window.history.scrollRestoration = 'manual';
-        }
-        window.scrollTo(0, 0);
-    }, []);
     return (
         <React.Fragment>
             <CssBaseline/>
@@ -29,7 +23,7 @@ const Home = () => {
             </HomePage>
             <Footer/>
         </React.Fragment>
-    )
+    );
 };
 
 export {Home};
