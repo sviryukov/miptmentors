@@ -4,12 +4,12 @@ import {Grid, Typography} from "@material-ui/core";
 import {CountUp} from "../common/Countup";
 
 const useStyles = makeStyles({
-    homeCountUp: {
+    homeCountUpItem: {
         width: '100%',
         fontSize: '65px',
         textAlign: 'center'
     },
-    homeCountUpText: {
+    homeCountUpItemText: {
         width: '100%',
         maxWidth: '262px',
         margin: 'auto',
@@ -18,18 +18,18 @@ const useStyles = makeStyles({
     }
 });
 
-const HomeCountUp = props => {
+const HomeCountUpItem = props => {
     const classes = useStyles();
     return (
         <Grid item xs={12} sm={4} md={3} xl={2}>
             <CountUp final={props.finalValue}
                      interval={props.interval}
-                     className={classes.homeCountUp}/>
-            <Typography className={classes.homeCountUpText}>
+                     className={classes.homeCountUpItem}/>
+            <Typography className={classes.homeCountUpItemText}>
                 {props.children}
             </Typography>
         </Grid>
     );
 };
 
-export {HomeCountUp};
+export {HomeCountUpItem};

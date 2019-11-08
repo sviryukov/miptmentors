@@ -6,11 +6,11 @@ const useStyles = makeStyles(theme => ({
     homeAboutProject: {
         width: '300px',
         paddingBottom: '100px',
+        textAlign: 'center',
         fontSize: '19px',
         [theme.breakpoints.up('sm')]: {
             width: '460px',
-            fontSize: '22px',
-            textAlign: 'center'
+            fontSize: '22px'
         },
         [theme.breakpoints.up('md')]: {
             width: '800px'
@@ -27,7 +27,9 @@ const HomeAboutProject = () => {
     return (
         <Grid item
               className={classes.homeAboutProject}>
-            <b>Клуб Менторов Физтех-Союза</b> - проект, который помогает студентам и молодым выпускникам МФТИ найти наставника среди опытных специалистов и предпринимателей. В проекте реализуются программы наставничества по трем направлениям: бизнес, карьерное и научное.
+            <b>Клуб Менторов Физтех-Союза</b> - проект, который помогает студентам и молодым выпускникам МФТИ найти
+            наставника среди опытных специалистов и предпринимателей. В проекте реализуются программы наставничества по
+            трем направлениям: бизнес, карьерное и научное.
         </Grid>
     );
 };
