@@ -17,21 +17,35 @@ const useStyles = makeStyles(theme => ({
 
 const HomeCountUpsContainer = () => {
     const classes = useStyles();
+    const countUpProps = [
+        {
+            finalValue: 129,
+            interval: 1000/129,
+            text: 'студентов получили помощь от наших менторов'
+        },
+        {
+            finalValue: 43,
+            interval: 1000/43,
+            text: 'ментора являются постоянными участниками проекта'
+        },
+        {
+            finalValue: 31,
+            interval: 1000/31,
+            text: 'проект реализован под руководсвом наших менторов'
+        }
+    ];
     return (
-        <CountUpReveal component={Grid} offset={-50}
-                       item xs={12}
-                       container spacing={4}
-                       className={classes.homeCountUpsContainer}>
-            <HomeCountUpItem finalValue={129} interval={1000/129}>
-                студентов получили помощь от наших менторов
-            </HomeCountUpItem>
-            <HomeCountUpItem finalValue={43} interval={1000/43}>
-                ментора являются постоянными участниками проекта
-            </HomeCountUpItem>
-            <HomeCountUpItem finalValue={31} interval={1000/31}>
-                проект реализован под руководсвом наших менторов
-            </HomeCountUpItem>
-        </CountUpReveal>
+        <CountUpReveal countUpComponent={HomeCountUpItem}
+                       countUpProps={countUpProps}
+                       offset={-50}
+                       component={Grid}
+                       componentProps={{
+                           item: true,
+                           xs: 12,
+                           container: true,
+                           spacing: 4,
+                           className: classes.homeCountUpsContainer
+                       }}/>
     );
 };
 

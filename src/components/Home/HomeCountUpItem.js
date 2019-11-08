@@ -28,11 +28,11 @@ const HomeCountUpItem = props => {
     return (
         <Grid item xs={12} sm={4} md={3} xl={2}
               className={classes.homeCountUpItemContainer}>
-            <CountUp final={props.finalValue}
+            <CountUp finalValue={props.finalValue}
                      interval={props.interval}
                      className={classes.homeCountUpItem}/>
             <Typography className={classes.homeCountUpItemText}>
-                {props.children}
+                {props.text}
             </Typography>
         </Grid>
     );

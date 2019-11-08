@@ -3,14 +3,14 @@ import {Div} from './Div';
 
 const CountUp = ({
                      initial = 0,
-                     final = 100,
+                     finalValue = 100,
                      interval = 20,
                      component = Div,
                      ...props
                  }) => {
     const [count, setCount] = useState(0);
     useEffect(() => {
-        if (count < final)
+        if (count < finalValue)
             setTimeout(() => {
                 setCount(count + 1);
             }, interval);
