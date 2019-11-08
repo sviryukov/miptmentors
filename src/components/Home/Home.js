@@ -6,6 +6,7 @@ import {HomePage} from './HomePage';
 import {SlideFromBottom} from "../common/animations";
 import {HomeAboutProject} from "./HomeAboutProject";
 import {HomeCountUpsContainer} from "./HomeCountUpsContainer";
+import {HomePartnersContainer} from "./HomePartnersContainer";
 import {Footer} from "../common/Footer";
 
 const Home = () => {
@@ -25,6 +26,7 @@ const Home = () => {
                 <HomePage>
                     <HomeAboutProject/>
                     <HomeCountUpsContainer/>
+                    <HomePartnersContainer/>
                 </HomePage>
             </SlideFromBottom>
             <Footer/>
