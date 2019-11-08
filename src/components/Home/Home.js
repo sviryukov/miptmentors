@@ -4,6 +4,8 @@ import {Navbar} from '../common/Navbar';
 import {Hero} from "./Hero";
 import {HomePage} from './HomePage';
 import {SlideFromBottom} from "../common/animations";
+import {HomeAboutProject} from "./HomeAboutProject";
+import {HomeCountUpsContainer} from "./HomeCountUpsContainer";
 import {Footer} from "../common/Footer";
 
 const Home = () => {
@@ -20,7 +22,10 @@ const Home = () => {
             <Hero/>
             <SlideFromBottom duration={0.5}
                              interval={300}>
-                <HomePage/>
+                <HomePage>
+                    <HomeAboutProject/>
+                    <HomeCountUpsContainer/>
+                </HomePage>
             </SlideFromBottom>
             <Footer/>
         </React.Fragment>

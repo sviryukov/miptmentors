@@ -4,10 +4,14 @@ import {Grid, Box} from "@material-ui/core";
 
 const useStyles = makeStyles(theme => ({
     homePage: {
-        minHeight: '2000px',
         margin: 'auto',
+        padding: '100px 0px',
+        [theme.breakpoints.up('lg')]: {
+            padding: '150px 0px'
+        },
+        justifyContent: 'center',
         backgroundColor: theme.palette.background.paper,
-        transition: 'width 0.3s'
+        transition: 'width 0.3s, padding 0.3s'
     }
 }));
 
@@ -25,8 +29,9 @@ const HomePage = props => {
               boxShadow={3}
               container
               className={classes.homePage}
-              children={props.children}
-              style={{width: width + '%'}}/>
+              style={{width: width + '%'}}>
+            {props.children}
+        </Grid>
     );
 };
 
