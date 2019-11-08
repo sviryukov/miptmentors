@@ -15,7 +15,7 @@ const useStyles = makeStyles(theme => ({
         fontSize: '15px'
     },
     footerContactsMenuContainer: {
-        paddingTop: '30px',
+        paddingTop: '21px',
         [theme.breakpoints.up('md')]: {
             textAlign: 'right'
         }
