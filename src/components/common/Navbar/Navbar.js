@@ -21,6 +21,7 @@ const Navbar = props => {
         if (event.type === 'keydown' && (event.key === 'Tab' || event.key === 'Shift')) {
             return;
         }
+        window.scrollTo(0, 0);
         document.body.style.overflowY = open ? 'hidden' : 'visible';
         setDrawerOpen(open);
     };
