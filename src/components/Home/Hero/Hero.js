@@ -8,13 +8,13 @@ const useStyles = makeStyles(theme => ({
         margin: 'auto',
         padding: '50px 5% 50px',
         [theme.breakpoints.up('sm')]: {
-            height: '510px',
+            height: '400px',
             marginTop: '100px',
             padding: '0px 5%'
         },
         [theme.breakpoints.up('md')]: {
             height: 'calc(100% - 280px)',
-            minHeight: '380px',
+            minHeight: '430px',
             maxHeight: '480px',
             padding: '0px 20px'
         },

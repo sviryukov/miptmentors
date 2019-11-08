@@ -3,14 +3,15 @@ import {Div} from "./Div";
 
 const CountUpReveal = ({
                            component = Div,
+                           offset = 0,
                            ...props
                        }) => {
     const countUpRevealRef = useRef(null);
     const [reachedBreakpoint, setReachedBreakpoint] = useState(false);
     useEffect(() => {
-        const breakpoint = countUpRevealRef.current.getBoundingClientRect().top + window.pageYOffset;
+        const breakpoint = countUpRevealRef.current.getBoundingClientRect().top + window.pageYOffset + offset;
         const checkBreakpoint = () => {
-            if(window.pageYOffset + window.innerHeight > breakpoint){
+            if (window.pageYOffset + window.innerHeight > breakpoint) {
                 setReachedBreakpoint(true);
                 window.removeEventListener('scroll', checkBreakpoint);
             }
