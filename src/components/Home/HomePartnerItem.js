@@ -15,8 +15,8 @@ const useStyles = makeStyles({
 const HomePartnerItem = props => {
     const classes = useStyles();
     return (
-        <Grid component={Link} href={props.href}
-              item>
+        <Grid component={Link} href={props.href} target='_blank'
+              item className={classes.gomePartnerItem}>
             <img src={props.img} alt={props.alt} className={classes.homePartnerItemImg}/>
         </Grid>
     );
