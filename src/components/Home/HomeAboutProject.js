@@ -7,6 +7,7 @@ const useStyles = makeStyles(theme => ({
         width: '300px',
         paddingBottom: '100px',
         textAlign: 'center',
+        fontWeight: '100',
         fontSize: '19px',
         [theme.breakpoints.up('sm')]: {
             width: '460px',

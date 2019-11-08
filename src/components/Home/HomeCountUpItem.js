@@ -6,6 +6,7 @@ import {CountUp} from "../common/Countup";
 const useStyles = makeStyles({
     homeCountUpItem: {
         width: '100%',
+        fontWeight: '100',
         fontSize: '65px',
         textAlign: 'center'
     },
@@ -13,6 +14,7 @@ const useStyles = makeStyles({
         width: '100%',
         maxWidth: '262px',
         margin: 'auto',
+        fontWeight: '100',
         fontSize: '18px',
         textAlign: 'center'
     }
