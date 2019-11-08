@@ -6,7 +6,7 @@ const useStyles = makeStyles(theme => ({
     contactsTextFacebook: {
         paddingRight: '20px',
         fontSize: '30px',
-        fontWeight: '600px',
+        fontWeight: '600',
         transition: 'color 0.1s',
         color: '#e5e5e5',
         '&:hover': {
