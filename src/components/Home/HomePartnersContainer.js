@@ -15,7 +15,7 @@ const HomePartnersContainer = () => {
     const classes = useStyles();
     return (
         <Grid item xs={12}
-              container spacing={4}
+              container
               className={classes.homePartnersContainer}>
             <HomeBlockHeader text='Наши партнеры'/>
             <HomePartnerItem href={'https://vk.com/start.mipt'} img={'/img/phystech.start.png'} alt={'Физтех.Старт'}/>
