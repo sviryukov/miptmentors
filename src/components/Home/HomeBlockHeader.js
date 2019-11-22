@@ -10,7 +10,8 @@ const useStyles = makeStyles(theme => ({
         fontWeight: '100',
         [theme.breakpoints.up('md')]: {
             paddingBottom: '50px'
-        }
+        },
+        zIndex: 1
     },
     homeBlockHeaderLight: {
         paddingTop: '100px',
@@ -20,7 +21,8 @@ const useStyles = makeStyles(theme => ({
         color: theme.palette.text.light,
         [theme.breakpoints.up('md')]: {
             paddingBottom: '50px'
-        }
+        },
+        zIndex: 1
     }
 }));
 
