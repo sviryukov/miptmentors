@@ -6,8 +6,7 @@ import {MongoClient} from "mongodb";
 import {ObjectId} from "mongodb";
 import flash from "connect-flash";
 import route from "./route";
-
-const uri = "mongodb+srv://admin:3f0O89m2lFJz0HWt@cluster0-n7ena.mongodb.net/test?retryWrites=true&w=majority";
+import {uri} from './config/db';
 
 const app = express();
 
