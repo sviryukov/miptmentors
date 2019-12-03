@@ -1,15 +1,11 @@
 const path = require('path');
+const pages = require('./src/pages');
+
+const entries = {};
+pages.forEach(page => entries[page.script] = './src/pages/' + page.script + '.js');
 
 module.exports = {
-    entry: {
-        home: './src/pages/home.js',
-        news: './src/pages/news.js',
-        mentors: './src/pages/mentors.js',
-        contacts: './src/pages/contacts.js',
-        signin: './src/pages/signin.js',
-        findmentor: './src/pages/findmentor.js',
-        becomementor: './src/pages/becomementor.js'
-    },
+    entry: entries,
     output: {
         path: path.join(__dirname, '/assets/js'),
         filename: '[name].js'
