@@ -36,7 +36,13 @@ export default (passport, client) => {
         });
     });
     router.get("/mentors_data", (request, response) => {
-        client.db('miptmentors').collection("mentors").find().toArray((err, mentors) => {
+        let query;
+        if (request.query.mentors) query = {
+            name: {
+                $in: request.query.mentors
+            }
+        };
+        client.db('miptmentors').collection("mentors").find(query).toArray((err, mentors) => {
             response.send(mentors);
         });
     });
