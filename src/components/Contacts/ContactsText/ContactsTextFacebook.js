@@ -4,7 +4,7 @@ import {Link} from "@material-ui/core";
 
 const useStyles = makeStyles(theme => ({
     contactsTextFacebook: {
-        paddingRight: '20px',
+        paddingRight: '10px',
         fontSize: '30px',
         fontWeight: '600',
         transition: 'color 0.1s',

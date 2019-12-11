@@ -10,7 +10,7 @@ import {ContactsTextTelegram} from "./ContactsTextTelegram";
 const useStyles = makeStyles(theme => ({
     contactsText: {
         order: '2',
-        padding: '80px 30px 80px',
+        padding: '80px 20px 80px',
         background: 'linear-gradient(45deg, ' + theme.palette.secondary.light + ', ' + theme.palette.secondary.dark + ')',
         shapeOutside: 'polygon(0 0, 100% 0, 100% 433px, 66% 403px, 0 423px)',
         clipPath: 'polygon(0 0, 100% 0, 100% 433px, 66% 403px, 0 423px)',

@@ -4,7 +4,7 @@ import {Link} from "@material-ui/core";
 
 const useStyles = makeStyles(theme => ({
     contactsTextInstagram: {
-        paddingRight: '20px',
+        paddingRight: '10px',
         fontSize: '40px',
         fontFamily: 'billabong',
         transition: 'color 0.1s',
