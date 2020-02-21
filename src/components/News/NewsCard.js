@@ -31,7 +31,7 @@ const NewsCard = props => {
                         className={classes.newsCard}>
             <Card>
                 <CardActionArea>
-                    <NewsCardImg image={props.img.replace('.', 'min.')} alt={props.title}/>
+                    <NewsCardImg image={props.img.replace('.', 'min.')} tag={props.tag} alt={props.title}/>
                     <CardContent className={classes.newsCardContent}>
                         <p className={classes.newsCardTitle}>{props.title}</p>
                         <p className={classes.newsCardDate}>{dateFormat(props.date)}</p>

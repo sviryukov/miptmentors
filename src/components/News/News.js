@@ -34,7 +34,8 @@ const News = () => {
                         <NewsCard key={newsItem._id}
                                   title={newsItem.title}
                                   date={newsItem.date}
-                                  img={newsItem.img}/>
+                                  img={newsItem.img}
+                                  tag={newsItem.tag}/>
                     ))}
                 </Grid>
             </Page>
