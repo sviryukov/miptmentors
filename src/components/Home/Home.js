@@ -5,7 +5,8 @@ import {Hero} from "./Hero";
 import {HomePage} from './HomePage';
 import {HomeAboutProject} from "./HomeAboutProject";
 import {HomeCountUpsContainer} from "./HomeCountUpsContainer";
-import {HomePhystechUnion} from "./HomePhystechUnion";
+import {HomeMentorsContainer} from "./HomeMentorsContainer";
+import {HomePhystechUnionContainer} from "./HomePhystechUnionContainer";
 import {HomePartnersContainer} from "./HomePartnersContainer";
 import {Footer} from "../common/Footer";
 
@@ -18,7 +19,8 @@ const Home = () => {
             <HomePage>
                 <HomeAboutProject/>
                 <HomeCountUpsContainer/>
-                <HomePhystechUnion/>
+                <HomeMentorsContainer/>
+                <HomePhystechUnionContainer/>
                 <HomePartnersContainer/>
             </HomePage>
             <Footer/>
