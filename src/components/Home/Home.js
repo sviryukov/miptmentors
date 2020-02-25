@@ -4,10 +4,10 @@ import {Navbar} from '../common/Navbar';
 import {Hero} from "./Hero";
 import {HomePage} from './HomePage';
 import {HomeAboutProject} from "./HomeAboutProject";
-import {HomeCountUpsContainer} from "./HomeCountUpsContainer";
-import {HomeMentorsContainer} from "./HomeMentorsContainer";
-import {HomePhystechUnionContainer} from "./HomePhystechUnionContainer";
-import {HomePartnersContainer} from "./HomePartnersContainer";
+import {HomeCountUps} from "./HomeCountUps";
+import {HomeMentors} from "./HomeMentors";
+import {HomePhystechUnion} from "./HomePhystechUnion";
+import {HomePartners} from "./HomePartners";
 import {Footer} from "../common/Footer";
 
 const Home = () => {
@@ -18,10 +18,10 @@ const Home = () => {
             <Hero/>
             <HomePage>
                 <HomeAboutProject/>
-                <HomeCountUpsContainer/>
-                <HomeMentorsContainer/>
-                <HomePhystechUnionContainer/>
-                <HomePartnersContainer/>
+                <HomeCountUps/>
+                <HomeMentors/>
+                <HomePhystechUnion/>
+                <HomePartners/>
             </HomePage>
             <Footer/>
         </React.Fragment>

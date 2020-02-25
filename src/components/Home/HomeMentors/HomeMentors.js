@@ -2,12 +2,12 @@ import React, {useEffect, useState} from 'react';
 import {makeStyles} from "@material-ui/styles";
 import axios from "axios";
 import {Grid} from "@material-ui/core";
-import {HomeBlockHeader} from "./HomeBlockHeader";
+import {HomeBlockHeader} from "../HomeBlockHeader";
 import {HomeMentor} from "./HomeMentor";
 import {HomeAllMentorsLink} from "./HomeAllMentorsLink";
 
 const useStyles = makeStyles(theme => ({
-    homeMentorsContainer: {
+    homeMentors: {
         padding : '75px 0px',
         borderTop: '1px solid ' + theme.palette.divider,
         backgroundColor: theme.palette.background.default,
@@ -15,7 +15,7 @@ const useStyles = makeStyles(theme => ({
     }
 }));
 
-const HomeMentorsContainer = () => {
+const HomeMentors = () => {
     const [mentors, setMentors] = useState([]);
     useEffect(() => {
         axios.get("/mentors_data", {
@@ -31,7 +31,7 @@ const HomeMentorsContainer = () => {
     return (
         <Grid item xs={12}
               container
-              className={classes.homeMentorsContainer}>
+              className={classes.homeMentors}>
             <HomeBlockHeader text={'Наши менторы'}/>
             {mentors.map(mentor => (
                 <HomeMentor name={mentor.name} img={mentor.img} education={mentor.education} work={mentor.work}/>
@@ -41,4 +41,4 @@ const HomeMentorsContainer = () => {
     );
 };
 
-export {HomeMentorsContainer};
+export {HomeMentors};

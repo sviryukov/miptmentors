@@ -1,11 +1,11 @@
 import React from 'react'
 import {makeStyles} from "@material-ui/styles";
 import {Grid} from "@material-ui/core";
-import {CountUpReveal} from "../common/Countup";
+import {CountUpReveal} from "../../common/Countup";
 import {HomeCountUpItem} from "./HomeCountUpItem";
 
 const useStyles = makeStyles(theme => ({
-    homeCountUpsContainer: {
+    homeCountUps: {
         padding: '75px 0px',
         margin: '0px',
         borderTop: '1px solid ' + theme.palette.divider,
@@ -14,7 +14,7 @@ const useStyles = makeStyles(theme => ({
     }
 }));
 
-const HomeCountUpsContainer = () => {
+const HomeCountUps = () => {
     const classes = useStyles();
     const countUpProps = [
         {
@@ -43,9 +43,9 @@ const HomeCountUpsContainer = () => {
                            xs: 12,
                            container: true,
                            spacing: 4,
-                           className: classes.homeCountUpsContainer
+                           className: classes.homeCountUps
                        }}/>
     );
 };
 
-export {HomeCountUpsContainer};
+export {HomeCountUps};

@@ -1,7 +1,7 @@
 import React from 'react'
 import {makeStyles} from "@material-ui/styles";
 import {Grid, Typography} from "@material-ui/core";
-import {CountUp} from "../common/Countup";
+import {CountUp} from "../../common/Countup";
 
 const useStyles = makeStyles({
     homeCountUpItemContainer: {

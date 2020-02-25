@@ -3,12 +3,10 @@ import {makeStyles} from "@material-ui/styles";
 import {Grid, Link, Typography} from "@material-ui/core";
 
 const useStyles = makeStyles(theme => ({
-    homePhystechUnionContainer: {
+    homePhystechUnion: {
         padding: '75px 0px',
         borderTop: '1px solid ' + theme.palette.divider,
-        justifyContent: 'center'
-    },
-    homePhystechUnion: {
+        justifyContent: 'center',
         textAlign: 'center'
     },
     homePhystechUnionImg: {
@@ -30,12 +28,11 @@ const useStyles = makeStyles(theme => ({
     }
 }));
 
-const HomePhystechUnionContainer = () => {
+const HomePhystechUnion = () => {
     const classes = useStyles();
     return (
-        <Grid item xs={12} container className={classes.homePhystechUnionContainer}>
-            <Grid item xs={10} md={8} lg={5}
-                  className={classes.homePhystechUnion}>
+        <Grid item xs={12} container className={classes.homePhystechUnion}>
+            <Grid item xs={10} md={8} lg={5}>
                 <Link href='https://phystech-union.org/' target='_blank'>
                     <img src={'/img/phystech-union.png'} alt={'Физтех-Союз'}
                          className={classes.homePhystechUnionImg}/>
@@ -54,4 +51,4 @@ const HomePhystechUnionContainer = () => {
     );
 };
 
-export {HomePhystechUnionContainer};
+export {HomePhystechUnion};
