@@ -4,7 +4,7 @@ import {Grid, Typography} from "@material-ui/core";
 
 const useStyles = makeStyles(theme => ({
     homeAboutProject: {
-        paddingBottom: '100px',
+        padding: '100px 0px',
         textAlign: 'center'
     },
     homeAboutProjectName: {

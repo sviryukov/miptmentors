@@ -5,10 +5,6 @@ import {Grid} from "@material-ui/core";
 const useStyles = makeStyles(theme => ({
     homePage: {
         borderTop: '1px solid ' + theme.palette.divider,
-        padding: '100px 0px',
-        [theme.breakpoints.up('lg')]: {
-            padding: '150px 0px'
-        },
         justifyContent: 'center',
         backgroundColor: theme.palette.background.paper
     }
