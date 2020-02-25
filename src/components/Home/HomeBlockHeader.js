@@ -2,36 +2,21 @@ import React from 'react';
 import {makeStyles} from "@material-ui/styles";
 import {Grid, Typography} from "@material-ui/core";
 
-const useStyles = makeStyles(theme => ({
+const useStyles = makeStyles({
     homeBlockHeader: {
-        padding: '100px',
+        paddingBottom: '50px',
         textAlign: 'center',
         fontSize: '40px',
-        fontWeight: '100',
-        [theme.breakpoints.up('md')]: {
-            paddingBottom: '50px'
-        },
-        zIndex: 1
-    },
-    homeBlockHeaderLight: {
-        paddingTop: '100px',
-        textAlign: 'center',
-        fontSize: '40px',
-        fontWeight: '100',
-        color: theme.palette.text.light,
-        [theme.breakpoints.up('md')]: {
-            paddingBottom: '50px'
-        },
-        zIndex: 1
+        fontWeight: '100'
     }
-}));
+});
 
 const HomeBlockHeader = props => {
     const classes = useStyles();
     return (
         <Grid component={Typography} variant='h2'
               item xs={12}
-              className={props.light ? classes.homeBlockHeaderLight : classes.homeBlockHeader}>
+              className={classes.homeBlockHeader}>
             {props.text}
         </Grid>
     );
