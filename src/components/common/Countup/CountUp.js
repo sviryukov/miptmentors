@@ -1,5 +1,5 @@
 import React, {useEffect, useState} from 'react';
-import {Div} from './Div';
+import {Div} from '../Div';
 
 const CountUp = ({
                      initial = 0,

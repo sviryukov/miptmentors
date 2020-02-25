@@ -1,5 +1,5 @@
 import React, {useEffect, useRef} from 'react';
-import Div from "./Div";
+import {Div} from "../Div";
 
 export default ({
                     delay = 0,

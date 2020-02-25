@@ -1,5 +1,5 @@
 import React, {useEffect, useRef, useState} from 'react';
-import {Div} from "./Div";
+import {Div} from "../Div";
 import {CountUp} from "./CountUp";
 
 const CountUpReveal = ({
