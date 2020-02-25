@@ -6,12 +6,11 @@ import {HomeCountUpItem} from "./HomeCountUpItem";
 
 const useStyles = makeStyles(theme => ({
     homeCountUpsContainer: {
-        padding: '140px 0px',
-        justifyContent: 'center',
-        background: 'linear-gradient(45deg, ' + theme.palette.secondary.light + ', ' + theme.palette.secondary.dark + ')',
-        shapeOutside: 'polygon(0 30px, 66% 60px, 100% 0px, 100% 100%, 33% calc(100% - 60px), 0 calc(100% - 30px))',
-        clipPath: 'polygon(0 30px, 66% 60px, 100% 0px, 100% 100%, 33% calc(100% - 60px), 0 calc(100% - 30px))',
-        color: theme.palette.text.light
+        padding: '75px 0px',
+        margin: '0px',
+        borderTop: '1px solid ' + theme.palette.divider,
+        background: 'url(/img/bg.png) 0 0 repeat ' + theme.palette.background.paper,
+        justifyContent: 'center'
     }
 }));
 
