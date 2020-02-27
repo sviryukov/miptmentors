@@ -1,7 +1,6 @@
 import React from "react";
 import {makeStyles} from "@material-ui/styles";
 import {Chip} from "@material-ui/core";
-import newsTags from './newsTags';
 
 const useStyles = makeStyles(theme => ({
     newsCardImgContainer: {
@@ -27,6 +26,20 @@ const useStyles = makeStyles(theme => ({
 
 const NewsCardImg = props => {
     const classes = useStyles();
+    const newsTags = {
+        "event": {
+            "name": "Мероприятия",
+            "color": "#1976d2"
+        },
+        "meeting": {
+            "name": "Встречи",
+            "color": "#dc004e"
+        },
+        "success": {
+            "name": "Истории успеха",
+            "color": "#9c27b0"
+        }
+    };
     return (
         <div className={classes.newsCardImgContainer}>
             <img src={'/img/' + props.image} className={classes.newsCardImg} alt={props.alt}/>

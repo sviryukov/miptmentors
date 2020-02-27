@@ -5,7 +5,7 @@ import {CssBaseline, Grid} from "@material-ui/core";
 import {Navbar} from '../common/Navbar';
 import {Page} from "../common/Page";
 import {PageHeader} from "../common/PageHeader";
-import {NewsNavbar} from "./NewsNavbar";
+import {PageNavbar} from "../common/PageNavbar";
 import {NewsCard} from './NewsCard';
 import {Footer} from "../common/Footer";
 
@@ -20,6 +20,24 @@ const News = () => {
     const [news, setNews] = useState([]);
     const [tag, setTag] = useState('all');
     const [newsVisible, setNewsVisible] = useState(false);
+    const newsTags = [
+        {
+            name: 'all',
+            heading: 'все новости'
+        },
+        {
+            name: 'meeting',
+            heading: 'встречи'
+        },
+        {
+            name: 'event',
+            heading: 'мероприятия'
+        },
+        {
+            name: 'success',
+            heading: 'истории успеха'
+        }
+    ];
     useEffect(() => {
         axios.get("/news_data")
             .then(res => {
@@ -42,8 +60,8 @@ const News = () => {
             <Navbar current='news'/>
             <Page>
                 <PageHeader text={'Новости проекта'}/>
-                <NewsNavbar setTag={handleSetTag} tag={tag}/>
                 <Grid container spacing={2} item xs={12} sm={8} className={classes.newsContainer}>
+                    <PageNavbar tabs={newsTags} setTab={handleSetTag} initialTab={'all'}/>
                     {news.map((newsItem) => (
                         (tag === newsItem.tag || tag === 'all') &&
                         <NewsCard key={newsItem._id}
