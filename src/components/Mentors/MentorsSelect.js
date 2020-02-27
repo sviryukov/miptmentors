@@ -15,14 +15,14 @@ const useStyles = makeStyles({
 
 const MentorsSelect = props => {
     const classes = useStyles();
-    const [category, setCategory] = React.useState('all');
+    const [categorySelectValue, setCategorySelectValue] = React.useState('all');
     const handleChange = event => {
-        setCategory(event.target.value);
+        setCategorySelectValue(event.target.value);
         props.setCategory(event.target.value);
     };
     return (
         <Grid item xs={12} className={classes.mentorsSelectContainer}>
-            <Select value={category} onChange={handleChange} className={classes.mentorsSelect}>
+            <Select value={categorySelectValue} onChange={handleChange} className={classes.mentorsSelect}>
                 <MenuItem value={'all'}>Все направления</MenuItem>
                 <MenuItem value={'business'}>Бизнес направление</MenuItem>
                 <MenuItem value={'career'}>Карьерное направление</MenuItem>
