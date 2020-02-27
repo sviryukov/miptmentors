@@ -28,11 +28,13 @@ const Mentors = () => {
             });
     }, []);
     const handleSetCategory = newCategory => {
-        setMentorsVisible(false);
-        setTimeout(() => {
-            setCategory(newCategory);
-            setMentorsVisible(true);
-        }, 300);
+        if (newCategory !== category) {
+            setMentorsVisible(false);
+            setTimeout(() => {
+                setCategory(newCategory);
+                setMentorsVisible(true);
+            }, 300);
+        }
     };
     return (
         <React.Fragment>
