@@ -5,7 +5,7 @@ import {CssBaseline, Grid} from "@material-ui/core";
 import {Navbar} from '../common/Navbar';
 import {Page} from "../common/Page";
 import {PageHeader} from "../common/PageHeader";
-import {reveal} from "../common/animations";
+import {NewsNavbar} from "./NewsNavbar";
 import {NewsCard} from './NewsCard';
 import {Footer} from "../common/Footer";
 
@@ -18,26 +18,40 @@ let useStyles = makeStyles({
 const News = () => {
     const classes = useStyles();
     const [news, setNews] = useState([]);
+    const [tag, setTag] = useState('all');
+    const [newsVisible, setNewsVisible] = useState(false);
     useEffect(() => {
         axios.get("/news_data")
             .then(res => {
                 setNews(res.data);
-                reveal();
+                setNewsVisible(true);
             });
     }, []);
+    const handleSetTag = newTag => {
+        if (newTag !== tag) {
+            setNewsVisible(false);
+            setTimeout(() => {
+                setTag(newTag);
+                setNewsVisible(true);
+            }, 300);
+        }
+    };
     return (
         <React.Fragment>
             <CssBaseline/>
             <Navbar current='news'/>
             <Page>
-                <PageHeader text='Новости проекта'/>
-                <Grid container spacing={2} item xs={12} sm={8} lg={9} className={classes.newsContainer}>
-                    {news.map(newsItem => (
+                <PageHeader text={'Новости проекта'}/>
+                <NewsNavbar setTag={handleSetTag} tag={tag}/>
+                <Grid container spacing={2} item xs={12} sm={8} className={classes.newsContainer}>
+                    {news.map((newsItem) => (
+                        (tag === newsItem.tag || tag === 'all') &&
                         <NewsCard key={newsItem._id}
                                   title={newsItem.title}
                                   date={newsItem.date}
                                   img={newsItem.img}
-                                  tag={newsItem.tag}/>
+                                  tag={newsItem.tag}
+                                  visible={newsVisible}/>
                     ))}
                 </Grid>
             </Page>
