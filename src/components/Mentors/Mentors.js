@@ -5,7 +5,7 @@ import {CssBaseline, Grid} from "@material-ui/core";
 import {Navbar} from '../common/Navbar';
 import {PageHeader} from '../common/PageHeader';
 import {Page} from "../common/Page";
-import {MentorsSelect} from "./MentorsSelect";
+import {PageNavbar} from "../common/PageNavbar";
 import {MentorCard} from './MentorCard';
 import {Footer} from "../common/Footer";
 
@@ -20,6 +20,24 @@ const Mentors = () => {
     const [mentors, setMentors] = useState([]);
     const [category, setCategory] = useState('all');
     const [mentorsVisible, setMentorsVisible] = useState(false);
+    const mentorCategories = [
+        {
+            name: 'all',
+            heading: 'все направления'
+        },
+        {
+            name: 'business',
+            heading: 'бизнес'
+        },
+        {
+            name: 'career',
+            heading: 'карьера'
+        },
+        {
+            name: 'science',
+            heading: 'наука'
+        }
+    ];
     useEffect(() => {
         axios.get("/mentors_data")
             .then(res => {
@@ -42,8 +60,8 @@ const Mentors = () => {
             <Navbar current='mentors'/>
             <Page>
                 <PageHeader text='Менторы проекта'/>
-                <MentorsSelect setCategory={handleSetCategory}/>
                 <Grid container spacing={4} item xs={10} md={11} lg={9} xl={8} className={classes.mentorsContainer}>
+                    <PageNavbar tabs={mentorCategories} setTab={handleSetCategory} initialTab={'all'}/>
                     {mentors.map((mentor, i) => (
                         (category === 'all' || mentors[i].categories.indexOf(category) !== -1) &&
                         <MentorCard key={mentor.name}
