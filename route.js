@@ -31,7 +31,7 @@ export default (passport, client) => {
             news.sort(function (a, b) {
                 return b.date - a.date;
             });
-            if (request.query.limited) news = news.slice(0, 3);
+            if (request.query.limited) news = news.slice(0, 2);
             response.send(news);
         });
     });
