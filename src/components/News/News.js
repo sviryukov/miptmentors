@@ -34,8 +34,8 @@ const News = () => {
             heading: 'мероприятия'
         },
         {
-            name: 'success',
-            heading: 'истории успеха'
+            name: 'feedback',
+            heading: 'отзывы'
         }
     ];
     useEffect(() => {

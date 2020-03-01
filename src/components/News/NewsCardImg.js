@@ -35,8 +35,8 @@ const NewsCardImg = props => {
             "name": "Встречи",
             "color": "#dc004e"
         },
-        "success": {
-            "name": "Истории успеха",
+        "feedback": {
+            "name": "отзывы",
             "color": "#9c27b0"
         }
     };
