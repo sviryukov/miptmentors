@@ -3,6 +3,7 @@ import {CssBaseline} from "@material-ui/core";
 import {Navbar} from '../common/Navbar';
 import {Hero} from "./Hero";
 import {HomePage} from './HomePage';
+import {HomeNews} from "./HomeNews";
 import {HomeAboutProject} from "./HomeAboutProject";
 import {HomeCountUps} from "./HomeCountUps";
 import {HomeMentors} from "./HomeMentors";
@@ -17,6 +18,7 @@ const Home = () => {
             <Navbar/>
             <Hero/>
             <HomePage>
+                <HomeNews/>
                 <HomeAboutProject/>
                 <HomeCountUps/>
                 <HomeMentors/>
