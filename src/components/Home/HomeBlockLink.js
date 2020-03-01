@@ -3,24 +3,24 @@ import {makeStyles} from "@material-ui/styles";
 import {Grid, Link} from "@material-ui/core";
 
 const useStyles = makeStyles({
-    homeAllMentorsLinkContainer: {
+    homeBlockLinkContainer: {
         textAlign: 'center',
         fontSize: '22px'
     },
-    homeAllMentorsLink: {
+    homeBlockLink: {
         color: '#1976d2'
     }
 });
 
-const HomeAllMentorsLink = () => {
+const HomeBlockLink = props => {
     const classes = useStyles();
     return (
-        <Grid item xs={12} className={classes.homeAllMentorsLinkContainer}>
-            <Link href={'/mentors'} className={classes.homeAllMentorsLink}>
-                Все менторы
+        <Grid item xs={12} className={classes.homeBlockLinkContainer}>
+            <Link href={props.href} className={classes.homeBlockLink}>
+                {props.text}
             </Link>
         </Grid>
     );
 };
 
-export {HomeAllMentorsLink};
+export {HomeBlockLink};

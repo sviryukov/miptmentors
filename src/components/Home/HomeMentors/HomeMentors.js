@@ -4,7 +4,7 @@ import axios from "axios";
 import {Grid} from "@material-ui/core";
 import {HomeBlockHeader} from "../HomeBlockHeader";
 import {HomeMentor} from "./HomeMentor";
-import {HomeAllMentorsLink} from "./HomeAllMentorsLink";
+import {HomeBlockLink} from "../HomeBlockLink";
 
 const useStyles = makeStyles(theme => ({
     homeMentors: {
@@ -36,7 +36,7 @@ const HomeMentors = () => {
             {mentors.map(mentor => (
                 <HomeMentor name={mentor.name} img={mentor.img} education={mentor.education} work={mentor.work}/>
             ))}
-            <HomeAllMentorsLink/>
+            <HomeBlockLink href={'/mentors'} text={'Все менторы'}/>
         </Grid>
     );
 };
