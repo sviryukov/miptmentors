@@ -9,7 +9,7 @@ import {HomeBlockLink} from "../HomeBlockLink";
 const useStyles = makeStyles(theme => ({
     homeMentors: {
         padding : '75px 0px',
-        borderTop: '1px solid ' + theme.palette.divider,
+        borderBottom: '1px solid ' + theme.palette.divider,
         backgroundColor: theme.palette.background.default,
         justifyContent: 'center'
     }

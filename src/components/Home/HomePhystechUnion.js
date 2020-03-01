@@ -5,7 +5,6 @@ import {Grid, Link, Typography} from "@material-ui/core";
 const useStyles = makeStyles(theme => ({
     homePhystechUnion: {
         padding: '75px 0px',
-        borderTop: '1px solid ' + theme.palette.divider,
         justifyContent: 'center',
         textAlign: 'center'
     },

@@ -6,9 +6,10 @@ import {NewsCard} from "../../News/NewsCard";
 import {HomeBlockLink} from "../HomeBlockLink";
 import {HomeBlockHeader} from "../HomeBlockHeader";
 
-const useStyles = makeStyles(() => ({
+const useStyles = makeStyles(theme => ({
     homeNewsContainer: {
         padding: '100px 0px 50px',
+        borderBottom: '1px solid ' + theme.palette.divider,
         justifyContent: 'center'
     },
     homeNews: {

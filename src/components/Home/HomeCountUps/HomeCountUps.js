@@ -8,7 +8,7 @@ const useStyles = makeStyles(theme => ({
     homeCountUps: {
         padding: '75px 0px',
         margin: '0px',
-        borderTop: '1px solid ' + theme.palette.divider,
+        borderBottom: '1px solid ' + theme.palette.divider,
         background: 'url(/img/bg.png) 0 0 repeat ' + theme.palette.background.paper,
         justifyContent: 'center'
     }
