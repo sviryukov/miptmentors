@@ -4,8 +4,11 @@ import {Grid} from "@material-ui/core";
 
 const useStyles = makeStyles(theme => ({
     pageNavbar: {
-        paddingBottom: '40px',
-        borderTop: '2px solid ' + theme.palette.text.primary
+        paddingBottom: '20px',
+        borderTop: '2px solid ' + theme.palette.text.primary,
+        [theme.breakpoints.up('md')]: {
+            paddingBottom: '30px'
+        }
     },
     pageNavbarTab: {
         padding: '10px 20px 0px 0px',
