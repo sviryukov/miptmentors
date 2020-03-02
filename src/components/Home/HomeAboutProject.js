@@ -13,7 +13,10 @@ const useStyles = makeStyles(theme => ({
     homeAboutProjectName: {
         fontWeight: '100',
         color: theme.palette.primary.main,
-        fontSize: '40px'
+        fontSize: '30px',
+        [theme.breakpoints.up("md")]: {
+            fontSize: '40px'
+        }
     },
     homeAboutProjectText: {
         fontWeight: '100',
