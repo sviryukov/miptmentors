@@ -53,12 +53,12 @@ const ContactsText = () => {
     return (
         <Grid item xs={12} md={5} lg={4} xl={3}
               className={classes.contactsText}>
-            <Link href='mailto:sviryukov.k@phystech.edu' className={classes.contactsTextLink}>
-                sviryukov.k@phystech.edu
+            <Link href='mailto:dm@phystechunion.org' className={classes.contactsTextLink}>
+                dm@phystechunion.org
             </Link>
             <br/>
-            <Link href='tel:+79250479358' className={classes.contactsTextLink}>
-                +7 (925) 047-93-58
+            <Link href='tel:+79166509953' className={classes.contactsTextLink}>
+                +7 (916) 650-99-53
             </Link>
             <br/>
             <ContactsTextPhystechUnion/>
