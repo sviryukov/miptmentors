@@ -7,7 +7,7 @@ import {NewsItemHeader} from "./NewsItemHeader";
 import {NewsItemText} from './NewsItemText';
 import {NewsItemDate} from './NewsItemDate';
 import {Footer} from "../common/Footer";
-import {NewsCardImg} from "../News/NewsCardImg";
+import {NewsImg} from "../common/NewsImg";
 import axios from "axios";
 
 let useStyles = makeStyles({
@@ -35,7 +35,7 @@ const NewsItem = () => {
                         <Grid container item xs={11} sm={8} lg={7} xl={6} className={classes.newsItemContainer}>
                             <NewsItemHeader text={newsItem.title}/>
                             <NewsItemDate date={newsItem.date}/>
-                            <NewsCardImg alt={newsItem.title} image={newsItem.img} tag={newsItem.tag}/>
+                            <NewsImg alt={newsItem.title} image={newsItem.img} tag={newsItem.tag}/>
                             <NewsItemText text={newsItem.text}/>
                         </Grid>
                     </Fade>

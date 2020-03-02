@@ -6,7 +6,7 @@ import {Navbar} from '../common/Navbar';
 import {Page} from "../common/Page";
 import {PageHeader} from "../common/PageHeader";
 import {PageNavbar} from "../common/PageNavbar";
-import {NewsCard} from './NewsCard';
+import {NewsCard} from '../common/NewsCard';
 import {Footer} from "../common/Footer";
 
 let useStyles = makeStyles({

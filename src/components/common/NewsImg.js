@@ -3,18 +3,19 @@ import {makeStyles} from "@material-ui/styles";
 import {Chip} from "@material-ui/core";
 
 const useStyles = makeStyles(theme => ({
-    newsCardImgContainer: {
+    newsImgContainer: {
+        width: '100%',
         position: 'relative',
         paddingTop: '66.6%'
     },
-    newsCardImg: {
+    newsImg: {
         position: 'absolute',
         width: '100%',
         height: 'auto',
         top: '0',
         left: '0'
     },
-    newsCardTag: {
+    newsTag: {
         position: 'absolute',
         left: '16px',
         bottom: '16px',
@@ -24,7 +25,7 @@ const useStyles = makeStyles(theme => ({
     }
 }));
 
-const NewsCardImg = props => {
+const NewsImg = props => {
     const classes = useStyles();
     const newsTags = {
         "event": {
@@ -41,13 +42,13 @@ const NewsCardImg = props => {
         }
     };
     return (
-        <div className={classes.newsCardImgContainer}>
-            <img src={'/img/' + props.image} className={classes.newsCardImg} alt={props.alt}/>
+        <div className={classes.newsImgContainer}>
+            <img src={'/img/' + props.image} className={classes.newsImg} alt={props.alt}/>
             <Chip label={newsTags[props.tag].name}
                   style={{backgroundColor: newsTags[props.tag].color}}
-                  className={classes.newsCardTag}/>
+                  className={classes.newsTag}/>
         </div>
     );
 };
 
-export {NewsCardImg};
+export {NewsImg};

@@ -2,7 +2,7 @@ import React, {useEffect, useState} from "react";
 import {makeStyles} from "@material-ui/styles";
 import axios from "axios";
 import {Grid} from "@material-ui/core";
-import {NewsCard} from "../../News/NewsCard";
+import {NewsCard} from "../../common/NewsCard";
 import {HomeBlockLink} from "../HomeBlockLink";
 import {HomeBlockHeader} from "../HomeBlockHeader";
 

@@ -1,7 +1,7 @@
 import React from 'react';
 import {makeStyles} from "@material-ui/styles";
 import { Grid } from "@material-ui/core";
-import { dateFormat } from "../News/dateFormat";
+import { dateFormat } from "../common/dateFormat";
 
 const useStyles = makeStyles(theme => ({
     newsItemDate: {
