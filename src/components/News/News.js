@@ -65,6 +65,7 @@ const News = () => {
                     {news.map((newsItem) => (
                         (tag === newsItem.tag || tag === 'all') &&
                         <NewsCard key={newsItem._id}
+                                  _id={newsItem._id}
                                   title={newsItem.title}
                                   date={newsItem.date}
                                   img={newsItem.img}

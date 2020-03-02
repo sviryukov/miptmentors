@@ -34,6 +34,7 @@ const HomeNews = () => {
             <Grid container spacing={2} item xs={11} sm={8} className={classes.homeNews}>
                 {news.map((newsItem) => (
                     <NewsCard key={newsItem._id}
+                              _id={newsItem._id}
                               title={newsItem.title}
                               date={newsItem.date}
                               img={newsItem.img}
