@@ -27,7 +27,7 @@ const Logo = () => {
     const classes = useStyles();
     return (
         <Grid item>
-            <ListItem className={classes.logo} component={Link} href='./' underline='none'>
+            <ListItem className={classes.logo} component={Link} href='/' underline='none'>
                 <Typography variant='h2' className={classes.logoText}>
                     КЛУБ<br/>МЕНТОРОВ<br/>ФИЗТЕХ-СОЮЗА
                 </Typography>
