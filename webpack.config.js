@@ -1,7 +1,9 @@
 const path = require('path');
 const pages = require('./src/pages');
 
-const entries = {};
+const entries = {
+    newsitem: './src/pages/newsitem.js'
+};
 pages.forEach(page => entries[page.script] = './src/pages/' + page.script + '.js');
 
 module.exports = {
