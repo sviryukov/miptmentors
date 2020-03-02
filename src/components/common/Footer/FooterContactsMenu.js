@@ -6,8 +6,8 @@ const FooterContactsMenu = () => {
     return (
         <React.Fragment>
             <FooterContactsMenuSocial/>
-            <FooterMenuLink href='tel:+79250479358' text='+7 (925) 047-93-58'/>
-            <FooterMenuLink href='mailto:sviryukov.k@phystech.edu' text='sviryukov.k@phystech.edu'/>
+            <FooterMenuLink href='tel:+79166509953' text='+7 (916) 650-99-53'/>
+            <FooterMenuLink href='mailto:dm@phystechunion.org' text='dm@phystechunion.org'/>
         </React.Fragment>
     );
 };
