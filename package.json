@@ -4,7 +4,7 @@
   "description": "",
   "main": "server.js",
   "scripts": {
-    "start": "webpack --mode=production && babel-node server.js",
+    "start": "webpack --mode=production && NODE_ENV=production babel-node server.js",
     "dev": "webpack --mode=development && babel-node server.js"
   },
   "author": "",
