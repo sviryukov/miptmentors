@@ -31,7 +31,7 @@ const useStyles = makeStyles(theme => ({
 const HomeAboutProject = () => {
     const classes = useStyles();
     return (
-        <Grid container item xs={12} className={classes.homeAboutProjectContainer}>
+        <Grid container item xs={12} className={classes.homeAboutProjectContainer} id={'learn-more-target'}>
             <Grid item xs={11} sm={9} md={8} lg={6}>
                 <Typography className={classes.homeAboutProjectName}>
                     Клуб Менторов Физтех&#8209;Союза

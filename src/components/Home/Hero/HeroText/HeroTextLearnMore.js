@@ -26,8 +26,14 @@ const useStyles = makeStyles(theme => ({
 
 const HeroTextLearnMore = () => {
     const classes = useStyles();
+    const handleClick = () => {
+        window.scrollTo({
+            top: document.getElementById('learn-more-target').getBoundingClientRect().top + pageYOffset,
+            behavior: 'smooth'
+        })
+    };
     return (
-        <Typography className={classes.heroTextLearnMore}>
+        <Typography className={classes.heroTextLearnMore} onClick={handleClick}>
             Узнать больше ➙
         </Typography>
     );
