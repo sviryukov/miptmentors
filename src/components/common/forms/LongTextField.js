@@ -15,10 +15,11 @@ let useStyles = makeStyles(theme => ({
 const LongTextField = props => {
     const classes = useStyles();
     return (
-        <TextField label={props.label}
+        <TextField label={props.label + (props.required ? " *" : "")}
                    margin='normal'
-                   name={props.name}
-                   id={props.name}
+                   value={props.value}
+                   onChange={event => props.handleChange(event.target.value)}
+                   error={props.error}
                    className={classes.longTextField}/>
     );
 };

@@ -1,6 +1,7 @@
 import React from 'react';
 import {makeStyles} from '@material-ui/styles';
-import {Box, FormControlLabel, Checkbox, Link} from '@material-ui/core';
+import {Box, FormControlLabel, Checkbox, Link, Typography} from '@material-ui/core';
+import theme from "../../../theme";
 
 let useStyles = makeStyles({
     processingConsent: {
@@ -15,12 +16,21 @@ let useStyles = makeStyles({
     }
 });
 
-const ProcessingConsent = () => {
+const ProcessingConsent = props => {
     const classes = useStyles();
     return (
         <Box className={classes.processingConsent}>
-            <FormControlLabel control={<Checkbox/>}
-                              label='Согласен(-на) на обработку персональных данных&nbsp;*'/>
+            <FormControlLabel control={
+                                  <Checkbox style={props.error ? {color: theme.palette.error.main} : {}}/>
+                              }
+                              label={
+                                  <Typography style={props.error ? {color: theme.palette.error.main} : {}}>
+                                      Согласен(-на) на обработку персональных данных
+                                      {props.required ? " *" : ""}
+                                  </Typography>
+                              }
+                              checked={props.value}
+                              onChange={event => props.handleChange(event.target.checked)}/>
             <br/>
             <br/>
             <Link href='https://phystech-union.org/wp-content/uploads/2019/08/Confidential_p-u.pdf' target='_blank'

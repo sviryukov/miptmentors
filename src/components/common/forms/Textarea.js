@@ -15,12 +15,13 @@ let useStyles = makeStyles(theme => ({
 const Textarea = props => {
     const classes = useStyles();
     return (
-        <TextField label={props.label}
+        <TextField label={props.label + (props.required ? " *" : "")}
                    multiline
                    rows={2}
                    margin='normal'
-                   name={props.name}
-                   id={props.name}
+                   value={props.value}
+                   onChange={event => props.handleChange(event.target.value)}
+                   error={props.error}
                    className={classes.textarea}/>
     );
 };

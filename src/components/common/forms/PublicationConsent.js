@@ -1,6 +1,7 @@
-import React, {useState} from 'react';
+import React from 'react';
 import {makeStyles} from '@material-ui/styles';
 import {Box, Typography, FormControlLabel, RadioGroup, Radio} from '@material-ui/core';
+import theme from "../../../theme";
 
 let useStyles = makeStyles({
     publicationConsent: {
@@ -13,24 +14,35 @@ let useStyles = makeStyles({
     }
 });
 
-const PublicationConsent = () => {
+const PublicationConsent = props => {
     const classes = useStyles();
-    const [consent, setConsent] = useState('true');
-    const handleChange = event => setConsent(event.target.value);
     return (
         <Box className={classes.publicationConsent}>
             <Typography className={classes.PublicationConsentHeader}>
                 Согласны ли вы на публикацию на ресурсах нашего проекта информации об успехах Вашего менторского взаимодействия?
+                {props.required ? " *" : ""}
             </Typography>
             <RadioGroup name='publication-consent'
-                        value={consent}
-                        onChange={handleChange}>
-                <FormControlLabel control={<Radio/>}
-                                  label='Согласен(-на)'
-                                  value='true'/>
-                <FormControlLabel control={<Radio/>}
-                                  label='Не согласен(-на)'
-                                  value='false'/>
+                        value={props.value}
+                        onChange={event => props.handleChange(event.target.value)}>
+                <FormControlLabel control={
+                                      <Radio style={props.error ? {color: theme.palette.error.main} : {}}/>
+                                  }
+                                  label={
+                                      <Typography style={props.error ? {color: theme.palette.error.main} : {}}>
+                                          Согласен(-на)
+                                      </Typography>
+                                  }
+                                  value={true}/>
+                <FormControlLabel control={
+                                      <Radio style={props.error ? {color: theme.palette.error.main} : {}}/>
+                                  }
+                                  label={
+                                      <Typography style={props.error ? {color: theme.palette.error.main} : {}}>
+                                          Не согласен(-на)
+                                      </Typography>
+                                  }
+                                  value={false}/>
             </RadioGroup>
         </Box>
     );

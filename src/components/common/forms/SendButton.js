@@ -9,13 +9,14 @@ let useStyles = makeStyles({
     }
 });
 
-const SendButton = () => {
+const SendButton = props => {
     const classes = useStyles();
     return (
         <Box className={classes.sendButtonContainer}>
             <Button variant="contained"
                     size="large"
-                    color="secondary">
+                    color="secondary"
+                    onClick={props.handleClick}>
                 Отправить
             </Button>
         </Box>
