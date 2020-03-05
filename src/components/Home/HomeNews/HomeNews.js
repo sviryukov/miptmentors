@@ -22,7 +22,7 @@ const HomeNews = () => {
     const [news, setNews] = useState([]);
     const [newsVisible, setNewsVisible] = useState(false);
     useEffect(() => {
-        axios.get("/news_data?limited=true")
+        axios.get("/news_data?limited=3")
             .then(res => {
                 setNews(res.data);
                 setNewsVisible(true);
