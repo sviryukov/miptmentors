@@ -20,7 +20,6 @@ const HomePartners = () => {
             <HomeBlockHeader text='Наши партнеры'/>
             <HomePartnerItem href={'https://vk.com/start.mipt'} img={'/img/phystech.start.png'} alt={'Физтех.Старт'}/>
             <HomePartnerItem href={'http://my-mentor.ru'} img={'/img/my-mentor.png'} alt={'My-mentor.ru'}/>
-            <HomePartnerItem href={'http://equium.club'} img={'/img/equium.png'} alt={'Эквиум - бизнес-сообщество'}/>
         </Grid>
     );
 };
