@@ -44,7 +44,7 @@ export default (passport, client) => {
                         )
                     );
                     const css = sheets.toString();
-                    response.send(template(newsItem.title, html, 'newsitem', css));
+                    response.send(template(newsItem.title + ' | Клуб Менторов Физтех-Союза', html, 'newsitem', css));
                 }
             });
         } catch(err) {
@@ -57,7 +57,7 @@ export default (passport, client) => {
             news.sort(function (a, b) {
                 return b.date - a.date;
             });
-            if (request.query.limited) news = news.slice(0, 2);
+            if (request.query.limited) news = news.slice(0, request.query.limited);
             response.send(news);
         });
     });
