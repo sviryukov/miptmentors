@@ -30,20 +30,20 @@ const useStyles = makeStyles(theme => ({
 const NewsCard = props => {
     const classes = useStyles();
     return (
-        <Grid item lg={4} md={6} xs={12}>
-                <Link href={'/news/' + props._id} color={'default'} className={classes.newsCardLink}>
-                    <Fade in={props.visible} timeout={500}>
-                        <Card>
-                            <CardActionArea>
-                                <NewsImg image={props.img.replace('.', 'min.')} tag={props.tag} alt={props.title}/>
-                                <CardContent className={classes.newsCardContent}>
-                                    <p className={classes.newsCardTitle}>{props.title}</p>
-                                    <p className={classes.newsCardDate}>{dateFormat(props.date)}</p>
-                                </CardContent>
-                            </CardActionArea>
-                        </Card>
-                    </Fade>
-                </Link>
+        <Grid item md={4} xs={12}>
+            <Link href={'/news/' + props._id} color={'default'} className={classes.newsCardLink}>
+                <Fade in={props.visible} timeout={500}>
+                    <Card>
+                        <CardActionArea>
+                            <NewsImg image={props.img.replace('.', 'min.')} tag={props.tag} alt={props.title}/>
+                            <CardContent className={classes.newsCardContent}>
+                                <p className={classes.newsCardTitle}>{props.title}</p>
+                                <p className={classes.newsCardDate}>{dateFormat(props.date)}</p>
+                            </CardContent>
+                        </CardActionArea>
+                    </Card>
+                </Fade>
+            </Link>
         </Grid>
     );
 };
