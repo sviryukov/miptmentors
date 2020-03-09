@@ -10,8 +10,10 @@ const useStyles = makeStyles(theme => ({
     homeMentors: {
         padding : '75px 0px',
         borderBottom: '1px solid ' + theme.palette.divider,
-        backgroundColor: theme.palette.background.default,
-        justifyContent: 'center'
+        justifyContent: 'center',
+        [theme.breakpoints.up('md')]: {
+            padding: '100px 0px'
+        }
     }
 }));
 

@@ -7,10 +7,12 @@ import {HomeCountUpItem} from "./HomeCountUpItem";
 const useStyles = makeStyles(theme => ({
     homeCountUps: {
         padding: '75px 0px',
-        margin: '0px',
         borderBottom: '1px solid ' + theme.palette.divider,
         background: 'url(/img/bg.png) 0 0 repeat ' + theme.palette.background.paper,
-        justifyContent: 'center'
+        justifyContent: 'center',
+        [theme.breakpoints.up('md')]: {
+            padding: '100px 0px'
+        }
     }
 }));
 
@@ -42,7 +44,6 @@ const HomeCountUps = () => {
                            item: true,
                            xs: 12,
                            container: true,
-                           spacing: 4,
                            className: classes.homeCountUps
                        }}/>
     );

@@ -4,11 +4,14 @@ import {Grid, Typography} from "@material-ui/core";
 
 const useStyles = makeStyles(theme => ({
     homeAboutProjectContainer: {
-        padding: '100px 0px',
+        padding: '75px 0px',
         borderBottom: '1px solid ' + theme.palette.divider,
+        backgroundColor: theme.palette.background.paper,
         justifyContent: 'center',
-        backgroundColor: theme.palette.background.default,
-        textAlign: 'center'
+        textAlign: 'center',
+        [theme.breakpoints.up('md')]: {
+            padding: '100px 0px'
+        }
     },
     homeAboutProjectName: {
         fontWeight: '100',

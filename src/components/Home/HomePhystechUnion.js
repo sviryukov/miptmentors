@@ -6,7 +6,11 @@ const useStyles = makeStyles(theme => ({
     homePhystechUnion: {
         padding: '75px 0px',
         justifyContent: 'center',
-        textAlign: 'center'
+        backgroundColor: theme.palette.background.paper,
+        textAlign: 'center',
+        [theme.breakpoints.up('md')]: {
+            padding: '100px 0px'
+        }
     },
     homePhystechUnionImg: {
         width: '280px',

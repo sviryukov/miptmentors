@@ -2,15 +2,17 @@ import React, {useEffect, useState} from "react";
 import {makeStyles} from "@material-ui/styles";
 import axios from "axios";
 import {Grid} from "@material-ui/core";
-import {NewsCard} from "../../common/NewsCard";
-import {HomeBlockLink} from "../HomeBlockLink";
-import {HomeBlockHeader} from "../HomeBlockHeader";
+import {NewsCard} from "../common/NewsCard";
+import {HomeBlockLink} from "./HomeBlockLink";
 
 const useStyles = makeStyles(theme => ({
     homeNewsContainer: {
-        padding: '100px 0px 50px',
+        padding: '75px 0px',
+        justifyContent: 'center',
         borderBottom: '1px solid ' + theme.palette.divider,
-        justifyContent: 'center'
+        [theme.breakpoints.up('md')]: {
+            padding: '100px 0px'
+        }
     },
     homeNews: {
         justifyContent: 'center'
@@ -30,8 +32,7 @@ const HomeNews = () => {
     }, []);
     return (
         <Grid container item xs={12} className={classes.homeNewsContainer}>
-            <HomeBlockHeader text={'Новости проекта'}/>
-            <Grid container spacing={2} item xs={11} sm={8} className={classes.homeNews}>
+            <Grid container spacing={2} item xs={11} lg={8} className={classes.homeNews}>
                 {news.map((newsItem) => (
                     <NewsCard key={newsItem._id}
                               _id={newsItem._id}

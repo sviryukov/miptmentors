@@ -4,12 +4,16 @@ import {Grid} from "@material-ui/core";
 import {HomeBlockHeader} from "../HomeBlockHeader";
 import {HomePartnerItem} from "./HomePartnerItem";
 
-const useStyles = makeStyles({
+const useStyles = makeStyles(theme => ({
     homePartners: {
-        padding: '75px 0px 150px',
-        justifyContent: 'center'
+        padding: '0px 0px 75px',
+        backgroundColor: theme.palette.background.paper,
+        justifyContent: 'center',
+        [theme.breakpoints.up('md')]: {
+            padding: '50px 0px 100px'
+        }
     }
-});
+}));
 
 const HomePartners = () => {
     const classes = useStyles();

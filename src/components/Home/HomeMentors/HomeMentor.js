@@ -6,10 +6,6 @@ const useStyles = makeStyles({
     homeMentor: {
         margin: '16px'
     },
-    mentorCardContent: {
-        height: '115px',
-        paddingTop: '0px'
-    },
     homeMentorCardName: {
         fontWeight: 'bold'
     }

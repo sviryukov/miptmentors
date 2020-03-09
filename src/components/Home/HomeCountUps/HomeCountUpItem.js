@@ -5,7 +5,7 @@ import {CountUp} from "../../common/Countup";
 
 const useStyles = makeStyles({
     homeCountUpItemContainer: {
-        height: 'fit-content'
+        padding: '16px',
     },
     homeCountUpItem: {
         width: '100%',
@@ -15,8 +15,6 @@ const useStyles = makeStyles({
     },
     homeCountUpItemText: {
         width: '100%',
-        maxWidth: '262px',
-        margin: 'auto',
         fontWeight: '100',
         fontSize: '18px',
         textAlign: 'center'

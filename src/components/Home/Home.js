@@ -1,9 +1,9 @@
 import React from 'react';
 import {CssBaseline} from "@material-ui/core";
 import {Navbar} from '../common/Navbar';
+import {Grid} from "@material-ui/core";
 import {Hero} from "./Hero";
-import {HomePage} from './HomePage';
-import {HomeNews} from "./HomeNews";
+import {HomeNews} from './HomeNews';
 import {HomeAboutProject} from "./HomeAboutProject";
 import {HomeCountUps} from "./HomeCountUps";
 import {HomeMentors} from "./HomeMentors";
@@ -16,15 +16,15 @@ const Home = () => {
         <React.Fragment>
             <CssBaseline/>
             <Navbar/>
-            <Hero/>
-            <HomePage>
+            <Grid container justify={'center'}>
+                <Hero/>
                 <HomeNews/>
                 <HomeAboutProject/>
                 <HomeCountUps/>
                 <HomeMentors/>
                 <HomePhystechUnion/>
                 <HomePartners/>
-            </HomePage>
+            </Grid>
             <Footer/>
         </React.Fragment>
     );
