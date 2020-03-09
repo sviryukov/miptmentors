@@ -30,7 +30,7 @@ const useStyles = makeStyles(theme => ({
 const NewsCard = props => {
     const classes = useStyles();
     return (
-        <Grid item md={4} xs={12}>
+        <Grid item sm={4} xs={12}>
             <Link href={'/news/' + props._id} color={'default'} className={classes.newsCardLink}>
                 <Fade in={props.visible} timeout={500}>
                     <Card>
