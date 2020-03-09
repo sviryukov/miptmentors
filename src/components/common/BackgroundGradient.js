@@ -10,7 +10,7 @@ let useStyles = makeStyles(theme => ({
         [theme.breakpoints.up('md')]: {
             height: '100%',
         },
-        background: 'linear-gradient(45deg, ' + theme.palette.secondary.light + ', ' + theme.palette.secondary.dark + ')',
+        background: 'linear-gradient(45deg, ' + theme.palette.primary.light + ', ' + theme.palette.primary.dark + ')',
         shapeOutside: 'polygon(0 185px, 66% 215px, 100% 155px, 100% 100%, 0 100%)',
         clipPath: 'polygon(0 185px, 66% 215px, 100% 155px, 100% 100%, 0 100%)',
         [theme.breakpoints.up('xl')]: {
