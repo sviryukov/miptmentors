@@ -4,16 +4,10 @@ import {Typography} from "@material-ui/core";
 
 const useStyles = makeStyles(theme => ({
     heroTextHeader: {
-        marginBottom: '15px',
-        lineHeight: '1.4',
-        fontWeight: '100',
         fontSize: '25px',
-        color: theme.palette.primary.main,
+        color: theme.palette.text.light,
         [theme.breakpoints.up('sm')]: {
-            fontSize: '40px'
-        },
-        [theme.breakpoints.up('md')]: {
-            fontSize: '44px'
+            fontSize: '37px'
         },
         [theme.breakpoints.up('xl')]: {
             fontSize: '55px'
@@ -21,15 +15,14 @@ const useStyles = makeStyles(theme => ({
     }
 }));
 
-const HeroTextHeader = () => {
+const HeroHeader = () => {
     const classes = useStyles();
     return (
         <Typography variant='h1'
-                    color='secondary'
                     className={classes.heroTextHeader}>
-            Программа наставничества<br/>для студентов МФТИ
+            Программа наставничества для студентов МФТИ
         </Typography>
     );
 };
 
-export {HeroTextHeader};
+export {HeroHeader};

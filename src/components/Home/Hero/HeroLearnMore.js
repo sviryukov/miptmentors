@@ -1,30 +1,29 @@
 import React from 'react';
 import {makeStyles} from "@material-ui/styles";
-import {Typography} from "@material-ui/core";
 
 const useStyles = makeStyles(theme => ({
     heroTextLearnMore: {
-        width: 'fit-content',
-        margin: '10px 0px',
+        margin: '0px 10px 10px 0px',
+        padding: '6px 16px',
+        verticalAlign: 'middle',
+        border: 'none',
+        outline: 'none',
+        backgroundColor: 'transparent',
         cursor: 'pointer',
-        color: theme.palette.primary.main,
-        fontSize: '17px',
-        fontWeight: '100',
+        color: theme.palette.text.light,
+        lineHeight: '1.75',
         transition: 'color 0.2s',
+        fontSize: '16px',
         [theme.breakpoints.up('sm')]: {
-            margin: '10px 0px',
             fontSize: '20px'
         },
-        [theme.breakpoints.up('xl')]: {
-            fontSize: '22px'
-        },
         '&:hover': {
-            color: theme.palette.secondary.main
+            color: theme.palette.secondary.light
         }
     }
 }));
 
-const HeroTextLearnMore = () => {
+const HeroLearnMore = () => {
     const classes = useStyles();
     const handleClick = () => {
         window.scrollTo({
@@ -33,10 +32,10 @@ const HeroTextLearnMore = () => {
         })
     };
     return (
-        <Typography className={classes.heroTextLearnMore} onClick={handleClick}>
+        <button className={classes.heroTextLearnMore} onClick={handleClick}>
             Узнать больше ➙
-        </Typography>
+        </button>
     );
 };
 
-export {HeroTextLearnMore};
+export {HeroLearnMore};

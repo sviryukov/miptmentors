@@ -1,33 +1,28 @@
 import React from 'react'
 import {makeStyles} from "@material-ui/styles";
 import {Grid} from "@material-ui/core";
-import {HeroText} from "./HeroText";
+import {HeroHeader} from "./HeroHeader";
+import {HeroSubheader} from "./HeroSubheader";
+import {HeroButton} from "./HeroButton";
+import {HeroLearnMore} from "./HeroLearnMore";
 
 const useStyles = makeStyles(theme => ({
+    heroContainer: {
+        margin: '0px',
+        padding: '50px 0px',
+        justifyContent: 'center',
+        background: 'linear-gradient(45deg, ' + theme.palette.primary.light + ', ' + theme.palette.primary.dark + ')',
+        shapeOutside: 'polygon(0 0, 100% 0, 100% 95%, 33% 100%, 0 95%)',
+        clipPath: 'polygon(0 0, 100% 0, 100% 95%, 33% 100%, 0 95%)',
+        [theme.breakpoints.up("md")]: {
+            padding: '100px 0px',
+            shapeOutside: 'polygon(0 0, 100% 0, 100% 80%, 33% 100%, 0 80%)',
+            clipPath: 'polygon(0 0, 100% 0, 100% 80%, 33% 100%, 0 80%)'
+        }
+    },
     hero: {
-        margin: 'auto',
-        padding: '50px 5% 50px',
-        [theme.breakpoints.up('sm')]: {
-            height: '400px',
-            marginTop: '100px',
-            padding: '0px 5%'
-        },
-        [theme.breakpoints.up('md')]: {
-            height: 'calc(100% - 280px)',
-            minHeight: '430px',
-            maxHeight: '480px',
-            padding: '0px 20px'
-        },
-        [theme.breakpoints.up('lg')]: {
-            height: 'calc(100% - 320px)',
-            minHeight: '440px',
-            maxHeight: '680px'
-        },
-        [theme.breakpoints.up('xl')]: {
-            height: 'calc(100% - 384px)',
-            minHeight: '520px',
-            maxHeight: '616px',
-            marginTop: '150px'
+        [theme.breakpoints.up("md")]: {
+            textAlign: 'center'
         }
     }
 }));
@@ -35,8 +30,14 @@ const useStyles = makeStyles(theme => ({
 const Hero = () => {
     const classes = useStyles();
     return (
-        <Grid container justify='space-between' item xs={12} md={10} xl={9} className={classes.hero}>
-            <HeroText/>
+        <Grid container spacing={2} item xs={12} className={classes.heroContainer}>
+            <Grid item xs={11} lg={8} className={classes.hero}>
+                <HeroHeader/>
+                <HeroSubheader/>
+                <HeroButton text='Найти ментора' href={'/findmentor'}/>
+                <HeroButton text='Стать ментором' href={'/becomementor'}/>
+                <HeroLearnMore/>
+            </Grid>
         </Grid>
     );
 };

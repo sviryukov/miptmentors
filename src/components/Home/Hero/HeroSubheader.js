@@ -4,11 +4,9 @@ import {Typography} from "@material-ui/core";
 
 const useStyles = makeStyles(theme => ({
     heroTextDescription: {
-        marginBottom: '25px',
-        lineHeight: '1.4',
-        fontWeight: '100',
-        color: theme.palette.primary.main,
+        margin: '25px 0px',
         fontSize: '20px',
+        color: theme.palette.text.light,
         [theme.breakpoints.up('sm')]: {
             fontSize: '22px'
         },
@@ -18,7 +16,7 @@ const useStyles = makeStyles(theme => ({
     }
 }));
 
-const HeroTextDescription = () => {
+const HeroSubheader = () => {
     const classes = useStyles();
     return (
         <Typography variant='h2'
@@ -28,4 +26,4 @@ const HeroTextDescription = () => {
     );
 };
 
-export {HeroTextDescription};
+export {HeroSubheader};
