@@ -13,9 +13,13 @@ const useStyles = makeStyles(theme => ({
             padding: '100px 0px'
         }
     },
+    homeAboutProjectImg: {
+        width: '250px',
+        marginBottom: '20px'
+    },
     homeAboutProjectName: {
         fontWeight: '100',
-        color: theme.palette.primary.main,
+        color: theme.palette.secondary.main,
         fontSize: '30px',
         [theme.breakpoints.up("md")]: {
             fontSize: '40px'
@@ -25,7 +29,7 @@ const useStyles = makeStyles(theme => ({
         fontWeight: '100',
         paddingTop: '20px',
         fontSize: '19px',
-        [theme.breakpoints.up('sm')]: {
+        [theme.breakpoints.up('200pxsm')]: {
             fontSize: '22px'
         },
         [theme.breakpoints.up('md')]: {
@@ -39,6 +43,7 @@ const HomeAboutProject = () => {
     return (
         <Grid container item xs={12} className={classes.homeAboutProjectContainer} id={'learn-more-target'}>
             <Grid item xs={11} sm={9} md={8} lg={6}>
+                <img className={classes.homeAboutProjectImg} src={'/img/logo.png'} alt={'Клуб Менторов Физтех-Союза'}/>
                 <Typography className={classes.homeAboutProjectName}>
                     Клуб Менторов Физтех&#8209;Союза
                 </Typography>
