@@ -3,7 +3,7 @@ import {makeStyles} from "@material-ui/styles";
 
 const useStyles = makeStyles(theme => ({
     heroTextLearnMore: {
-        margin: '0px 10px 10px 0px',
+        margin: '10px 50px 10px 0px',
         padding: '6px 0px',
         verticalAlign: 'middle',
         border: 'none',
@@ -15,6 +15,7 @@ const useStyles = makeStyles(theme => ({
         transition: 'color 0.2s',
         fontSize: '16px',
         [theme.breakpoints.up('sm')]: {
+            margin: '0px 10px 10px 0px',
             padding: '6px 16px',
             fontSize: '20px'
         },
