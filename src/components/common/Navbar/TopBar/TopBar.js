@@ -32,8 +32,8 @@ const TopBar = () => {
         <Grid container
               item xs={12}
               className={classes.topBar}>
-            <Link href='https://spasibophystech.ru/' target='_blank' className={classes.topBarLink}>
-                Вступайте в Физтех-Союз
+            <Link href='https://phystech-union.org/' target='_blank' className={classes.topBarLink}>
+                Официальный сайт Физтех-Союза
                 <TopBarIcon fontSize='small' color='inherit' className={classes.topBarLinkIcon}/>
             </Link>
         </Grid>
