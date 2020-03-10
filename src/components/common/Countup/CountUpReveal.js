@@ -12,9 +12,8 @@ const CountUpReveal = ({
     const countUpRevealRef = useRef(null);
     const [reachedBreakpoint, setReachedBreakpoint] = useState(false);
     useEffect(() => {
-        const breakpoint = countUpRevealRef.current.getBoundingClientRect().top + window.pageYOffset + offset;
         const checkBreakpoint = () => {
-            if (window.pageYOffset + window.innerHeight > breakpoint) {
+            if (countUpRevealRef.current.getBoundingClientRect().top + offset - window.innerHeight < 0) {
                 setReachedBreakpoint(true);
                 window.removeEventListener('scroll', checkBreakpoint);
             }
