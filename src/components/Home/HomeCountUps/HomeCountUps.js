@@ -38,7 +38,7 @@ const HomeCountUps = () => {
     return (
         <CountUpReveal countUpComponent={HomeCountUpItem}
                        countUpProps={countUpProps}
-                       offset={-50}
+                       offset={240}
                        component={Grid}
                        componentProps={{
                            item: true,
