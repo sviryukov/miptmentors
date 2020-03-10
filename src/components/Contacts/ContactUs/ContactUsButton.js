@@ -13,7 +13,7 @@ const ContactUsButton = () => {
     return (
         <Button variant="contained"
                 size="large"
-                color="secondary"
+                color="primary"
                 className={classes.contactUsButton}>
             Отправить
         </Button>

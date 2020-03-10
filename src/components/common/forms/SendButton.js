@@ -15,7 +15,7 @@ const SendButton = props => {
         <Box className={classes.sendButtonContainer}>
             <Button variant="contained"
                     size="large"
-                    color="secondary"
+                    color="primary"
                     onClick={props.handleClick}>
                 Отправить
             </Button>
