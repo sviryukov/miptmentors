@@ -43,7 +43,7 @@ const HomeAboutProject = () => {
     return (
         <Grid container item xs={12} className={classes.homeAboutProjectContainer} id={'learn-more-target'}>
             <Grid item xs={11} sm={9} md={8} lg={6}>
-                <img className={classes.homeAboutProjectImg} src={'/img/logo.png'} alt={'Клуб Менторов Физтех-Союза'}/>
+                <img className={classes.homeAboutProjectImg} src={'/img/logo.svg'} alt={'Клуб Менторов Физтех-Союза'}/>
                 <Typography className={classes.homeAboutProjectName}>
                     Клуб Менторов Физтех&#8209;Союза
                 </Typography>
