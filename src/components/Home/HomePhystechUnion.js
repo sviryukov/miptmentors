@@ -37,7 +37,7 @@ const HomePhystechUnion = () => {
         <Grid item xs={12} container className={classes.homePhystechUnion}>
             <Grid item xs={10} md={8} lg={5}>
                 <Link href='https://phystech-union.org/' target='_blank'>
-                    <img src={'/img/phystech-union.png'} alt={'Физтех-Союз'}
+                    <img src={'/img/phystech-union.svg'} alt={'Физтех-Союз'}
                          className={classes.homePhystechUnionImg}/>
                 </Link>
                 <Typography className={classes.homePhystechUnionText}>
