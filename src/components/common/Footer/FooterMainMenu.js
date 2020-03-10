@@ -9,7 +9,7 @@ const FooterMainMenu = () => {
             <FooterMenuLink href='/news' text='Новости проекта'/>
             <FooterMenuLink href='/mentors' text='Менторы проекта'/>
             <FooterMenuLink href='/contacts' text='Контакты'/>
-            <FooterMenuLink href='http://phystechunion.org' target='_blank' text='Физтех-Союз'/>
+            <FooterMenuLink href='http://phystech-union.org' target='_blank' text='Физтех-Союз'/>
         </React.Fragment>
     );
 };
