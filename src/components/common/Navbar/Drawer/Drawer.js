@@ -37,10 +37,10 @@ const Drawer = props => {
                      left: props.drawerOpen ? '0%' : '100%'
                  }}>
                 <List className={classes.drawerList}>
+                    <DrawerItem text='Стать ментором' href='/becomementor'/>
+                    <DrawerItem text='Найти ментора' href='/findmentor'/>
                     <DrawerItem text='Новости проекта' href='/news'/>
                     <DrawerItem text='Менторы проекта' href='/mentors'/>
-                    <DrawerItem text='Найти ментора' href='/findmentor'/>
-                    <DrawerItem text='Стать ментором' href='/becomementor'/>
                     <DrawerItem text='Контакты' href='/contacts'/>
                 </List>
             </Box>

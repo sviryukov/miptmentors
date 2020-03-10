@@ -31,10 +31,10 @@ const Menu = props => {
         <Grid item className={classes.menuContainer}>
             <List component={Box} display={{xs: 'none', md: 'flex'}}
                   className={classes.menuList}>
+                <MenuItem text='Стать ментором' href='/becomementor' id='becomementor' current={props.current === 'becomementor'}/>
+                <MenuItem text='Найти ментора' href='/findmentor' id='findmentor' current={props.current === 'findmentor'}/>
                 <MenuItem text='Новости проекта' href='/news' id='news' current={props.current === 'news'}/>
                 <MenuItem text='Менторы проекта' href='/mentors' id='mentors' current={props.current === 'mentors'}/>
-                <MenuItem text='Найти ментора' href='/findmentor' id='findmentor' current={props.current === 'findmentor'}/>
-                <MenuItem text='Стать ментором' href='/becomementor' id='becomementor' current={props.current === 'becomementor'}/>
                 <MenuItem text='Контакты' href='/contacts' id='contacts' current={props.current === 'contacts'}/>
             </List>
             <Box display={{xs: 'flex', md: 'none'}}
