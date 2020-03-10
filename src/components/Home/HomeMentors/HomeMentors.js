@@ -36,7 +36,11 @@ const HomeMentors = () => {
               className={classes.homeMentors}>
             <HomeBlockHeader text={'Наши менторы'}/>
             {mentors.map(mentor => (
-                <HomeMentor name={mentor.name} img={mentor.img} education={mentor.education} work={mentor.work}/>
+                <HomeMentor key={mentor.name}
+                            name={mentor.name}
+                            img={mentor.img}
+                            education={mentor.education}
+                            work={mentor.work}/>
             ))}
             <HomeBlockLink href={'/mentors'} text={'Все менторы'}/>
         </Grid>
