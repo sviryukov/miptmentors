@@ -12,7 +12,7 @@ let useStyles = makeStyles({
 const FormHeader = props => {
     const classes = useStyles();
     return (
-        <Typography variant='h4'
+        <Typography variant='h1'
                     className={classes.formHeader}>
             {props.text}
         </Typography>
