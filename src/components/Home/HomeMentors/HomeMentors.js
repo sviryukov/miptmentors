@@ -22,7 +22,7 @@ const HomeMentors = () => {
     useEffect(() => {
         axios.get("/mentors_data", {
             params: {
-                mentors: ['Сергей Белоусов', 'Ратмир Тимашев', 'Андрей Иващенко']
+                mentors: ['Сергей Белоусов', 'Сергей Дашков', 'Андрей Иващенко']
             }
         })
             .then(res => {
