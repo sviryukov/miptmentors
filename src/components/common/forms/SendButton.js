@@ -4,20 +4,19 @@ import {Box, Button} from '@material-ui/core';
 
 let useStyles = makeStyles({
     sendButtonContainer: {
-        marginTop: "30px",
-        textAlign: 'center'
+        marginTop: "30px"
     }
 });
 
 const SendButton = props => {
     const classes = useStyles();
     return (
-        <Box className={classes.sendButtonContainer}>
+        <Box className={classes.sendButtonContainer} style={{ textAlign: props.textAlign || 'center'}}>
             <Button variant="contained"
                     size="large"
                     color="primary"
                     onClick={props.handleClick}>
-                Отправить
+                {props.text || 'Отправить'}
             </Button>
         </Box>
     );
