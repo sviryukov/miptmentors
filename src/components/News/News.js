@@ -60,7 +60,7 @@ const News = () => {
             <Navbar current='news'/>
             <Page>
                 <PageHeader text={'Новости проекта'}/>
-                <Grid container spacing={2} item xs={11} lg={9} xl={8} className={classes.newsContainer}>
+                <Grid container spacing={2} item xs={11} lg={8} className={classes.newsContainer}>
                     <PageNavbar tabs={newsTags} setTab={handleSetTag} initialTab={'all'}/>
                     {news.map((newsItem) => (
                         (tag === newsItem.tag || tag === 'all') &&
