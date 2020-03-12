@@ -17,7 +17,7 @@ const Textarea = props => {
     return (
         <TextField label={props.label + (props.required ? " *" : "")}
                    multiline
-                   rows={2}
+                   rows={props.rows || 2}
                    margin='normal'
                    value={props.value}
                    onChange={event => props.handleChange(event.target.value)}
