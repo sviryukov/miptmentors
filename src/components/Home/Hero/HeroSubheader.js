@@ -21,7 +21,7 @@ const HeroSubheader = () => {
     return (
         <Typography variant='h2'
                     className={classes.heroTextDescription}>
-            Открыт набор менторов и менти на новый сезон проекта! Успейте подать заявку до 5 марта.
+            Найдите наставника для карьерного роста или станьте ментором для будущего профессионала
         </Typography>
     );
 };
