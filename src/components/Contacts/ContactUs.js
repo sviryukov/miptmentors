@@ -1,10 +1,10 @@
 import React from 'react';
 import {makeStyles} from '@material-ui/styles';
 import {Grid, Box} from '@material-ui/core';
-import {FormHeader} from "../../common/forms/FormHeader";
-import {ContactUsEmailField} from "./ContactUsEmailField";
-import {ContactUsMessageField} from "./ContactUsMessageField";
-import {ContactUsButton} from "./ContactUsButton";
+import {FormHeader} from "../common/forms/FormHeader";
+import {LongTextField} from "../common/forms/LongTextField";
+import {Textarea} from "../common/forms/Textarea";
+import {SendButton} from "../common/forms/SendButton";
 
 let useStyles = makeStyles(theme => ({
     contactUsContainer: {
@@ -35,9 +35,9 @@ const ContactUs = () => {
               item xs={12} md={5} lg={4} xl={3}
               className={classes.contactUsContainer}>
             <FormHeader text='Свяжитесь с нами'/>
-            <ContactUsEmailField/>
-            <ContactUsMessageField/>
-            <ContactUsButton/>
+            <LongTextField label={'E-mail'}/>
+            <Textarea label={'Ваш вопрос'} rows={5}/>
+            <SendButton textAlign={'left'}/>
         </Grid>
     );
 };
