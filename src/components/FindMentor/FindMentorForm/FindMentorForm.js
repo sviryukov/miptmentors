@@ -2,6 +2,8 @@ import React from 'react';
 import {makeStyles} from '@material-ui/styles';
 import {Grid, Box} from '@material-ui/core';
 import {FormHeader} from "../../common/forms/FormHeader";
+import {LongTextField} from "../../common/forms/LongTextField";
+import {SendButton} from "../../common/forms/SendButton";
 /*import {ShortTextField} from "../../common/forms/ShortTextField";
 import {FindMentorFormDepartment} from "./FindMentorFormDepartment";
 import {FindMentorFormYear} from "./FindMentorFormYear";
@@ -45,6 +47,10 @@ const FindMentorForm = () => {
             <br/>
             <br/>
             Присоединяйтесь к нам в следующем сезоне в октябре 2020 года.
+            <br/>
+            <br/>
+            <LongTextField label={'E-mail'}/>
+            <SendButton text={'Напомнить мне о начале набора'}/>
             {/*<ShortTextField label='Имя *' name='name'/>
             <ShortTextField label='Фамилия *' name='surname'/>
             <FindMentorFormDepartment/>
