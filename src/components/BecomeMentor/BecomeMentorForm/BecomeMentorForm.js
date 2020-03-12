@@ -12,7 +12,7 @@ import {SendButton} from "../../common/forms/SendButton";
 let useStyles = makeStyles(theme => ({
     becomeMentorForm: {
         borderRadius: '4px',
-        padding: '80px 50px 40px',
+        padding: '80px 20px 40px',
         [theme.breakpoints.up('sm')]: {
             padding: '100px 50px 40px'
         },
