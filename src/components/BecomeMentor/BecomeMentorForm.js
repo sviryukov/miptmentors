@@ -2,19 +2,16 @@ import React from 'react';
 import {makeStyles} from '@material-ui/styles';
 import {Grid, Box} from '@material-ui/core';
 import {Form} from "../common/forms/Form";
-import {contactUsFormData} from "./contactUsFormData";
+import {becomeMentorFormData} from "./becomeMentorFormData";
 
 let useStyles = makeStyles(theme => ({
-    contactUsContainer: {
-        order: '3',
+    becomeMentorForm: {
         borderRadius: '4px',
-        padding: '80px 30px 00px',
+        padding: '80px 20px 40px',
         [theme.breakpoints.up('sm')]: {
-            padding: '80px 150px 00px'
+            padding: '100px 50px 40px'
         },
         [theme.breakpoints.up('md')]: {
-            order: '2',
-            height: '489px',
             padding: '64px',
             margin: '80px 0px 50px',
             backgroundColor: theme.palette.background.paper
@@ -25,22 +22,22 @@ let useStyles = makeStyles(theme => ({
     }
 }));
 
-const ContactUs = () => {
+const BecomeMentorForm =  () => {
     const classes = useStyles();
     return (
         <Grid component={Box}
               boxShadow={{xs: 0, md: 3}}
-              item xs={12} md={5} lg={4} xl={3}
-              className={classes.contactUsContainer}>
-            <Form header={'Свяжитесь с нами'}
-                  formData={contactUsFormData}
-                  url={'/contactus'}
+              item xs={12} md={7} lg={6} xl={5}
+              className={classes.becomeMentorForm}>
+            <Form header={'Стать ментором'}
+                  formData={becomeMentorFormData}
+                  url={'/becomementor'}
                   alert={{
-                      success: 'Вопрос успешно отправлен!',
+                      success: 'Заявка успешно отправлена!',
                       error: 'Что-то пошло не так, пожалуйста, повторите отправку позже'
                   }}/>
         </Grid>
     );
 };
 
-export {ContactUs};
+export {BecomeMentorForm};
