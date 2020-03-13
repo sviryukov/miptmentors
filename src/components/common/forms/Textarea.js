@@ -16,6 +16,7 @@ const Textarea = props => {
     const classes = useStyles();
     return (
         <TextField label={props.label + (props.required ? " *" : "")}
+                   variant={props.variant || 'standard'}
                    multiline
                    rows={props.rows || 2}
                    margin='normal'

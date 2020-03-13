@@ -16,6 +16,7 @@ const LongTextField = props => {
     const classes = useStyles();
     return (
         <TextField label={props.label + (props.required ? " *" : "")}
+                   variant={props.variant || 'standard'}
                    margin='normal'
                    value={props.value}
                    onChange={event => props.handleChange(event.target.value)}
