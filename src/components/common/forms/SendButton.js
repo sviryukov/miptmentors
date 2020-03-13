@@ -16,7 +16,7 @@ const SendButton = props => {
                     size="large"
                     color="primary"
                     onClick={props.handleClick}>
-                {props.text || 'Отправить'}
+                {props.text}
             </Button>
         </Box>
     );
