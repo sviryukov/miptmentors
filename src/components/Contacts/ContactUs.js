@@ -35,8 +35,8 @@ const ContactUs = () => {
               item xs={12} md={5} lg={4} xl={3}
               className={classes.contactUsContainer}>
             <FormHeader text='Свяжитесь с нами'/>
-            <LongTextField label={'E-mail'}/>
-            <Textarea label={'Ваш вопрос'} rows={5}/>
+            <LongTextField label={'E-mail'} variant={'outlined'}/>
+            <Textarea label={'Ваш вопрос'} variant={'outlined'} rows={5}/>
             <SendButton textAlign={'left'}/>
         </Grid>
     );
