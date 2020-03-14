@@ -7,6 +7,7 @@ import {ProcessingConsent} from "../common/forms/ProcessingConsent";
 const becomeMentorFormData = [
     {
         name: 'name',
+        type: 'string',
         check: value => value !== '',
         Component: ShortTextField,
         props: {
@@ -16,6 +17,7 @@ const becomeMentorFormData = [
     },
     {
         name: 'surname',
+        type: 'string',
         check: value => value !== '',
         Component: ShortTextField,
         props: {
@@ -25,6 +27,7 @@ const becomeMentorFormData = [
     },
     {
         name: 'education',
+        type: 'string',
         check: value => value !== '',
         Component: LongTextField,
         props: {
@@ -34,6 +37,7 @@ const becomeMentorFormData = [
     },
     {
         name: 'work',
+        type: 'string',
         check: value => value !== '',
         Component: LongTextField,
         props: {
@@ -43,6 +47,7 @@ const becomeMentorFormData = [
     },
     {
         name: 'phone',
+        type: 'string',
         check: value => /^\+\d \(\d{3}\) \d{3}-\d{2}-\d{2}$/.test(value),
         Component: PhoneInput,
         props: {
@@ -51,6 +56,7 @@ const becomeMentorFormData = [
     },
     {
         name: 'email',
+        type: 'string',
         check: value => /^.+@.+$/.test(value),
         Component: ShortTextField,
         props: {
@@ -60,6 +66,7 @@ const becomeMentorFormData = [
     },
     {
         name: 'publicationConsent',
+        type: 'boolean',
         check: () => true,
         initialValue: true,
         Component: PublicationConsent,
@@ -69,6 +76,7 @@ const becomeMentorFormData = [
     },
     {
         name: 'processingConsent',
+        type: 'boolean',
         check: value => value,
         Component: ProcessingConsent,
         initialValue: false,

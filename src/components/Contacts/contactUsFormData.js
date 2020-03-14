@@ -4,6 +4,7 @@ import {Textarea} from "../common/forms/Textarea";
 const contactUsFormData = [
     {
         name: 'email',
+        type: 'string',
         check: value => /^.+@.+$/.test(value),
         Component: LongTextField,
         props: {
@@ -14,6 +15,7 @@ const contactUsFormData = [
     },
     {
         name: 'question',
+        type: 'string',
         check: value => value !== '',
         Component: Textarea,
         props: {
