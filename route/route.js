@@ -69,18 +69,20 @@ const route = client => {
         });
     });
     router.get("/news_item_data", (request, response) => {
-        try {
-            let _id = ObjectID(request.query._id);
-            client.db('miptmentors').collection("news").findOne({_id: _id}).then(newsItem => {
-                if (newsItem.publicated === "true") {
-                    response.send(newsItem);
-                } else {
-                    response.sendStatus('400');
-                }
-            });
-        } catch (e) {
-            response.sendStatus('400');
-        }
+        if (request.query._id) {
+            try {
+                let _id = ObjectID(request.query._id);
+                client.db('miptmentors').collection("news").findOne({_id: _id}).then(newsItem => {
+                    if (newsItem) {
+                        if (newsItem.publicated === "true") {
+                            response.send(newsItem);
+                        } else response.sendStatus('400');
+                    } else response.sendStatus('400');
+                });
+            } catch (e) {
+                response.sendStatus('400');
+            }
+        } else response.sendStatus('400');
     });
     router.get("/mentors_data", (request, response) => {
         let query;
