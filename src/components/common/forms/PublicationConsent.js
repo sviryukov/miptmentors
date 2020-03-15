@@ -6,11 +6,8 @@ import theme from "../../../theme";
 let useStyles = makeStyles({
     publicationConsent: {
         marginTop: '32px',
-        marginBottom: '8px'
-    },
-    publicationConsentHeader: {
-        width: '100%',
-        marginBottom: '8px'
+        marginBottom: '8px',
+        fontSize: '16px'
     }
 });
 
@@ -18,10 +15,8 @@ const PublicationConsent = props => {
     const classes = useStyles();
     return (
         <Box className={classes.publicationConsent}>
-            <Typography className={classes.PublicationConsentHeader}>
-                Согласны ли вы на публикацию на ресурсах нашего проекта информации об успехах Вашего менторского взаимодействия?
-                {props.required ? " *" : ""}
-            </Typography>
+            Согласны ли вы на публикацию на ресурсах нашего проекта информации об успехах Вашего менторского взаимодействия?
+            {props.required ? " *" : ""}
             <RadioGroup name='publication-consent'
                         value={props.value}
                         onChange={event => props.handleChange(event.target.value)}>
