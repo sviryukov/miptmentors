@@ -3,7 +3,7 @@ import {makeStyles} from "@material-ui/styles";
 import {Typography} from "@material-ui/core";
 
 const useStyles = makeStyles(theme => ({
-    heroTextDescription: {
+    heroTextSubheader: {
         margin: '25px 0px',
         fontSize: '20px',
         color: theme.palette.text.light,
@@ -20,7 +20,7 @@ const HeroSubheader = () => {
     const classes = useStyles();
     return (
         <Typography variant='h2'
-                    className={classes.heroTextDescription}>
+                    className={classes.heroTextSubheader}>
             Найдите наставника для карьерного роста или станьте ментором для будущего профессионала
         </Typography>
     );
