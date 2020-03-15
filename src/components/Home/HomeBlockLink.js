@@ -5,9 +5,7 @@ import {Grid, Link} from "@material-ui/core";
 const useStyles = makeStyles({
     homeBlockLinkContainer: {
         textAlign: 'center',
-        fontSize: '22px'
-    },
-    homeBlockLink: {
+        fontSize: '22px',
         color: '#1976d2'
     }
 });
@@ -15,10 +13,10 @@ const useStyles = makeStyles({
 const HomeBlockLink = props => {
     const classes = useStyles();
     return (
-        <Grid item xs={12} className={classes.homeBlockLinkContainer}>
-            <Link href={props.href} className={classes.homeBlockLink}>
-                {props.text}
-            </Link>
+        <Grid item xs={12}
+              component={Link} href={props.href}
+              className={classes.homeBlockLinkContainer}>
+            {props.text}
         </Grid>
     );
 };
