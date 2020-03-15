@@ -3,23 +3,25 @@ import {makeStyles} from "@material-ui/styles";
 import {Card, CardContent, CardMedia, Grid} from "@material-ui/core";
 
 const useStyles = makeStyles({
-    homeMentor: {
+    homeMentorCard: {
         margin: '16px'
     },
-    homeMentorCardName: {
+    homeMentorCardHeader: {
         fontWeight: 'bold'
     }
 });
 
-const HomeMentor = props => {
+const HomeMentorCard = props => {
     const classes = useStyles();
     return (
         <Grid component={Card}
               item xs={10} sm={3} lg={2}
-              className={classes.homeMentor}>
+              className={classes.homeMentorCard}>
             <CardMedia image={'/img/' + props.img} component="img"/>
-            <CardContent className={classes.homeMentorCardContent}>
-                <p className={classes.homeMentorCardName}>{props.name}</p>
+            <CardContent>
+                <p className={classes.homeMentorCardHeader}>
+                    {props.name}
+                </p>
                 {props.education}
                 <br/>
                 {props.work}
@@ -28,4 +30,4 @@ const HomeMentor = props => {
     );
 };
 
-export {HomeMentor};
+export {HomeMentorCard};
