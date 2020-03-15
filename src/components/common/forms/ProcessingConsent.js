@@ -9,8 +9,6 @@ let useStyles = makeStyles({
         marginBottom: '8px'
     },
     processingConsentLink: {
-        width: '100%',
-        marginTop: '8px',
         textDecoration: 'underline',
         fontSize: '16px'
     }
