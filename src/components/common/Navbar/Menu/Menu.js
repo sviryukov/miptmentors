@@ -6,7 +6,7 @@ import {MenuDrawerOpen} from "./MenuDrawerOpen";
 import {MenuDrawerClose} from "./MenuDrawerClose";
 
 const useStyles = makeStyles(theme => ({
-    menuContainer: {
+    menu: {
         width: 'calc(100% - 179px)',
         [theme.breakpoints.up('xl')]: {
             width: 'calc(100% - 207px)'
@@ -28,7 +28,7 @@ const useStyles = makeStyles(theme => ({
 const Menu = props => {
     const classes = useStyles();
     return (
-        <Grid item className={classes.menuContainer}>
+        <Grid item className={classes.menu}>
             <List component={Box} display={{xs: 'none', md: 'flex'}}
                   className={classes.menuList}>
                 <MenuItem text='Стать ментором' href='/becomementor' id='becomementor' current={props.current === 'becomementor'}/>
