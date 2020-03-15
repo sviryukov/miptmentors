@@ -7,21 +7,16 @@ import {HeroButton} from "./HeroButton";
 import {HeroLearnMore} from "./HeroLearnMore";
 
 const useStyles = makeStyles(theme => ({
-    heroContainer: {
+    hero: {
         margin: '0px',
         padding: '50px 0px',
-        justifyContent: 'center',
         background: 'linear-gradient(45deg, ' + theme.palette.primary.light + ', ' + theme.palette.primary.dark + ')',
         shapeOutside: 'polygon(0 0, 100% 0, 100% 95%, 33% 100%, 0 95%)',
         clipPath: 'polygon(0 0, 100% 0, 100% 95%, 33% 100%, 0 95%)',
         [theme.breakpoints.up("md")]: {
             padding: '100px 0px',
             shapeOutside: 'polygon(0 0, 100% 0, 100% 80%, 33% 100%, 0 80%)',
-            clipPath: 'polygon(0 0, 100% 0, 100% 80%, 33% 100%, 0 80%)'
-        }
-    },
-    hero: {
-        [theme.breakpoints.up("md")]: {
+            clipPath: 'polygon(0 0, 100% 0, 100% 80%, 33% 100%, 0 80%)',
             textAlign: 'center'
         }
     }
@@ -30,8 +25,10 @@ const useStyles = makeStyles(theme => ({
 const Hero = () => {
     const classes = useStyles();
     return (
-        <Grid container spacing={2} item xs={12} className={classes.heroContainer}>
-            <Grid item xs={11} lg={8} className={classes.hero}>
+        <Grid container spacing={2} justify='center'
+              item xs={12}
+              className={classes.hero}>
+            <Grid item xs={11} lg={8}>
                 <HeroHeader/>
                 <HeroSubheader/>
                 <HeroButton text='Найти ментора' href={'/findmentor'}/>
