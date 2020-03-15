@@ -1,11 +1,9 @@
 import React from 'react';
 import {makeStyles} from '@material-ui/styles';
-import {Grid, Link, Typography} from "@material-ui/core";
-import {ContactsTextPhystechUnion} from './ContactsTextPhystechUnion';
-import {ContactsTextFacebook} from "./ContactsTextFacebook";
-import {ContactsTextVk} from "./ContactsTextVk";
-import {ContactsTextInstagram} from "./ContactsTextInstagram";
-import {ContactsTextTelegram} from "./ContactsTextTelegram";
+import {Grid} from "@material-ui/core";
+import {ContactsTextLink} from "./ContactsTextLink";
+import {ContactsTextHeader} from "./ContactsTextHeader";
+import {ContactsTextSocialLink} from "./ContactsTextSocialLink";
 
 const useStyles = makeStyles(theme => ({
     contactsText: {
@@ -29,22 +27,6 @@ const useStyles = makeStyles(theme => ({
         [theme.breakpoints.up('xl')]: {
             marginTop: '120px'
         }
-    },
-    contactsTextLink: {
-        fontSize: '20px',
-        fontWeight: '100',
-        transition: 'color 0.1s',
-        color: '#e5e5e5',
-        '&:hover': {
-            color: theme.palette.secondary.contrastText,
-            textDecoration: 'none'
-        }
-    },
-    contactsTextFollowUs: {
-        padding: '30px 0px',
-        fontSize: '20px',
-        fontWeight: '100',
-        color: theme.palette.secondary.contrastText
     }
 }));
 
@@ -53,23 +35,24 @@ const ContactsText = () => {
     return (
         <Grid item xs={12} md={5} lg={4} xl={3}
               className={classes.contactsText}>
-            <Link href='mailto:dm@phystechunion.org' className={classes.contactsTextLink}>
-                dm@phystechunion.org
-            </Link>
+            <ContactsTextLink href='mailto:dm@phystechunion.org' text='dm@phystechunion.org'/>
             <br/>
-            <Link href='tel:+79166509953' className={classes.contactsTextLink}>
-                +7 (916) 650-99-53
-            </Link>
+            <ContactsTextLink href='tel:+79166509953' text='+7 (916) 650-99-53'/>
             <br/>
-            <ContactsTextPhystechUnion/>
-            <Typography className={classes.contactsTextFollowUs}>
-                Подписывайтесь на нас:
-            </Typography>
-            <ContactsTextFacebook/>
-            <ContactsTextVk/>
+            <ContactsTextLink href='http://phystechunion.org' text='phystech&#8209;union.org'/>
+            <ContactsTextHeader text='Подписывайтесь на нас:'/>
+            <ContactsTextSocialLink href='https://www.facebook.com/phystech/'
+                                    style={{ fontWeight: '600' }}
+                                    text='facebook'/>
+            <ContactsTextSocialLink href='https://vk.com/phystechunion'
+                                    text='ВКонтакте'/>
             <br/>
-            <ContactsTextInstagram/>
-            <ContactsTextTelegram/>
+            <ContactsTextSocialLink href='https://www.instagram.com/phystechunion/'
+                                    style={{ fontFamily: 'billabong', fontSize: '40px' }}
+                                    text='Instagram'/>
+            <ContactsTextSocialLink href='http://t.me/phystechunion'
+                                    style={{ fontWeight: '100' }}
+                                    text='Telegram'/>
         </Grid>
     );
 };

@@ -5,12 +5,12 @@ import {Form} from "../common/forms/Form";
 import {contactUsFormData} from "./contactUsFormData";
 
 let useStyles = makeStyles(theme => ({
-    contactUsContainer: {
+    contactUs: {
         order: '3',
         borderRadius: '4px',
-        padding: '80px 30px 00px',
+        padding: '80px 30px 0px',
         [theme.breakpoints.up('sm')]: {
-            padding: '80px 150px 00px'
+            padding: '80px 150px 0px'
         },
         [theme.breakpoints.up('md')]: {
             order: '2',
@@ -31,7 +31,7 @@ const ContactUs = () => {
         <Grid component={Box}
               boxShadow={{xs: 0, md: 3}}
               item xs={12} md={5} lg={4} xl={3}
-              className={classes.contactUsContainer}>
+              className={classes.contactUs}>
             <Form header={'Свяжитесь с нами'}
                   formData={contactUsFormData}
                   url={'/contactus'}
