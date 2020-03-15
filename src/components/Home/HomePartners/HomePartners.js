@@ -2,7 +2,7 @@ import React from 'react'
 import {makeStyles} from "@material-ui/styles";
 import {Grid} from "@material-ui/core";
 import {HomeBlockHeader} from "../HomeBlockHeader";
-import {HomePartnerItem} from "./HomePartnerItem";
+import {HomePartnerLink} from "./HomePartnerLink";
 
 const useStyles = makeStyles(theme => ({
     homePartners: {
@@ -22,8 +22,8 @@ const HomePartners = () => {
               container
               className={classes.homePartners}>
             <HomeBlockHeader text='Наши партнеры'/>
-            <HomePartnerItem href={'https://vk.com/start.mipt'} img={'/img/phystech.start.png'} alt={'Физтех.Старт'}/>
-            <HomePartnerItem href={'http://my-mentor.ru'} img={'/img/my-mentor.png'} alt={'My-mentor.ru'}/>
+            <HomePartnerLink href={'https://vk.com/start.mipt'} img={'/img/phystech.start.png'} alt={'Физтех.Старт'}/>
+            <HomePartnerLink href={'http://my-mentor.ru'} img={'/img/my-mentor.png'} alt={'My-mentor.ru'}/>
         </Grid>
     );
 };
