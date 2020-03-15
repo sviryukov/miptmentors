@@ -37,8 +37,7 @@ const FindMentorForm = () => {
             <FormHeader text='Найти ментора'/>
             <Typography className={classes.findMentorFormText}>
                 Регистрация на 5-й сезон Клуба Менторов Физтех-Союза закрыта.
-            </Typography>
-            <Typography className={classes.findMentorFormText}>
+                <br/>
                 Присоединяйтесь к нам в следующем сезоне в октябре 2020 года!
             </Typography>
             <Form formData={reminderFormData}
