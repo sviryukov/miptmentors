@@ -6,21 +6,19 @@ const useStyles = makeStyles(theme => ({
     pageNavbar: {
         paddingBottom: '20px',
         borderTop: '2px solid ' + theme.palette.text.primary,
+        fontWeight: 'bold',
+        textTransform: 'uppercase',
         [theme.breakpoints.up('md')]: {
             paddingBottom: '30px'
         }
     },
     pageNavbarTab: {
         padding: '10px 20px 0px 0px',
-        fontWeight: 'bold',
-        textTransform: 'uppercase',
         cursor: 'pointer',
         transition: 'color 0.3s'
     },
     pageNavbarChosenTab: {
         padding: '10px 20px 0px 0px',
-        fontWeight: 'bold',
-        textTransform: 'uppercase',
         cursor: 'pointer',
         transition: 'color 0.3s',
         color: theme.palette.secondary.main
