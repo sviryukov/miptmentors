@@ -4,7 +4,7 @@ import {TextField} from '@material-ui/core';
 import {MaskedInput} from "./MaskedInput";
 
 let useStyles = makeStyles(theme => ({
-    shortTextField: {
+    phoneInput: {
         width: '100%',
         [theme.breakpoints.up('sm')]: {
             width: '45%',
@@ -28,7 +28,7 @@ const PhoneInput = props => {
                            mask: ['+', /\d/, ' ', '(', /\d/, /\d/, /\d/, ')', ' ', /\d/, /\d/, /\d/, '-', /\d/, /\d/, '-', /\d/, /\d/]
                        }
                    }}
-                   className={classes.shortTextField}/>
+                   className={classes.phoneInput}/>
     );
 };
 
