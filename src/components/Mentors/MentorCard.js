@@ -8,11 +8,11 @@ const useStyles = makeStyles({
         borderRadius: '0px',
         backgroundColor: 'transparent'
     },
-    mentorCardContent: {
+    mentorCardText: {
         height: '115px',
         paddingTop: '0px'
     },
-    mentorCardName: {
+    mentorCardHeader: {
         fontWeight: 'bold'
     }
 });
@@ -24,8 +24,10 @@ const MentorCard = props => {
             <Fade in={props.visible} timeout={500}>
                 <Card className={classes.mentorCard}>
                     <CardMedia image={'/img/' + props.img} component="img"/>
-                    <CardContent className={classes.mentorCardContent}>
-                        <p className={classes.mentorCardName}>{props.name}</p>
+                    <CardContent className={classes.mentorCardText}>
+                        <p className={classes.mentorCardHeader}>
+                            {props.name}
+                        </p>
                         {props.education}
                         <br/>
                         {props.work}

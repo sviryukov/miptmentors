@@ -10,7 +10,7 @@ import {MentorCard} from './MentorCard';
 import {Footer} from "../common/Footer";
 
 let useStyles = makeStyles({
-    mentorsContainer: {
+    mentors: {
         justifyContent: 'center'
     }
 });
@@ -60,7 +60,7 @@ const Mentors = () => {
             <Navbar current='mentors'/>
             <Page>
                 <PageHeader text='Менторы проекта'/>
-                <Grid container spacing={4} item xs={11} lg={9} xl={8} className={classes.mentorsContainer}>
+                <Grid container spacing={4} item xs={11} lg={9} xl={8} className={classes.mentors}>
                     <PageNavbar tabs={mentorCategories} setTab={handleSetCategory} initialTab={'all'}/>
                     {mentors.map((mentor, i) => (
                         (category === 'all' || mentors[i].categories.indexOf(category) !== -1) &&
