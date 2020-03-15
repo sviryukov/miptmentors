@@ -11,7 +11,7 @@ import {NewsImg} from "../common/NewsImg";
 import axios from "axios";
 
 let useStyles = makeStyles({
-    newsItemContainer: {
+    newsItem: {
         justifyContent: 'center'
     }
 });
@@ -32,7 +32,7 @@ const NewsItem = () => {
             <Page>
                 {newsItem && (
                     <Fade in={!!newsItem} timeout={500}>
-                        <Grid container item xs={11} sm={8} lg={7} xl={6} className={classes.newsItemContainer}>
+                        <Grid container item xs={11} sm={8} lg={7} xl={6} className={classes.newsItem}>
                             <NewsItemHeader text={newsItem.title}/>
                             <NewsItemDate date={newsItem.date}/>
                             <NewsImg alt={newsItem.title} image={newsItem.img} tag={newsItem.tag}/>
