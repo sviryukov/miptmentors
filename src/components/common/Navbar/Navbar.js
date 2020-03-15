@@ -7,7 +7,7 @@ import {Menu} from './Menu';
 import {Drawer} from './Drawer';
 
 const useStyles = makeStyles(theme => ({
-    container: {
+    navbar: {
         padding: '0px',
         borderBottom: '1px solid ' + theme.palette.divider,
         backgroundColor: theme.palette.background.paper
@@ -28,7 +28,7 @@ const Navbar = props => {
     return (
         <React.Fragment>
             <Drawer drawerOpen={drawerOpen}/>
-            <Grid container className={classes.container}>
+            <Grid container className={classes.navbar}>
                 <TopBar/>
                 <Logo/>
                 <Menu handleDrawerOpenClick={toggleDrawer(true)}
