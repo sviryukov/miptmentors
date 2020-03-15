@@ -3,7 +3,7 @@ import {makeStyles} from "@material-ui/styles";
 import {Grid, Typography} from "@material-ui/core";
 
 const useStyles = makeStyles(theme => ({
-    newsItemHeaderContainer: {
+    newsItemHeader: {
         padding: "70px 0px 20px",
         fontSize: '30px',
         textAlign: 'left',
@@ -22,7 +22,7 @@ const NewsItemHeader = props => {
     return (
         <Grid item xs={12}
               component={Typography} variant='h1'
-              className={classes.newsItemHeaderContainer}>
+              className={classes.newsItemHeader}>
             {props.text}
         </Grid>
     );
