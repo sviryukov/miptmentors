@@ -4,6 +4,7 @@ import {makeStyles} from '@material-ui/styles';
 
 const useStyles = makeStyles(theme => ({
     menuListItem: {
+        padding: '8px 16px',
         width: 'auto',
         height: '81px',
         [theme.breakpoints.up('xl')]: {
@@ -11,13 +12,14 @@ const useStyles = makeStyles(theme => ({
         },
         textAlign: 'center',
         textTransform: 'uppercase',
+        transition: 'color 0.2s',
         '&:hover': {
             textDecoration: 'none',
             color: theme.palette.secondary.main
-        },
-        transition: 'color 0.2s'
+        }
     },
     menuListItemCurrent: {
+        padding: '8px 16px',
         width: 'auto',
         height: '81px',
         [theme.breakpoints.up('xl')]: {
@@ -27,11 +29,11 @@ const useStyles = makeStyles(theme => ({
         borderBottom: '2px solid',
         textAlign: 'center',
         textTransform: 'uppercase',
+        transition: 'color 0.2s',
         '&:hover': {
             textDecoration: 'none',
             color: theme.palette.secondary.main
-        },
-        transition: 'color 0.2s'
+        }
     }
 }));
 
