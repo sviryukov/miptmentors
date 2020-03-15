@@ -10,13 +10,13 @@ const useStyles = makeStyles(theme => ({
             textDecoration: 'none'
         }
     },
-    newsCardContent: {
+    newsCardText: {
         fontSize: '16px',
         [theme.breakpoints.up('xl')]: {
             fontSize: '18px'
         }
     },
-    newsCardTitle: {
+    newsCardHeader: {
         margin: '0px',
         color: theme.palette.text.primary
     },
@@ -36,8 +36,8 @@ const NewsCard = props => {
                     <Card>
                         <CardActionArea>
                             <NewsImg image={props.img.replace('.', 'min.')} tag={props.tag} alt={props.title}/>
-                            <CardContent className={classes.newsCardContent}>
-                                <p className={classes.newsCardTitle}>{props.title}</p>
+                            <CardContent className={classes.newsCardText}>
+                                <p className={classes.newsCardHeader}>{props.title}</p>
                                 <p className={classes.newsCardDate}>{dateFormat(props.date)}</p>
                             </CardContent>
                         </CardActionArea>
