@@ -1,25 +1,23 @@
 import React from 'react';
 import {makeStyles} from "@material-ui/styles";
+import {Typography, Link} from '@material-ui/core';
 
 const useStyles = makeStyles(theme => ({
+    heroTextLearnMoreContainer: {
+        marginTop: '20px'
+    },
     heroTextLearnMore: {
-        margin: '10px 50px 10px 0px',
         padding: '6px 0px',
-        verticalAlign: 'middle',
-        border: 'none',
-        outline: 'none',
-        backgroundColor: 'transparent',
         cursor: 'pointer',
         color: theme.palette.text.light,
-        lineHeight: '1.75',
         transition: 'color 0.2s',
         fontSize: '16px',
         [theme.breakpoints.up('sm')]: {
-            margin: '0px 10px 10px 0px',
             padding: '6px 16px',
             fontSize: '20px'
         },
         '&:hover': {
+            textDecoration: 'none',
             color: theme.palette.secondary.light
         }
     }
@@ -34,9 +32,11 @@ const HeroLearnMore = () => {
         })
     };
     return (
-        <button className={classes.heroTextLearnMore} onClick={handleClick}>
-            Узнать больше ➙
-        </button>
+        <Typography className={classes.heroTextLearnMoreContainer}>
+            <Link className={classes.heroTextLearnMore} onClick={handleClick}>
+                Узнать больше ➙
+            </Link>
+        </Typography>
     );
 };
 
