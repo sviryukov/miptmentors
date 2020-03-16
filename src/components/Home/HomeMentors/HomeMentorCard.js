@@ -1,6 +1,6 @@
 import React from 'react';
 import {makeStyles} from "@material-ui/styles";
-import {Card, CardContent, CardMedia, Grid} from "@material-ui/core";
+import {Card, CardContent, CardMedia, Fade, Grid} from "@material-ui/core";
 
 const useStyles = makeStyles({
     homeMentorCard: {
@@ -19,19 +19,21 @@ const useStyles = makeStyles({
 const HomeMentorCard = props => {
     const classes = useStyles();
     return (
-        <Grid component={Card}
+        <Fade in={props.visible} timeout={500}>
+            <Grid component={Card}
               item xs={10} sm={3} lg={2}
               className={classes.homeMentorCard}>
-            <CardMedia image={'/img/' + props.img} className={classes.homeMentorCardImg}/>
-            <CardContent>
-                <p className={classes.homeMentorCardHeader}>
-                    {props.name}
-                </p>
-                {props.education}
-                <br/>
-                {props.work}
-            </CardContent>
-        </Grid>
+                <CardMedia image={'/img/' + props.img} className={classes.homeMentorCardImg}/>
+                <CardContent>
+                    <p className={classes.homeMentorCardHeader}>
+                        {props.name}
+                    </p>
+                    {props.education}
+                    <br/>
+                    {props.work}
+                </CardContent>
+            </Grid>
+        </Fade>
     );
 };
 

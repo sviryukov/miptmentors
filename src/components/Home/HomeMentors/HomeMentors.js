@@ -3,6 +3,7 @@ import {makeStyles} from "@material-ui/styles";
 import axios from "axios";
 import {Grid} from "@material-ui/core";
 import {HomeBlockHeader} from "../HomeBlockHeader";
+import {HomeMentorCardSkeleton} from "./HomeMentorCardSkeleton";
 import {HomeMentorCard} from "./HomeMentorCard";
 import {HomeBlockLink} from "../HomeBlockLink";
 
@@ -19,6 +20,7 @@ const useStyles = makeStyles(theme => ({
 
 const HomeMentors = () => {
     const [mentors, setMentors] = useState([]);
+    const [mentorsVisible, setMentorsVisible] = useState(false);
     useEffect(() => {
         axios.get("/mentors_data", {
             params: {
@@ -27,6 +29,7 @@ const HomeMentors = () => {
         })
             .then(res => {
                 setMentors(res.data);
+                setMentorsVisible(true);
             });
     }, []);
     const classes = useStyles();
@@ -35,13 +38,20 @@ const HomeMentors = () => {
               container
               className={classes.homeMentors}>
             <HomeBlockHeader text={'Наши менторы'}/>
-            {mentors.map(mentor => (
+            {mentors.length === 0 ? (
+                <>
+                    <HomeMentorCardSkeleton/>
+                    <HomeMentorCardSkeleton/>
+                    <HomeMentorCardSkeleton/>
+                </>
+            ) :(mentors.map(mentor => (
                 <HomeMentorCard key={mentor.name}
                                 name={mentor.name}
                                 img={mentor.img}
                                 education={mentor.education}
-                                work={mentor.work}/>
-            ))}
+                                work={mentor.work}
+                                visible={mentorsVisible}/>
+            )))}
             <HomeBlockLink href={'/mentors'} text={'Все менторы'}/>
         </Grid>
     );
