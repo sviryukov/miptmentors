@@ -2,8 +2,9 @@ import React, {useEffect, useState} from "react";
 import {makeStyles} from "@material-ui/styles";
 import axios from "axios";
 import {Grid} from "@material-ui/core";
-import {NewsCard} from "../common/NewsCard";
-import {HomeBlockLink} from "./HomeBlockLink";
+import {HomeNewsSkeleton} from './HomeNewsSkeleton';
+import {NewsCard} from "../../common/NewsCard";
+import {HomeBlockLink} from "../HomeBlockLink";
 
 const useStyles = makeStyles(theme => ({
     homeNewsContainer: {
@@ -33,7 +34,13 @@ const HomeNews = () => {
     return (
         <Grid container item xs={12} className={classes.homeNewsContainer}>
             <Grid container spacing={2} item xs={11} lg={8} className={classes.homeNews}>
-                {news.map((newsItem) => (
+                {news.length === 0 ? (
+                    <>
+                        <HomeNewsSkeleton/>
+                        <HomeNewsSkeleton/>
+                        <HomeNewsSkeleton/>
+                    </>
+                ) : (news.map((newsItem) => (
                     <NewsCard key={newsItem._id}
                               _id={newsItem._id}
                               title={newsItem.title}
@@ -41,7 +48,7 @@ const HomeNews = () => {
                               img={newsItem.img}
                               tag={newsItem.tag}
                               visible={newsVisible}/>
-                ))}
+                )))}
                 <HomeBlockLink href={'/news'} text={'Больше новостей'}/>
             </Grid>
         </Grid>
