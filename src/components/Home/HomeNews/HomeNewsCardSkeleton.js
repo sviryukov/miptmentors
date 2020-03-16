@@ -4,12 +4,12 @@ import {Grid, Card, CardActionArea, CardContent} from "@material-ui/core";
 import {Skeleton} from "@material-ui/lab";
 
 const useStyles = makeStyles(theme => ({
-    homeNewsImgSkeleton: {
+    homeNewsCardImgSkeleton: {
         width: '100%',
         height: '0px',
         paddingBottom: '66.6%'
     },
-    homeNewsHeaderSkeleton: {
+    homeNewsCardHeaderSkeleton: {
         width: '100%',
         height: '15px',
         marginBottom: '3px',
@@ -17,24 +17,24 @@ const useStyles = makeStyles(theme => ({
             height: '18px'
         }
     },
-    homeNewsDateSkeleton: {
+    homeNewsCardDateSkeleton: {
         width: '30%',
         height: '15px',
         marginTop: '19px'
     }
 }));
 
-const HomeNewsSkeleton = () => {
+const HomeNewsCardSkeleton = () => {
     const classes = useStyles();
     return (
         <Grid item sm={4} xs={12}>
             <Card>
                 <CardActionArea>
-                    <Skeleton className={classes.homeNewsImgSkeleton} variant='rect'/>
+                    <Skeleton className={classes.homeNewsCardImgSkeleton} variant='rect'/>
                     <CardContent>
-                        <Skeleton className={classes.homeNewsHeaderSkeleton}/>
-                        <Skeleton className={classes.homeNewsHeaderSkeleton}/>
-                        <Skeleton className={classes.homeNewsDateSkeleton}/>
+                        <Skeleton className={classes.homeNewsCardHeaderSkeleton}/>
+                        <Skeleton className={classes.homeNewsCardHeaderSkeleton}/>
+                        <Skeleton className={classes.homeNewsCardDateSkeleton}/>
                     </CardContent>
                 </CardActionArea>
             </Card>
@@ -42,4 +42,4 @@ const HomeNewsSkeleton = () => {
     );
 };
 
-export {HomeNewsSkeleton};
+export {HomeNewsCardSkeleton};
