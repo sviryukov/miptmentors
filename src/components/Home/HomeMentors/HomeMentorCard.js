@@ -6,6 +6,11 @@ const useStyles = makeStyles({
     homeMentorCard: {
         margin: '16px'
     },
+    homeMentorCardImg: {
+        width: '100%',
+        height: '0px',
+        paddingBottom: '100%'
+    },
     homeMentorCardHeader: {
         fontWeight: 'bold'
     }
@@ -17,7 +22,7 @@ const HomeMentorCard = props => {
         <Grid component={Card}
               item xs={10} sm={3} lg={2}
               className={classes.homeMentorCard}>
-            <CardMedia image={'/img/' + props.img} component="img"/>
+            <CardMedia image={'/img/' + props.img} className={classes.homeMentorCardImg}/>
             <CardContent>
                 <p className={classes.homeMentorCardHeader}>
                     {props.name}
