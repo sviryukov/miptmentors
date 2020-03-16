@@ -13,6 +13,9 @@ const useStyles = makeStyles(theme => ({
         color: theme.palette.secondary.contrastText,
         '&:hover': {
             textDecoration: 'none'
+        },
+        [theme.breakpoints.up('md')]: {
+            maxWidth: '250px'
         }
     }
 }));

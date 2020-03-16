@@ -12,12 +12,6 @@ const useStyles = makeStyles(theme => ({
         backgroundColor: theme.palette.text.primary,
         fontSize: '15px'
     },
-    footerContactsMenuContainer: {
-        paddingTop: '21px',
-        [theme.breakpoints.up('md')]: {
-            textAlign: 'right'
-        }
-    },
     footerCopyright: {
         paddingTop: '65px',
         color: theme.palette.secondary.contrastText,
