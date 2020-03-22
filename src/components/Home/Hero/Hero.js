@@ -28,7 +28,7 @@ const Hero = () => {
         <Grid container spacing={2} justify='center'
               item xs={12}
               className={classes.hero}>
-            <Grid item xs={11} lg={8}>
+            <Grid item xs={11} lg={10}>
                 <HeroHeader/>
                 <HeroSubheader/>
                 <HeroButton text='Найти ментора' href={'/findmentor'}/>

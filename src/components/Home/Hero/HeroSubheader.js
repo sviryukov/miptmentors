@@ -21,7 +21,7 @@ const HeroSubheader = () => {
     return (
         <Typography variant='h2'
                     className={classes.heroTextSubheader}>
-            Найдите наставника для карьерного роста или станьте ментором для будущего профессионала
+            Формирование связи поколений через обмен профессиональным и жизненным опытом
         </Typography>
     );
 };

@@ -7,10 +7,10 @@ const useStyles = makeStyles(theme => ({
         fontSize: '25px',
         color: theme.palette.text.light,
         [theme.breakpoints.up('sm')]: {
-            fontSize: '37px'
+            fontSize: '35px'
         },
         [theme.breakpoints.up('xl')]: {
-            fontSize: '55px'
+            fontSize: '53px'
         }
     }
 }));
@@ -20,7 +20,7 @@ const HeroHeader = () => {
     return (
         <Typography variant='h1'
                     className={classes.heroTextHeader}>
-            Программа наставничества для студентов МФТИ
+            Программа наставничества для студентов и выпускников&nbsp;МФТИ
         </Typography>
     );
 };
