@@ -2,6 +2,7 @@ import React from 'react';
 import {CssBaseline} from "@material-ui/core";
 import {Navbar} from '../common/Navbar';
 import {Page} from "../common/Page";
+import {AboutHeader} from "./AboutHeader";
 import {Footer} from "../common/Footer";
 
 const About = () => {
@@ -10,7 +11,7 @@ const About = () => {
             <CssBaseline/>
             <Navbar/>
             <Page>
-                
+                <AboutHeader/>
             </Page>
             <Footer/>
         </React.Fragment>
