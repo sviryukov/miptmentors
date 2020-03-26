@@ -8,6 +8,7 @@ const useStyles = makeStyles({
     },
     homeBlockLink: {
         fontSize: '22px',
+        fontWeight: 'normal',
         color: '#1976d2'
     }
 });
