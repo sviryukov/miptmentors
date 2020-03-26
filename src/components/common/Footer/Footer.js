@@ -28,6 +28,7 @@ const Footer = () => {
             <Grid container item className={classes.footer}>
                 <FooterMenu header='Клуб Менторов Физтех&#8209;Союза'
                             links={[
+                                {href: '/about', text: 'О проекте'},
                                 {href: '/mentors', text: 'Менторы проекта'},
                                 {href: '/news', text: 'Новости проекта'},
                                 {href: '/contacts', text: 'Контакты'},
