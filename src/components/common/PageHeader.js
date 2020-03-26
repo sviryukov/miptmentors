@@ -7,6 +7,7 @@ const useStyles = makeStyles(theme => ({
     pageHeader: {
         padding: "70px 0px 40px",
         textAlign: 'center',
+        fontSize: '40px',
         [theme.breakpoints.up('md')]: {
             padding: "80px 0px 40px",
         },
@@ -20,9 +21,9 @@ const PageHeader = props => {
     const classes = useStyles();
     return (
         <Grid item xs={12}
-              component={Typography} variant='h1'
+              component={Typography} variant={props.variant || 'h1'}
               className={classes.pageHeader}
-              style={{ color: props.color === 'light' ? theme.palette.text.light : theme.palette.text.primary}}>
+              style={{ color: theme.palette.text[props.color || 'primary']}}>
             {props.text}
         </Grid>
     );
