@@ -43,7 +43,7 @@ const NewsImg = props => {
     };
     return (
         <div className={classes.newsImgContainer}>
-            <img src={'/img/' + props.image} className={classes.newsImg} alt={props.alt}/>
+            <img src={'http://admin-miptmenors.jelastic.regruhosting.ru/img/' + props.image} className={classes.newsImg} alt={props.alt}/>
             <Chip label={newsTags[props.tag].name}
                   style={{backgroundColor: newsTags[props.tag].color}}
                   className={classes.newsTag}/>
