@@ -44,14 +44,18 @@ const Form = props => {
             });
             axios.post(props.url, application)
                 .then(() => {
-                    setData(initialData);
-                    setResult({
-                        completed: true,
-                        severity: 'success'
-                    });
+                    if (props.success) props.success();
+                    else {
+                        setData(initialData);
+                        setResult({
+                            completed: true,
+                            severity: 'success'
+                        });
+                    }
                 })
                 .catch(() => {
-                    setResult({
+                    if (props.error) props.error();
+                    else setResult({
                         completed: true,
                         severity: 'error'
                     });
