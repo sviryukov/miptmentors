@@ -32,8 +32,10 @@ const ContactUs = () => {
               boxShadow={{xs: 0, md: 3}}
               item xs={12} md={5} lg={4} xl={3}
               className={classes.contactUs}>
-            <Form header={'Свяжитесь с нами'}
-                  formData={contactUsFormData}
+            <Form formData={contactUsFormData}
+                  headerProps={{
+                      text: 'Свяжитесь с нами'
+                  }}
                   url={'/contactus'}
                   alert={{
                       success: 'Вопрос успешно отправлен!',

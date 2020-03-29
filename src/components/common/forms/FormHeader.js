@@ -12,8 +12,9 @@ let useStyles = makeStyles({
 const FormHeader = props => {
     const classes = useStyles();
     return (
-        <Typography variant='h1'
-                    className={classes.formHeader}>
+        <Typography className={classes.formHeader}
+                    variant={props.variant || 'h1'}
+                    style={{textAlign: props.textAlign || 'left'}}>
             {props.text}
         </Typography>
     );

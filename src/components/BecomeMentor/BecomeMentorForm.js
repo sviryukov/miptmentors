@@ -29,8 +29,10 @@ const BecomeMentorForm =  () => {
               boxShadow={{xs: 0, md: 3}}
               item xs={12} md={7} lg={6} xl={5}
               className={classes.becomeMentorForm}>
-            <Form header={'Стать ментором'}
-                  formData={becomeMentorFormData}
+            <Form formData={becomeMentorFormData}
+                  headerProps={{
+                      text: 'Стать ментором'
+                  }}
                   url={'/becomementor'}
                   alert={{
                       success: 'Заявка успешно отправлена!',

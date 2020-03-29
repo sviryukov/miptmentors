@@ -60,7 +60,7 @@ const Form = props => {
     };
     return (
         <React.Fragment>
-            {props.header && (<FormHeader text={props.header}/>)}
+            {props.headerProps && (<FormHeader {...props.headerProps}/>)}
             {props.formData.map(Input => (
                 <Input.Component key={Input.name}
                                  value={data[Input.name].value}
